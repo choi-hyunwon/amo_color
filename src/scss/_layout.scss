@@ -1,0 +1,229 @@
+// header
+.bg-header {
+  min-width: 1200px;
+  z-index: 100;
+  background-color: #001D2E;
+}
+
+// wrap
+.wrap {
+  width: auto;
+  .navbar {
+    &.navbar-expand {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .nav-item {
+      padding-left: 2px;
+    }
+  }
+
+  // custom container
+  .container-fluid {
+    min-width: 1200px;
+  }
+}
+
+// footer
+footer {
+  z-index: 100;
+  width: 100%;
+  min-width: 1200px;
+  height: 60px;
+  background-color: #777;
+  border: solid 1px #707070;
+  .footer {
+    width: 1200px;
+    padding: 0 50px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 60px;
+    color: #fff;
+    vertical-align: middle;
+    .copyright {
+      color: #fff;
+    }
+  }
+}
+
+//"My UI" text image
+/* MyUI 텍스트 시작 위치 = 50% + 54.6px */
+.main-bg {
+  //border: 1px solid red;
+  position: relative;
+  margin-top: -14px;
+  .bar {
+    height: 35px;
+    background-color: #b1e2f3;
+    position: absolute;
+    bottom: 2px;
+    &.left-bar {
+      width: calc(50% + 54.6px + 5px);
+      left: 0;
+    }
+    &.right-bar {
+      width: calc(50% - 54.6px - 475.4px + 5px);
+      right: 0;
+    }
+  }
+  img {
+    width: 475.4px;
+    margin-left: calc(50% + 54.6px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-bg {
+    .bar {
+      &.left-bar {
+        width: calc(600px + 54.6px + 5px);
+      }
+      &.right-bar {
+        // 50% - 54.6px - 475.4px - 20px
+        width: calc(600px - 54.6px - 475.4px + 2px);
+        left: calc(600px + 54.6px + 475.4px);
+      }
+    }
+    img {
+      margin-left: 654.6px;
+    }
+  }
+}
+
+
+
+
+// aside
+.aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100%;
+  box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fbfeff;
+
+  .header {
+    position: relative;
+    height: 70px;
+    min-width: 320px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+
+    &.bg-header {
+      background-color: #001d2e;
+      a {
+        position: absolute;
+        top: 16.5px;
+        left: 107px;
+      }
+    }
+  }
+
+  .category {
+    margin-top: 7px;
+    .menu {
+      position: relative;
+      .title {
+        display: block;
+        padding: 13px 28px;
+        &.active {
+          font-weight: 600;
+        }
+        &:hover {
+          background-color: #04bcde;
+          color: #fff;
+        }
+        .icon {
+          position: absolute;
+          top: 13px;
+          left: 28px;
+          width: 24px;
+          text-align: center;
+        }
+        .text {
+          margin-left: 42px;
+          line-height: 26px;
+        }
+      }
+      .submenu {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          a {
+            display: inline-block;
+            padding: 13px 18px 13px 70px;
+            width: 100%;
+          }
+
+          &.active, &:hover {
+            background-color: #04bcde;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// document page (page with aside) header
+.doc-header {
+  .navbar{
+    &.navbar-expand {
+      max-width: 880px;
+      min-width: 880px;
+      margin-left: 320px;
+      padding: 19px 25px;
+      .nav-item {
+
+        &:not(.active) {
+          a {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+
+.doc-content {
+  max-width: 880px;
+  min-width: 880px;
+  margin-left: 320px;
+  padding: 30px;
+
+  .directory {
+    padding: 3px 0 20px;
+    font-size: 16px;
+    line-height: 24px;
+    .name {
+      margin: 0 5px;
+      :first-child {
+        margin-left: 0;
+      }
+      :last-child {
+        margin-right: 0;
+      }
+      &.active {
+        text-decoration: underline;
+        color: #04bcde;
+      }
+    }
+    .far {
+      font-size: 16px;
+    }
+  }
+
+  .doc-title {
+    padding: 30px 0 10px;
+    font-weight: 600;
+    line-height: 54px;
+  }
+}

@@ -1,0 +1,196 @@
+// main page sections
+section {
+  z-index: 100;
+
+  // section header
+  .header {
+    padding-top: 80px;
+    font-size: 48px;
+    //letter-spacing: -4.5px;
+    margin-left: -2px;
+    line-height: 75px;
+  }
+
+  // main page 1st section
+  &.introduction {
+    position: relative;
+    padding: 0 90px;
+    .header {
+      padding-top: 120px;
+      letter-spacing: -0.7px;
+    }
+    .detail {
+      padding-top: 40px;
+      width: 759px;
+      color: $gray-800;
+      font-size: 20px;
+      line-height: 24px;
+      .line {
+        margin-bottom: 8px;
+        //overflow: hidden;
+        letter-spacing: -0.3px;
+      }
+    }
+    .version {
+      padding-top: 16px;
+      color: #666;
+      letter-spacing: -0.3px;
+    }
+    .btn-area {
+      padding-top: 60px;
+      .btn {
+        letter-spacing: -1px;
+      }
+    }
+    .github {
+      padding-top: 50px;
+      .line {
+        letter-spacing: -0.1px;
+      }
+      .link {
+        padding-top: 23px;
+      }
+    }
+  }
+
+  // main page 2nd section
+  &.support {
+    //margin-top: 86px;
+    background-color: #eefbff;
+
+    .framework {
+      text-align: center;
+      .header {
+        letter-spacing: -0.4px;
+        line-height: 70px;
+        padding-bottom: 7px;
+      }
+      .sub-header {
+        margin-top: 17px;
+        font-size: 20px;
+        letter-spacing: 0;
+      }
+      .list {
+        margin-top: 103px;
+        text-align: center;
+        .item {
+          display: inline-block;
+
+          .title {
+            margin-top: 34px;
+          }
+          .info {
+            margin-top: 11px;
+            color: #999;
+          }
+
+          &.bootstrap {
+            padding-left: 100px;
+            .title {
+              color: #62488a;
+            }
+          }
+
+          &.react {
+            .title {
+              color: #05bff2;
+            }
+          }
+
+          &.vue {
+            padding-right: 120px;
+            .title {
+              color: #3bb983;
+            }
+          }
+        }
+      }
+    }
+
+    .technology {
+      .header {
+        text-align: center;
+        width: 897px;
+        margin: 0 auto;
+        padding-top: 89px;
+        line-height: 58px;
+        letter-spacing: -1px;
+      }
+
+      .list {
+        padding: 60px 150px 79px;
+        .item {
+          margin-top: 40px;
+          position: relative;
+          &:first-child {
+            margin-top: 10px;
+          }
+          .icon {
+            position: absolute;
+            top: 41px;
+            left: 0;
+          }
+          .detail {
+            margin-left: 90px;
+            .title {
+              font-size: 20px;
+            }
+            .info {
+              margin-top: 13px;
+              letter-spacing: -0.2px;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  // main page 3rd section
+  &.component {
+    margin-top: 1px;
+    margin-bottom: 6px;
+    .header {
+      text-align: center;
+      letter-spacing: -0.4px;
+      padding-right: 4px;
+    }
+    .sub-header {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: -0.2px;
+      padding-right: 3px;
+    }
+    .list {
+      margin-top: 119px;
+      padding: 0 55px;
+      .item {
+        padding-left: 66px;
+        margin-bottom: 114px;
+        .title {
+          font-size: 20px;
+          margin-bottom: 30px;
+          i { // fa
+            position: absolute;
+            font-size: 24px;
+          }
+          .text {
+            margin-left: 44px;
+            line-height: 26px;
+            letter-spacing: 0.5px;
+          }
+        }
+        .detail {
+          list-style-type: none;
+          margin-left: 2px;
+          li {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

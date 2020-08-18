@@ -1,0 +1,38 @@
+
+.sample-text {
+  span {
+    line-height: 25px;
+  }
+}
+.sample-bold {
+  margin-top: 20px;
+  span {
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+.sample-list {
+  position: relative;
+  margin-top: 20px;
+  line-height: 24px;
+  .fas {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 8px;
+    vert-align: middle;
+  }
+  span {
+    margin-left: 14px;
+  }
+}
+.sample-code {
+  margin: 10px 0;
+  padding: 30px 30px 27px;
+  border: 1px solid #d1e7ee;
+  background: #fbfeff;
+  .title {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}

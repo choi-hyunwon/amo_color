@@ -1,0 +1,146 @@
+//step
+
+.step {
+  li {
+    list-style-type: none;
+    width: $step-list-width;
+    float: left;
+    font-size: $step-font-size;
+    position: relative;
+    text-align: center;
+    color: $step-list-color;
+
+    &:before {
+      width: 30px;
+      height: 30px;
+      content: '';
+      line-height: 30px;
+      border: 3px solid $step-border-color;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background: #fff escape-svg($custom-checkbox-indicator-icon-checked) no-repeat 1px 6px;
+      background-size: 25px 16px;
+    }
+
+    &:after {
+      width: 100%;
+      content: '';
+      position: absolute;
+      border-bottom: 4px dotted $step-list-border-color;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+    }
+
+    &:first-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  li.active {
+    &:before {
+      border-color: $primary;
+      background-color: $step-active-bg-color;
+    }
+  }
+
+  li.current {
+    &:before {
+      border: 3px solid $step-border-current-color;
+    }
+  }
+}
+
+.step-arrow {
+  li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    text-align: center;
+    margin: 0 5px;
+    font-size: $step-arrow-font-size;
+    color: $step-arrow-list-color;
+    height: $step-arrow-list-height;
+    line-height: $step-arrow-list-line-height;
+    min-width: $step-arrow-list-width;
+    background-color: $step-arrow-bg-color;
+    border: 1px solid $step-arrow-border-color;
+    border-radius: $step-arrow-list-border-radius;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 14px;
+      right: -4px;
+      width: 7px;
+      height: 7px;
+      background: $step-arrow-bg-color;
+      transform: rotate(45deg);
+      border: 1px solid $step-arrow-border-color;
+      border-bottom: 0;
+      border-left: 0;
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+
+    &:first-child {
+      &:before {
+        border: none;
+      }
+    }
+
+    span {
+      position: relative;
+
+      &:before {
+        opacity: 0;
+        content: '';
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        left: -22px;
+        color: $step-arrow-done-color;
+        background: escape-svg($step-check-item) no-repeat 1px 6px;
+        background-size: 25px 19px;
+      }
+    }
+
+    &.done {
+      span {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.active {
+      color: $step-arrow-active-color;
+      background-color: $step-arrow-active-bg-color;
+      border: 1px solid $step-arrow-active-border-color;
+
+      &:after {
+        background: $step-arrow-active-bg-color;
+        border-color: $step-arrow-active-border-color;
+      }
+    }
+  }
+}
+.step-arrow-center {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  & .step-arrow {
+    margin: 0 auto;
+  }
+}

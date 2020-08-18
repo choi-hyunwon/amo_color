@@ -1,0 +1,23 @@
+body {
+  font-family: 'NotoSansCJKkr-Regular';
+}
+
+a {
+  font-size: 16px;
+  color: #333;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+
+// section with background-color
+.bg-container {
+  margin-top: 85px;
+  background-color: #eefbff;
+  //opacity: 0.3;
+}
+
+
+
