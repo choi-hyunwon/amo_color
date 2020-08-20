@@ -2,37 +2,1424 @@
 <html lang="ko">
 @@include('../html/include/head.html')
 <body>
-@@include('../html/include/header.html')
-	<div class="profileBox">
-		<figure>
 
+<header class="showRight">
+@@include('../html/include/header.html')
+</header>
+	<div class="profileBox">
+		
+		<figure>
+			<div class="editButton"></div>
+			<div class="personalColor"></div>
 			
 		</figure>
 		<h2 class="userId">테일러 스위프트<span class="levelText">16Lv.</span></h2>
 		<h3 class="follwInfo">팔로워 1,200 &VerticalBar; 팔로잉 2,094,123</h3>
-		<h3 class="hashes">#졸리다 #배고프다 #앙꼬빵</h3>
+		<h3 class="hashTags"><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>구려</a><a>마징가</a></h3>
 		<ul class="snsBox">
 			<li></li>
 			<li></li>
 			<li></li>
 			<li></li>
 		</ul>
-		<div class="frame">
-			<div class="levelBarBox">
-
+		<div class="paddingFrame">
+			<div class="levelInfoBox">
+				<div class="levelInfos">
+					<span class="level">16Lv.</span>
+					<span class="levelFraction"><strong>74</strong>/100</span>
+				</div>
 				<div class="levelBar">
 					<div class="progress"></div>
 				</div>
+				<div class="remainLevel"><strong>17</strong>레벨까지 <strong>26</strong>컬러가 남았어요!</div>
 			</div>
-			<div class="attendCheckBox">출석체크 하기</div>
+			<button class="attendCheckBox">출석체크 하기</button>
+			
+			<div class="validateEmailBox">
+				<p>이메일을 인증하고 다양한 혜택을 누려보세요!</p>
+				<button type="button" class="okButton">이메일 인증</button>
+			</div>
+
 		</div>
+
 	</div>
 	<main>
-		<ul class="tabs">
+		<ul class="tabs" data-tab-id="mainTabs">
 			<li class="on">파우치</li>
 			<li>나의 글</li>
 			<li>스크랩</li>
 		</ul>
+		<div id="mainTabs" class="tabContents">
+			<section class="pouch">
+				<ul class="drawer">
+					<li class="noItem">
+						<p class="noItem lipstick">파우치에 등록된 제품이 없어요.</p>
+					</li>
+					<li>
+						<i>립스틱 (3)</i>
+						<div class="scrollBox">
+							<ul class="scrollItems">
+								<li class="item">
+									<div class="itemTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag blueTag">잘쓴탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+								</li>
+								<li class="item">
+									<div class="itemTag brownTag">믿거탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag greenTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i>립틴트 &amp; 라커 (9)</i>
+						<div class="scrollBox">
+							<ul class="scrollItems">
+								<li class="item">
+									<div class="itemTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag blueTag">잘쓴탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i>립글로스 &amp; 오일 (9)</i>
+						<div class="scrollBox">
+							<ul class="scrollItems">
+								<li class="item">
+									<div class="itemTag greenTag">애증탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag blueTag">잘쓴탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag greenTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+								</li>
+								<li class="item">
+									<div class="itemTag brownTag">믿거탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+								<li class="item">
+									<div class="itemTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i>립펜슬 &amp; 립라이너 (9)</i>
+						<div class="scrollBox">
+							<ul class="scrollItems">
+								<li class="item">
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i>립밤 (9)</i>
+						<div class="scrollBox">
+							<ul class="scrollItems">
+								<li class="item">
+									<div class="itemTag pinkTag">인생탬</div>
+									<div class="shadow"></div>
+									<div class="photo"></div>
+									<div class="itemName">로즈버디</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				
+				<div class="centerButtonBox">
+					<button type="button" disabled>라벨 설정하기</button>
+					<button type="button">제품 추가하기</button>
+				</div>
+
+				<div class="colorChipBox">
+					<i>나의 컬러칩 (3)</i>
+					<div class="scrollBox">
+						<ul class="scrollItems">
+
+							<li class="item">
+								<div class="new"></div>
+								<div class="chip" style="background-color: #e03e3e"></div>
+								<label>체리블로썸</label>
+							</li>
+							
+							<li class="item">
+								<div class="chip" style="background-color: #bc4747"></div>
+								<label>썬키스트 오렌지</label>
+							</li>
+							
+							<li class="item">
+								<div class="chip" style="background-color: #9a3535"></div>
+								<label>바이올렛 로즈</label>
+							</li>
+
+							<li class="item addNew">
+								<div class="chip"></div>
+								<label>추가</label>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="myArticles" style="display: none">
+				<div class="buttonTabs scrollBox">
+					<div class="scrollItems">
+						<button type="button" class="on">뷰티팁</button>
+						<button type="button">제품평가</button>
+						<button type="button">자유톡</button>
+					</div>
+				</div>
+
+				<div class="buttonTabsContents">
+
+					<ul class="beautyTipList">
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">쿨톤미현</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<article>하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</article>
+								<a class="showMore">더보기</a>
+								<div class="hashButtons">
+									<a>태그</a>
+									<a>캔디</a>
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+
+								<button class="showMeMoreButton">
+									<span class="icon pinkStar"></span><span>237개의 관련 제품보기</span>
+								</button>
+
+							</div>
+							
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">웜톤미현</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<article>카인드베어 당신의 케이스에 그림같은 순간을 입혀드립니다 . 작가 추가 하는 작가 메시지 후원하기 공유하기. 홈 스토리 판매 작품 금손 클래스 구매 후기 프로필 ...</article>
+								<a class="showMore">더보기</a>
+								<div class="hashButtons">
+									<a>태그</a>
+									<a>캔디</a>
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+
+								<button class="showMeMoreButton">
+									<span class="icon pinkStar"></span><span>237개의 관련 제품보기</span>
+								</button>
+
+							</div>
+							
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li class="noItem">
+							<p class="pencil">아직 작성한 뷰티팁이 없어요.</p>
+						</li>
+						
+					</ul>
+
+					<ul class="productReviewList" style="display: none">
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">이쁘니</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">202시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="productInfoBox">
+									<div class="productPhoto"></div>
+									<ul>
+										<li class="productBrand">메이크업포에버</li>
+										<li class="productName">버시컬러 스테인</li>
+										<li class="productType">핫 스트릭</li>
+									</ul>
+								</div>
+
+								<div class="starBox">
+									<div>
+										<ul class="stars">
+											<li class="on"></li>
+											<li class="on"></li>
+											<li class="on"></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<div class="averageStar">3</div>
+									</div>
+
+									<div>
+										<button type="button" class="pinkSmallButton">이 제품 첫 리뷰</button>
+									</div>
+
+								</div>
+								
+								<ul class="productReviewReplyList">
+									<li class="thumbUp">너무 부드럽고 저렴한데다가 발색도 너무 좋아요.</li>
+									<li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+									<li class="tip">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+								</ul>
+								<a class="showMore">더보기</a>
+								
+								<div class="hashButtons">
+									<a>캔디</a>
+									<a>이뻐</a>
+									<a>비싸</a>
+								</div>
+
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">더워죽겠다</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">202시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="productInfoBox">
+									<div class="productPhoto"></div>
+									<ul>
+										<li class="productBrand">메이크업포에버</li>
+										<li class="productName">버시컬러 스테인</li>
+										<li class="productType">핫 스트릭</li>
+									</ul>
+								</div>
+
+								<div class="starBox">
+									<div>
+										<ul class="stars">
+											<li class="on"></li>
+											<li class="on"></li>
+											<li class="on"></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<div class="averageStar">3</div>
+									</div>
+
+									<div>
+										<button type="button" class="pinkSmallButton">이 제품 첫 리뷰</button>
+									</div>
+
+								</div>
+								
+								<ul class="productReviewReplyList">
+									<li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+								</ul>
+								<a class="showMore">더보기</a>
+								
+								<div class="hashButtons">
+									<a>캔디</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="noItem">
+							<p class="pencil">아직 작성한 제품 평가가 없어요.</p>
+						</li>
+					</ul>
+
+					<ul class="freeTalkList" style="display: none">
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">벵봉</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="talkType">일상톡</div>
+								<div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<a class="showMore">더보기</a>
+
+								<img src="../img/common/productPhoto3.jpg" />
+
+								<div class="hashButtons">
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">벵봉</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="talkType">일상톡</div>
+								<div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<a class="showMore">더보기</a>
+
+
+
+								<div class="hashButtons">
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+					
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">홍시라네</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">0시간전</div>
+								</div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="talkType">일상톡</div>
+								<div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<a class="showMore">더보기</a>
+
+								<div class="hashButtons">
+									<a>비싸</a>
+								</div>
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li class="noItem">
+							<p class="pencil">아직 작성한 자유톡이 없어요.</p>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+			
+			<section class="scrab" style="display: none">
+				<div class="buttonTabs scrollBox">
+					<div class="scrollItems">
+						<button type="button" class="on">제품</button>
+						<button type="button">브랜드</button>
+						<button type="button" class="lookAtMe">제품 평가</button>
+						<button type="button" class="lookAtMe">뷰티팁</button>
+						<button type="button">자유톡</button>
+					</div>
+				</div>
+
+				<div class="buttonTabsContents">
+
+					<ul class="productList">
+						<li class="noItem">
+							<p class="bookmark">아직 스크랩한 제품이 없어요.</p>
+						</li>
+
+						<li>
+							<div class="productPhoto"></div>
+							<div class="productPhoto2"></div>
+							<ul>
+								<li>스틸라 스틸라 스틸라 스틸라 스틸라 스틸라 </li>
+								<li>무드 인핸서 리퀴드</li>
+								<li><span class="personalColor spring"></span><span class="personalColor fall"></span>본 투비 피치</li>
+								<li>1,345,000원</li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="productPhoto"></div>
+							<div class="productPhoto2"></div>
+							<ul>
+								<li>스틸라</li>
+								<li>무드 인핸서 리퀴드무드 인핸서 리퀴드무드 인핸서 리퀴드무드 인핸서 리퀴드무드 인핸서 리퀴드무드 인핸서 리퀴드</li>
+								<li><span class="personalColor spring"></span><span class="personalColor fall"></span>본 투비 피치</li>
+								<li>1,345,000원</li>
+							</ul>
+						</li>
+						<li>
+							<div class="productPhoto"></div>
+							<div class="productPhoto2"></div>
+							<ul>
+								<li>스틸라</li>
+								<li>무드 인핸서 리퀴드</li>
+								<li><span class="personalColor spring"></span><span class="personalColor fall"></span><span class="personalColor spring"></span><span class="personalColor fall"></span><span class="personalColor spring"></span><span class="personalColor fall"></span><span class="personalColor spring"></span><span class="personalColor fall"></span><span class="personalColor spring"></span><span class="personalColor fall"></span>본 투비 피치</li>
+								<li>1,345,000원</li>
+							</ul>
+						</li>
+						<li>
+							<div class="productPhoto"></div>
+							<div class="productPhoto2"></div>
+							<ul>
+								<li>스틸라</li>
+								<li>무드 인핸서 리퀴드</li>
+								<li><span class="personalColor spring"></span><span class="personalColor fall"></span>본 투비 피치</li>
+								<li>1,345,000원</li>
+							</ul>
+						</li>
+						<li>
+							<div class="productPhoto"></div>
+							<div class="productPhoto2"></div>
+							<ul>
+								<li>스틸라</li>
+								<li>무드 인핸서 리퀴드</li>
+								<li><span class="personalColor spring"></span><span class="personalColor fall"></span>본 투비 피치</li>
+								<li>1,345,000원</li>
+							</ul>
+						</li>
+
+					</ul>
+
+					<ul class="brandList" style="display: none">
+						<li class="noItem">
+							<p class="bookmark">아직 스크랩한 브랜드가 없어요.</p>
+						</li>
+
+						<li>
+							<div class="productLogo">
+								<div class="lookAtMe"></div>
+							</div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+							<span class="productTag event"></span>
+						</li>
+						
+						<li>
+							<div class="productLogo"></div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+						</li>
+						
+						<li>
+							<div class="productLogo"></div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+							<span class="productTag new"></span>
+						</li>
+						
+						<li>
+							<div class="productLogo">
+								<div class="lookAtMe"></div>
+							</div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+						</li>
+						
+						<li>
+							<div class="productLogo">
+							</div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+						</li>
+						
+						<li>
+							<div class="productLogo">
+							</div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+						</li>
+						
+						<li>
+							<div class="productLogo">
+							</div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+						</li>
+						
+						<li>
+							<div class="productLogo">
+							</div>
+							<span class="productName">세로파컬랙션</span>
+							<span class="productCount">상품 127개</span>
+						</li>
+					</ul>
+
+					<ul class="productReviewList" style="display: none">
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">이쁘니</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">202시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="productInfoBox">
+									<div class="productPhoto"></div>
+									<ul>
+										<li class="productBrand">메이크업포에버</li>
+										<li class="productName">버시컬러 스테인</li>
+										<li class="productType">핫 스트릭</li>
+									</ul>
+								</div>
+
+								<div class="starBox">
+									<div>
+										<ul class="stars">
+											<li class="on"></li>
+											<li class="on"></li>
+											<li class="on"></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<div class="averageStar">3</div>
+									</div>
+
+									<div>
+										<button type="button" class="pinkSmallButton">이 제품 첫 리뷰</button>
+									</div>
+
+								</div>
+								
+								<ul class="productReviewReplyList">
+									<li class="thumbUp">너무 부드럽고 저렴한데다가 발색도 너무 좋아요.</li>
+									<li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+									<li class="tip">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+								</ul>
+								<a class="showMore">더보기</a>
+								
+								<div class="hashButtons">
+									<a>캔디</a>
+									<a>이뻐</a>
+									<a>비싸</a>
+								</div>
+
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">더워죽겠다</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">202시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="productInfoBox">
+									<div class="productPhoto"></div>
+									<ul>
+										<li class="productBrand">메이크업포에버</li>
+										<li class="productName">버시컬러 스테인</li>
+										<li class="productType">핫 스트릭</li>
+									</ul>
+								</div>
+
+								<div class="starBox">
+									<div>
+										<ul class="stars">
+											<li class="on"></li>
+											<li class="on"></li>
+											<li class="on"></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<div class="averageStar">3</div>
+									</div>
+
+									<div>
+										<button type="button" class="pinkSmallButton">이 제품 첫 리뷰</button>
+									</div>
+
+								</div>
+								
+								<ul class="productReviewReplyList">
+									<li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+								</ul>
+								<a class="showMore">더보기</a>
+								
+								<div class="hashButtons">
+									<a>캔디</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="noItem">
+							<p class="bookmark">아직 스크랩한 제품 평가가 없어요.</p>
+						</li>
+					</ul>
+
+					<ul class="beautyTipList" style="display: none">
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">쿨톤미현</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<article>하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</article>
+								<a class="showMore">더보기</a>
+								<div class="hashButtons">
+									<a>태그</a>
+									<a>캔디</a>
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+
+								<button class="showMeMoreButton">
+									<span class="icon pinkStar"></span><span>237개의 관련 제품보기</span>
+								</button>
+
+							</div>
+							
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">웜톤미현</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="listPhoto noScrollBar">
+								<img src="../img/common/productPhoto2.jpg" />
+								<img src="../img/common/productPhoto.jpg" />
+								<img src="../img/common/productPhoto2.jpg" />
+							</div>
+
+							<div class="productScrollButtons">
+								<div class="on"></div>
+								<div></div>
+								<div></div>
+							</div>
+
+							<div class="paddingFrame">
+								<article>카인드베어 당신의 케이스에 그림같은 순간을 입혀드립니다 . 작가 추가 하는 작가 메시지 후원하기 공유하기. 홈 스토리 판매 작품 금손 클래스 구매 후기 프로필 ...</article>
+								<a class="showMore">더보기</a>
+								<div class="hashButtons">
+									<a>태그</a>
+									<a>캔디</a>
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+
+								<button class="showMeMoreButton">
+									<span class="icon pinkStar"></span><span>237개의 관련 제품보기</span>
+								</button>
+
+							</div>
+							
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li class="noItem">
+							<p class="bookmark">아직 스크랩한 뷰티팁이 없어요.</p>
+						</li>
+						
+					</ul>
+
+					<ul class="freeTalkList" style="display: none">
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">벵봉</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="talkType">일상톡</div>
+								<div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<a class="showMore">더보기</a>
+
+								<img src="../img/common/productPhoto3.jpg" />
+
+								<div class="hashButtons">
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">벵봉</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">22시간전</div>
+								</div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="talkType">일상톡</div>
+								<div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<a class="showMore">더보기</a>
+
+
+
+								<div class="hashButtons">
+									<a>이뻐</a>
+									<a>비싸</a>
+									<a>빨갛다</a>
+								</div>
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+					
+						
+						<li>
+							<div class="writerInfo">
+								<div>
+									<div class="writerPhoto"></div>
+									<div class="writerName">홍시라네</div>
+									<div class="personalColor"></div>
+									<div class="personalColorText">가을웜</div>
+								</div>
+
+								<div>
+									<div class="whenDidShe">0시간전</div>
+								</div>
+							</div>
+
+							<div class="paddingFrame">
+								<div class="talkType">일상톡</div>
+								<div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+								<a class="showMore">더보기</a>
+
+								<div class="hashButtons">
+									<a>비싸</a>
+								</div>
+							</div>
+
+							<div class="socialInfoBox">
+								<div>
+									<div class="smallSocialIcons heartIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons replyIcon"></div>
+									<span>999+</span>
+									<div class="smallSocialIcons watchIcon"></div>
+									<span>999+</span>
+								</div>
+
+								<div>
+									<div class="socialIcons"></div>
+									<div class="socialIcons"></div>
+								</div>
+							</div>
+
+						</li>
+						
+						<li class="noItem">
+							<p class="bookmark">아직 스크랩한 자유톡이 없어요.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
 	</main>
+
+	<div class="blackAlert">12월 12일 출석이 완료되었습니다.</div>
+
+	<div class="messageBox">
+		<i>인생템</i>
+		<p>저 봄소프트인데, 이거를 바를때마다 주변분들이 뭐발랐나고 찰떡이라고 칭찬을 해주셔서 중요한 날이면 꼭 꼭 이 제품만 바르는 제 인생템이예요 :) 
+지속력까지 좋은 아이예요! 절대 단종안되길 ㅜ</p>
+		<div class="buttonBox">
+			<button type="button">닫기</button>
+			<button type="button" class="default">제품 보러가기</button>
+		</div>
+	</div>
+
+	<div class="layer" id="profileEdit">
+	@@include('include/profileEdit.html')
+	</div>
+
+	<script type="text/javascript">
+
+	// 큰 탭 (파우치, 나의 글, 스크랩)
+	$(".tabs li").on("click", function(){
+		$(this).addClass("on").siblings().removeClass("on");
+		var $tabContents = $("#" + $(this).parent(".tabs").attr("data-tab-id"));
+		if (!$tabContents.length) return;
+		var index = $(this).index();
+		$tabContents.children().hide();
+		$tabContents.children().eq(index).show();
+	});
+
+	// 출석체크 메세지 보여주기
+	$(".attendCheckBox").on("click", function(){
+		$(".blackAlert").css("bottom", 16);
+		setTimeout(function(){
+			$(".blackAlert").css("bottom", -100);
+		}, 2000);
+	});
+	
+	// 메세지 박스 보여주기
+	$(".drawer .item").on("click", function(){
+		$(".messageBox").css("bottom", 16);
+	});
+
+	// 메세지 박스내 닫는 버튼
+	$(".messageBox button").on("click", function(){
+		$(this).parents(".messageBox").css("bottom", -250);
+	});
+
+	// 버튼형 탭
+	$(".buttonTabs button").on("click", function() {
+		var index = $(this).index();
+		$(this).addClass("on").siblings().removeClass("on");
+		var $tabContents = $(this).parents(".buttonTabs").next(".buttonTabsContents");
+		if (!$tabContents.length) return;
+		$tabContents.children().hide();
+		$tabContents.children().eq(index).show();
+	});
+
+	// 프로필 수정 버튼
+	$(".profileBox .editButton").on("click", function(){
+		$("#profileEdit").addClass("show");
+	});
+
+	// 프로필 수정 닫기
+	$("#profileEdit header .backArrow").click(function() {
+		$("#profileEdit").removeClass("show");
+	});
+
+	// 스크롤 엔드 이벤트 생성
+	$.fn.scrollEnd = function(callback, timeout) {          
+		$(this).scroll(function(){
+			var $this = $(this);
+			if ($this.data('scrollTimeout')) {
+				clearTimeout($this.data('scrollTimeout'));
+			}
+			$this.data('scrollTimeout', setTimeout(function(){
+				callback($this);
+			}, timeout));
+		});
+	};
+
+	// 스크롤시 하단 버튼 이동
+	$(".listPhoto").scrollEnd(function($this){
+		var scrollLeft = $this[0].scrollLeft;
+		var itemWidth = $(window).width();
+		var index = Math.round(scrollLeft / itemWidth);
+		var $scrollBox = $this.next(".productScrollButtons");
+		if (!$scrollBox.length) return;
+		$scrollBox.children().eq(index).addClass("on").siblings().removeClass("on");
+	}, 100);
+
+	</script>
 </body>
 </html>
