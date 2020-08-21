@@ -1,6 +1,12 @@
 :root {
 	--whiteColor: #f9f9f9;
 	--pinkColor: #ff336c;
+	--blueColor: #3396ff;
+
+	--springColor : #ffbaba;
+	--summerColor : #73e9e4;
+	--autumnColor : #ff8a75;
+	--winterColor : #9293ff;
 }
 
 main { display: block; }
@@ -22,8 +28,22 @@ button:focus { outline: none; }
 
 /* 공통 */
 .flex { display: flex; }
+.flex.column { flex-direction: column; }
 .showMore { font-size: 14px; color: #cccccc; }
 .lookAtMe:before { content: ""; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: var(--pinkColor); }
+button[disabled] { color: #cccccc !important; }
+.dimmed { opacity: 0.3; }
+.textLeft { text-align: left; }
+.textRight { text-align: right; }
+.textCenter { text-align: center; }
+.inlineBlock { display: inline-block; }
+
+.pink { color: var(--pinkColor); }
+
+
+/* 최하단 버튼 */
+.bottomButton { border: none; padding: 20px; width: 100%; background-color: black; color: white; font-size: 16px; font-weight: bold;  }
+.bottomButton[disabled] { background-color: #cccccc;  }
 
 /* 헤더 메뉴 */
 header.showTitle h1 { display: block; }
@@ -32,29 +52,48 @@ header.showRight > .rightIcons { display: flex; }
 
 header { position: relative; padding: 0 16px; height: 60px; background-color: white; }
 header h1 { top: 18px; display:none; position: absolute; margin: auto; left: 0; right: 0; font-size: 20px; color: #000000; text-align: center; }
-header > * { flex: 0 0 auto; }
+header > * { flex: 0 0 auto; color: #333333; }
 header .leftIcons, header .rightIcons { display: none; position: absolute; top: 18px; };
 header .leftIcons { left: 16px; };
 header .rightIcons { right: 16px; };
-header .leftIcons > *, header .rightIcons > * { margin-right: 8px; border-radius: 50%; }
+header .leftIcons > *, header .rightIcons > * { margin-right: 16px; border-radius: 50%; }
 header .leftIcons > *:last-child, header .rightIcons > *:last-child { margin-right: 0; };
+header .fa-bell { position: relative; }
+header .fa-cog { font-size: 24px; }
+header .fa-chevron-left { font-size: 24px; color: #333333; }
 
 /* 아이콘들 */
-.backArrow { background-color: #999999; width: 24px; height: 24px; }
-.gearIcon { background-color: gray; width: 24px; height: 24px; }
-.bellIcon { position: relative; background-color: lightGray; width: 24px; height: 24px; }
-.bellIcon .lookAtMe:before { position: absolute; top:0; right: 0; }
+.fa-bell .lookAtMe:before { position: absolute; top:0; right: 0; }
 
 /* 프로필 박스 */
 .profileBox { margin: 4px 0 24px; display: flex; align-items: center; flex-direction: column; }
+.layer .profileBox { margin-bottom: 0; }
 .profileBox > * { flex: 0 0 auto; }
-.profileBox figure { position: relative; border-radius: 50%; width: 100px; height: 100px; background-color: lightGray; }
+.profileBox figure { background: url("../img/common/profilePicture.jpg") no-repeat center; background-size: cover; margin: 0 0 16px; position: relative; border-radius: 50%; width: 100px; height: 100px; background-color: lightGray; }
 .profileBox figure .editButton { position: absolute; width: 30px; height: 30px; border-radius: 50%; background-color: white; filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .15)); right: 0; bottom: 0; }
+.profileBox.editMode figure { margin: 0; }
 .profileBox.editMode figure .editButton { background-color: var(--pinkColor); }
 .profileBox figure .personalColor { position: absolute; width: 30px; height: 30px; border-radius: 50%; filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .15)); right: 0; top: 0; }
 .profileBox > h2.userId { white-space: nowrap; font-size: 16px; color: #333333; font-weight: bold; }
 .profileBox > h2.userId .levelText { font-size: 14px; color: var(--pinkColor); margin-left: 4px; }
 .profileBox .follwInfo { color: #999999; font-size: 14px; margin-top: 4px;  }
+.profileBox .profileEmail { display: flex; align-items: center; color: #666666; font-size: 12px; margin-top: 10px; text-align: center; }
+.profileBox .profileEmail .fa-facebook{ font-size: 18px; color: #445d98; margin-right: 8px; }
+.profileBox .profileEmail .fa-check { font-size: 14px; color: #3396ff; margin-left: 8px; }
+.profileBox .bottomButton { margin-top: 64px; }
+
+
+/* personalColor Box */
+.personalColorBox { display: flex; align-items: center; justify-content: space-between; }
+.profileBox .personalColorBox { margin-top: 18px; padding: 0 26px; }
+.personalColorBox .personalColor { width: 33px; height: 33px; }
+.personalColorBox div.flex.column { align-items: center; }
+.personalColorBox .personalColorTitle { margin-top: 8px; font-size: 14px; }
+.personalColorBox .personalColorTitle.spring { color: var(--springColor); }
+.personalColorBox .personalColorTitle.summer { color: var(--summerColor); }
+.personalColorBox .personalColorTitle.autumn { color: var(--autumnColor); }
+.personalColorBox .personalColorTitle.winter { color: var(--winterColor); }
+
 
 /* 프로필 내 해시태그 */
 .hashTags { justify-content: center; color: #333333; font-size: 14px; margin: 16px 16px 0;  display: flex; flex-wrap: wrap; line-height: 1.6; }
@@ -75,8 +114,10 @@ header .leftIcons > *:last-child, header .rightIcons > *:last-child { margin-rig
 .levelInfoBox .levelBar .progress { width: 56%; background-color: var(--pinkColor); border-radius: 5px; height: 10px; }
 .levelInfoBox .remainLevel { margin-top: 4px; color: #999999; font-size: 12px; }
 
-/* 출석체크 박스 */
-.attendCheckBox { width: 100%; background-color: white; border-radius: 2px; margin-top: 16px; padding: 17px 0; border: 1px solid var(--pinkColor); color: var(--pinkColor); font-size: 16px; font-weight: bold; text-align: center;  }
+/* 핑크 버튼 */
+.pinkButton { width: 100%; background-color: white; border-radius: 2px; margin-top: 16px; padding: 17px 0; border: 1px solid var(--pinkColor); color: var(--pinkColor); font-size: 16px; font-weight: bold; text-align: center;  }
+.pinkButton[disabled] { background-color: #f7f7f7; border-color: #ededed; }
+.pinkButton.fullColor { border-radius: 4px; color: white; background-color: var(--pinkColor); border: none;  }
 
 /* 이메일 인증박스 */
 .validateEmailBox { margin-top: 24px; text-align: center; border-radius: 2px; border: 1px solid #ededed; padding: 16px 20px; }
@@ -106,7 +147,6 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 /* 중앙의 큰 버튼 라벨 설정하기, 제품 추가하기 */
 .centerButtonBox { display: flex; padding: 16px 16px 24px; background-color: #f7f7f7; }
 .centerButtonBox button { font-size: 14px; padding: 16px 26px; flex: 1; border: 1px solid #ededed; color: #333333; background-color: white; }
-.centerButtonBox button[disabled] { color: #cccccc; }
 .centerButtonBox button:last-child { border-left: none; }
 
 /* 파우치 아이템의 태크, 인생탬,민거템 등, 컬로로 분리 */
@@ -125,7 +165,7 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 .paddingFrame { padding: 0 16px; width: 100%; box-sizing: border-box; }
 
 /* 하단 알림 상자 */
-.blackAlert { transition: bottom 0.5s; padding: 20px 16px; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; color: white; font-size: 16px; text-align: center; position: fixed; bottom: -100px; left: 16px; right: 16px; }
+.blackAlert { line-height: 1.7; text-align: left; z-index: 1; transition: bottom 0.5s; padding: 20px 16px; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; color: white; font-size: 16px; position: fixed; bottom: -100px; left: 16px; right: 16px; }
 
 /* 작은 버튼 형 탭 */
 .buttonTabs { padding: 16px; overflow-x: auto; }
@@ -161,10 +201,13 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .buttonBox button { background-color: white; font-size: 14px; color: #333333; border: 1px solid #ededed; padding: 8px 16px; }
 .buttonBox button.default { color: var(--pinkColor); }
 
+
 /* personalColor Icons */
-.personalColor { width: 18px; height: 18px; background: url("../img/common/personalColor.png") no-repeat; background-size: contain; }
-.personalColor.spring { background-image: url("../img/common/personalColor2.png"); }
-.personalColor.fall { background-image: url("../img/common/personalColor.png"); }
+.personalColor { width: 18px; height: 18px; background-repeat: no-repeat; background-size: contain; background-position: center; }
+.personalColor.spring { background-image: url("../img/common/spring.png"); }
+.personalColor.summer { background-image: url("../img/common/summer.png"); }
+.personalColor.autumn { background-image: url("../img/common/autumn.png"); }
+.personalColor.winter { background-image: url("../img/common/winter.png"); }
 
 /* 뷰티팁 리스트 */
 .beautyTipList { background-color: #ededed; }
@@ -285,11 +328,53 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 
 
 /* layer */
-.layer { transition: left 0.4s; position: fixed; top: 0; left:100%; background-color: white; width: 100%; height:  100%; }
-.layer.show { left: 0; }
+.layer { overflow-y: auto; box-shadow: 0px 0 80px rgba(0, 0, 0, 0); transition: left 0.4s, box-shadow 0.4s; position: fixed; top: 0; left:100%; background-color: white; width: 100%; height:  100%; }
+.layer.show { left: 0; box-shadow: 0px 0 50px rgba(0, 0, 0, 0.2); }
 
 /* 프로필 수정 */
 .profileBox.editMode {  }
-.profileBox.editMode i { margin-bottom: 16px; display: block; font-style: normal; font-size: 14px; color: #666666; }
-.profileBox.editMode input[type='email'] { padding: 7px 8px; height: 26px; width: 100%; border: none; border-bottom: 1px solid #cccccc; color: #333333; font-size: 16px; }
-.profileBox.editMode .attendCheckBox { margin-top: 35px; }
+.profileBox.editMode i { margin: 40px 0 0px; display: block; font-style: normal; font-size: 14px; color: #666666; }
+.profileBox.editMode i.sub { margin-top: 4px; color: #666666; font-size: 12px; }
+.profileBox.editMode i.sub.pink { color: var(--pinkColor); }
+.profileBox.editMode i.sub.blue { color: var(--blueColor); }
+.profileBox.editMode i:first-child { margin-top: 32px; }
+.profileBox.editMode input[type='text'],
+.profileBox.editMode input[type='tel'],
+.profileBox.editMode input[type='email']
+{ transition: border-color .5s; padding: 7px 8px; height: 26px; width: 100%; border: none; border-bottom: 1px solid #cccccc; color: #333333; font-size: 16px; margin-top: 16px; }
+.profileBox.editMode input[type='text']:focus,
+.profileBox.editMode input[type='tel']:focus,
+.profileBox.editMode input[type='email']:focus
+{ border-bottom-color: black; }
+.profileBox.editMode input[type='text'].pink,
+.profileBox.editMode input[type='tel'].pink,
+.profileBox.editMode input[type='email'].pink
+{ border-bottom-color: var(--pinkColor); }
+.profileBox.editMode .buttonBox { margin-top: 8px; }
+.profileBox.editMode .validateEmail { margin-top: 35px; }
+.profileBox.editMode .setStyleButton { margin-top: 16px; }
+
+
+/* 회색 박스 */
+.grayBox { background-color: #f7f7f7; padding: 16px; color: #999999; font-size: 14px; line-height: 17px; }
+.profileBox.editMode .grayBox { margin-top: 24px; }
+.grayBox p { text-align: justify; white-space: pre-line; }
+.grayBox .title { text-align: center; color: #333333; margin-bottom: 8px; }
+.grayBox .title.left { text-align: left;  }
+
+/* 스타일 태그 */
+.styleTags { margin-top: 16px; display: flex; flex-wrap: wrap;  }
+.styleTags a { flex: 0 0 auto; margin: 0 8px 8px 0; border-radius: 8px; border: 1px solid #ededed; background-color: white; color: #333333; font-size: 14px; padding: 7px 15px; }
+.styleTags a:last-child { margin-right: 0; }
+
+/* 프로필 수정의 SNS 계정 */
+.snsAccounts { margin-top: 19px; }
+.snsAccounts > li { margin-top: 35px; display: flex; align-items: center; position: relative; }
+.snsAccounts > li:first-child { margin-top: 0;; }
+.snsAccounts > li > * { flex: 0 0 auto;  }
+.snsAccounts > li > input[type='text'] { color: #cccccc; margin-top: 0 !important; flex: 1 0 0; font-size: 14px;  }
+.snsAccounts > li > input[type='text']::placeholder { color: #cccccc; }
+.snsAccounts > li  span { background-color: lightGray; width: 24px; height: 24px; border-radius: 50%; margin-right: 8px;  }
+.snsAccounts > li  button { position: absolute; bottom: 1px; right: 0; padding: 9px 16px 4px; color: #cccccc; border: none; background-color: white; font-size: 14px; }
+
+.snsAccount + .grayBox title { margin-bottom: 16px; }
