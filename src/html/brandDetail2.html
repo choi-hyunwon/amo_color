@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+@@include('../html/include/head.html', { title : "Amore"})
+<body>
+
+<header class="showLeft showTitle">
+@@include('../html/include/header.html', { "title" : "브랜드관" })
+</header>
+<main class="brandDetail">
+	<div class="brandInfoBox eventTag">
+		<div class="relative">
+			<figure>
+				<img src="../img/common/sampleLogo01.png" />
+			</figure>
+		</div>
+		<div class="brandName">투페이스드</div>
+	</div>
+	
+	<p class="infoBox">당당하고 강인한 자아와 내면 그 깊은 곳에서부터 존재하는 나만의 아름다움을 스스로 발견하고 자신 있게 드러내는 것이 투페이스드의 신념입니다.</p>
+
+	<img class="brandDetailPhoto" src="../img/common/sampleProductPhoto04.jpg" />
+
+	<h3>브랜드 추천 제품</h3>
+	@@include("partial/productScrollBox.html")
+
+	<!-- 소셜 정보 박스 -->
+	@@include("partial/socialInfoBox.html")
+
+	<!-- 덧글 목록 -->
+	@@include("partial/replyList.html")
+
+	<div class="infoBox"><span>2,345</span>명이 응원중</div>
+	
+	<div class="paddingFrame">
+		<button type="button" class="pinkButton">응원 댓글 남기고 선물 받기</button>
+	</div>
+
+	<h3>브랜드 인기 제품</h3>
+	@@include("partial/productScrollBox.html")
+
+	<!-- 풀다운 제품 리스트 -->
+	@@include("partial/pullDownProductList.html", { on : "on", none: ""})
+
+</main>
+
+<script type="text/javascript">
+	// 좋아요 토글
+	$(".snsLikeIcon").click(function(){
+		$(this).toggleClass("on");
+	});
+
+	$(".pullDownArrow").click(function(){
+		var $list = $(this).parents("div").next("ul");
+		$list.slideToggle();
+		$(this).toggleClass("on");
+	});
+</script>
+</body>
+</html>
