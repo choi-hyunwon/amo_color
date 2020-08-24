@@ -78,7 +78,6 @@ button.black { color: black; border-color: black; }
 .snsSmallLikeIcon,
 .snsSmallLikeIcon:before { background: url("../img/common/snsLikeIcon.png") no-repeat center; width: 25px; height: 23px; background-size: 15px 14px;  }
 .snsSmallLikeIcon:before { content: ""; display: block; transition: transform 0.4s, opacity 0.4s; transform: scale(2); position: absolute; opacity: 0; background-image: url("../img/common/snsLikeIconOn.png"); }
-.snsSmallLikeIcon.on { background-image: url("../img/common/snsLikeIconOn.png"); }
 .snsSmallLikeIcon.on:before { opacity: 1; transform: scale(1); }
 .snsSmallReplyIcon { background: url("../img/common/snsReplyIcon.png") no-repeat center; width: 15px; height: 14px; background-size: 15px 14px; }
 .snsSmallWatchIcon { background: url("../img/common/snsWatchIcon.png") no-repeat center; width: 18px; height: 12px; background-size: 18px 12px; }
@@ -87,7 +86,6 @@ button.black { color: black; border-color: black; }
 .snsLikeIcon:before
 { position: relative; transition: background-image 0.4s; background: url("../img/common/snsLikeIcon.png") no-repeat center; width: 25px; height: 23px; background-size: 25px 23px;  }
 .snsLikeIcon:before { content: ""; display: block; transition: transform 0.4s, opacity 0.4s; transform: scale(2); position: absolute; opacity: 0; background-image: url("../img/common/snsLikeIconOn.png"); }
-.snsLikeIcon.on { background-image: url("../img/common/snsLikeIconOn.png"); }
 .snsLikeIcon.on:before { opacity: 1; transform: scale(1); }
 .snsBookmarkIcon { background: url("../img/common/snsBookmarkIcon.png") no-repeat center; width: 18px; height: 23px; background-size: 18px 23px;  }
 
@@ -129,7 +127,7 @@ input { transition: background-color 0.4s, border-color 0.4s; }
 input:before { transition: opacity 0.4s; }
 
 /* 최하단 버튼 */
-.bottomButton { border: none; padding: 20px; width: 100%; background-color: black; color: white; font-size: 16px; font-weight: bold;  }
+.bottomButton { border: none; padding: 20px; width: 100%; background-color: black; color: white; font-size: 16px; font-weight: bold; border-radius: 0; }
 .bottomButton[disabled] { background-color: #cccccc; color: white !important; }
 
 /* 헤더 메뉴 */
@@ -189,10 +187,11 @@ header .bellIcon { position: relative; }
 .snsBox { justify-content: center; width: 100%; list-style: none; margin: 0; padding: 0; display: flex; margin-top: 16px; }
 .snsBox li { margin: 4px; height: 36px; flex: 0 0 36px; border-radius: 50%; }
 
-.snsInstagram { background-image: linear-gradient(215deg, purple, orange); }
-.snsYoutube { background-color: #f43434; }
-.snsFacebook { background-color: #003980; }
-.snsNaver { background-color: green; }
+
+.snsInstagram { width: 36px; height: 36px; background: url("../img/common/snsIcons.png") no-repeat; background-size: 144px 36px; background-position: 0 0; }
+.snsYoutube { width: 36px; height: 36px; background: url("../img/common/snsIcons.png") no-repeat; background-size: 144px 36px; background-position: -36px 0; }
+.snsFacebook { width: 36px; height: 36px; background: url("../img/common/snsIcons.png") no-repeat; background-size: 144px 36px; background-position: -72px 0; }
+.snsNaver { width: 36px; height: 36px; background: url("../img/common/snsIcons.png") no-repeat; background-size: 144px 36px; background-position: -108px 0; }
 
 /* 레벨 진행상황 박스 */
 .infoBox { border-radius: 2px; padding: 24px 16px; border: 1px solid #ededed; }
@@ -211,7 +210,7 @@ header .bellIcon { position: relative; }
 
 /* 이메일 인증박스 */
 .validateEmailBox { margin-top: 24px; text-align: center; }
-.validateEmailBox p { letter-spacing: -0.9px; font-size: 14px; color: black; }
+.validateEmailBox p { letter-spacing: -0.9px; font-size: 14px; color: black; text-align: center; }
 .validateEmailBox button { margin-top: 13px; }
 
 /* 오케이버튼 */
@@ -229,7 +228,8 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 .drawer > li i { top: 24px; left: 16px; position: absolute; font-style: normal; font-size: 12px; color:#333333; }
 .drawer .item { margin-right: 8px; flex-shrink: 0; width: 84px; height: 124px; position: relative; }
 .drawer .item .shadow { box-shadow: none !important; background-image: linear-gradient(#e7e7e7, #acacac); position: absolute; height: 4px; width: 74px; filter: blur(2px); bottom: 14px; border-radius: 50%; }
-.drawer .item .photo { position: relative; width: 66px; height: 108px; background-color: white; }
+.drawer .item figure { position: relative; width: 66px; height: 108px; background-color: white; padding: 4px 8px; }
+.drawer .item figure img { width: 50px; height: 100px; object-fit: cover; ovject-position: center; }
 .drawer .item .itemTag { position: absolute; top: 16px; left: 58px;  }
 .drawer .item .itemName { width: 66px; text-align: center; margin-top: 4px; color: #999999; font-size: 12px; font-weight: bold; }
 .pouch li.noItem { padding: 0 0 30px; min-height: 183px; }
@@ -366,9 +366,9 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .starBox { align-items: center; display: flex; justify-content: space-between; }
 .starBox > div { display: flex; align-items: center; }
 .starBox .stars { display: flex; align-items: center; }
-.starBox .stars li { border-radius: 50%; margin-right: 4px; border-width: 50%; width: 14px; height: 13px; background-color: #ededed; }
+.starBox .stars li { border-radius: 50%; margin-right: 4px; border-width: 50%; width: 14px; height: 13px; background: url("../img/common/starIcon.png") no-repeat center; background-size: 14px 13px; }
 .starBox .stars li:last-child { margin-right: 0;}
-.starBox .stars li.on { background-color: #ffe600 }
+.starBox .stars li.on { background-image: url("../img/common/starIconOn.png"); }
 .starBox .averageStar { margin-left: 8px; font-size: 12px; color: #747783; }
 .pinkSmallButton { border-radius: 2px; color: var(--pinkColor); border: 1px solid var(--pinkColor); background-color: white; padding: 2px 4px; font-size: 10px; }
 
@@ -463,7 +463,12 @@ label.subTitle:first-child { margin-top: 32px; }
 .snsAccounts > li:first-child { margin-top: 0; }
 .snsAccounts > li > * { flex: 0 0 auto;  }
 .snsAccounts > li > input[type='text'] { height: 24px; color: #333333; margin-top: 0 !important; flex: 1 0 0; font-size: 14px;  }
-.snsAccounts > li  span { width: 24px; height: 24px; border-radius: 50%; margin-right: 8px;  }
+.snsAccounts > li  span { width: 24px; height: 24px; border-radius: 50%; margin-right: 8px; background-size: 96px 24px; }
+
+.snsAccounts .snsInstagram { background-position: 0 0; }
+.snsAccounts .snsYoutube { background-position: -24px 0; }
+.snsAccounts .snsFacebook { background-position: -48px 0; }
+.snsAccounts .snsNaver { background-position: -72px 0; }
 .snsAccounts > li  button { position: absolute; bottom: 1px; right: 0; padding: 9px 16px 4px; color: black; border: none; background-color: white; font-size: 14px; }
 .snsAccount + .grayBox title { margin-bottom: 16px; }
 
@@ -552,7 +557,7 @@ input.agreeForExpose { float: left; margin-top: 4px; }
 .brandInfoBox { margin-top: 16px; display: flex; flex-direction: column; align-items: center; position: relative; }
 .brandInfoBox figure { background-color: #e1e1e1; width: 120px; height: 120px; background-color: #ffd7d7; border-radius: 50%; overflow: hidden; }
 .brandInfoBox figure img { width: 120px; height: 120px; display: block; object-fit:cover; object-position: center; }
-.brandInfoBox.eventTag .relative:before { content: ""; display: block; position: absolute; width: 40px; height: 14px; background: url("../img/common/event.png") no-repeat center; top: 8px; right: 0; }
+.brandInfoBox.eventTag .relative:before { content: ""; display: block; position: absolute; width: 40px; height: 14px; background: url("../img/common/tagEvent.png") no-repeat center; top: 8px; right: 0; }
 .brandInfoBox .brandName { margin-top: 16px; text-align: center; font-weight: bold; color: black; font-size: 20px; }
 .brandInfoBox + .infoBox { margin: 16px 0 8px; text-align: center; border-left: none; border-right: 0; border-bottom: 0; padding: 16px; line-height: 17px; font-size: 14px; text-align: center; }
 
@@ -597,7 +602,7 @@ h3 + .productScrollBox { margin-top: 18px; }
 .replyList .addReply { font-size: 12px; color: #999999; margin-left: 9px; }
 .replyList .more { position: absolute; top: 16px; right: 24px; }
 
-.brandDetail .pinkButton, .brandDetail3 .pinkButton { margin-top: 24px; }
+.brandDetail .pinkButton, .brandDetail3 .pinkButton, #editProfileLayer .pinkButton { margin-top: 24px; }
 .brandDetail .socialInfoBox { border-bottom: 1px solid #ededed; }
 
 /* 풀 다운 제품 (브랜드 디테일 2) */
