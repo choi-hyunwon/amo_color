@@ -1,0 +1,176 @@
+<div class="layer" id="editProfileLayer">
+	<header class="showLeft showTitle">
+		@@include('../include/header.html', { title : "프로필 수정" })
+	</header>
+
+	<div class="profileBox editMode">
+
+		<div class="relative">
+			<figure>
+				<img src="../img/common/sampleProfilePicture1.jpg" />
+			</figure>
+			<div class="editButton"></div>
+		</div>
+
+		<div class="profileEmail">
+			<span class="fab fa-facebook"></span>
+			<span>colortailor@colortailor.com</span>
+			<span class="fas fa-check"></span>
+		</div>
+	</div>
+	<div class="paddingFrame">
+
+		<label class="subTitle">닉네임</label class="subTitle">
+		<input class="inputStyle" type="text" name="nickName" maxlength="10" />
+		<span class="isValid">닉네임은 최대 10자 이내입니다.</span>
+		<div class="buttonBox">
+			<button type="button" class="default" disabled data-for="nickname">중복확인</button>
+		</div>
+
+		<label class="subTitle">태어난 년도</label class="subTitle">
+		<input class="inputStyle" type="tel" />
+		<span class="isValid blue">올바른 형식입니다.</span>
+
+
+		<label class="subTitle">이메일</label class="subTitle">
+		<input class="inputStyle" type="email" class="pink" />
+		<label class="subTitle isValid pink">올바르지 않은 이메일 형식입니다.</label class="subTitle">
+
+		<button class="pinkButton validateEmail">이메일 인증하기</button>
+		<!-- <button class="pinkButton validateEmail" disabled>이메일 인증하기</button> -->
+
+	</div>
+
+	<div class="grayBox">
+		<div class="title">이메일 인증</div>
+		<p>1. 이메일 인증은 최초 1회에 한해서 진행됩니다.
+			2. 인증후에는 이메일 주소 변경이 불가합니다.
+			3. 이메일 인증을 하지 않아도 컬러테일러 앱 내 대부분의 서비스 이용이 가능합니다.
+			4. 단, 레벨이나 뱃지, 쿠폰 등의 일부 기능은 사용이 제한됩니다.
+			5. 인증 메일은 발송 시점으로부터 24시간 동안 유효합니다.
+			6. 재발송 시 기존 코드가 만료되오니 반드시 가장 최근에 수신된 메일을 확인해주세요.
+			7. 메일이 도착하지 않는다면 스팸함을 확인해주세요.</p>
+	</div>
+
+	<div class="paddingFrame">
+		<label class="subTitle">스타일 태그</label>
+		<div class="styleTags">
+			<a>월급노예</a>
+			<a>봉순언니헤어</a>
+			<a>러블리</a>
+			<a>항상풀메</a>
+			<a>욜로</a>
+		</div>
+		<button type="button" class="pinkButton setStyleButton">설정하기</button>
+
+		<label class="subTitle">퍼스널 컬러</label>
+		<div class="personalColorBox">
+			<div class="flex column dimmed">
+				<div class="personalColor spring"></div>
+				<div class="personalColorText spring">봄웜</div>
+			</div>
+			<div class="flex column">
+				<div class="personalColor summer"></div>
+				<div class="personalColorText summer">여름쿨</div>
+			</div>
+			<div class="flex column dimmed">
+				<div class="personalColor autumn"></div>
+				<div class="personalColorText autumn">가울웜</div>
+			</div>
+			<div class="flex column dimmed">
+				<div class="personalColor winter"></div>
+				<div class="personalColorText winter">겨울쿨</div>
+			</div>
+		</div>
+
+		<label class="subTitle">SNS 계정</label>
+		<ul class="snsAccounts">
+			<li>
+				<span class="snsInstagram"></span>
+				<input class="inputStyle" type="text" name="snsInstagram" placeholder="www.instagram.com/사용자ID" />
+				<button type="button" disabled>확인</button>
+			</li>
+			<li class="isValid blue">올바른 형식입니다.</li>
+			<li>
+				<span class="snsYoutube"></span>
+				<input class="inputStyle" type="text" name="snsYoutube" placeholder="www.youtube.com/상세URL" />
+				<button type="button" disabled>확인</button>i>
+			</li>
+			<li class="isValid blue">올바른 형식입니다.</li>
+			<li>
+				<span class="snsFacebook"></span>
+				<input class="inputStyle" type="text" name="snsFacebook" placeholder="www.facebook.com/사용자ID" />
+				<button type="button" disabled>확인</button>i>
+			</li>
+			<li class="isValid pink">올바르지 않은 형식입니다.</li>
+			<li>
+				<span class="snsNaver"></span>
+				<input class="inputStyle" type="text" name="snsNaver" placeholder="blog.naver.com/사용자ID" />
+				<button type="button" disabled>확인</button>i>
+			</li>
+			<li class="isValid blue">올바른 형식입니다.</li>
+		</ul>
+
+		<div class="grayBox">
+			<strong class="title left inlineBlock">프로필에 나의 SNS 계정 공개</strong>
+			<p><span class="pink">유튜브</span>는 ‘맞춤 URL’이 있는 채널만 등록이 가능하며, ‘설정’ → ‘고급 설정’에서 조회할 수 있습니다.</p>
+			<p><span class="pink">페이스북</span>은 나의 프로필 내 ‘프로필 설정’에서 확인할 수 있습니다. </p>
+			<p><span class="pink">네이버 블로그</span> 주소는 네이버에서 제공하는 URL 양식만 등록이 가능합니다. (개인도메인 등록 불가)</p>
+		</div>
+
+		<button type="button" class="pinkButton setPersonalInfo fullColor">개인정보 수정</button>
+
+	</div>
+
+	<button type="button" class="bottomButton">저장</button>
+
+
+</div>
+
+<script type="text/javascript">
+	// 인풋 활성화 바인딩
+	$("#editProfileLayer [name='nickName']").on("keyup", function () {
+		;
+		var $button = $("#editProfileLayer button[data-for='nickname']");
+		if ($(this).val()) {
+			$button.removeAttr("disabled");
+		} else {
+			$button.attr("disabled", true);
+		}
+	});
+
+	// sns 버튼 활성/비활성
+	$("[name='snsInstagram'], [name='snsYoutube'], [name='snsFacebook'], [name='snsNaver']").on("keyup", function () {
+		var $button = $(this).siblings("button");
+		if ($(this).val()) {
+			$button.removeAttr("disabled");
+		} else {
+			$button.attr("disabled", true);
+		}
+	});
+
+	// 스타일 설정하기 버튼
+	$(".setStyleButton").on("click", function () {
+		showLayer($("#setStyleLayer"));
+	});
+
+	// 퍼스널컬러 선택하기
+	$(".personalColorBox > *").on("click", function () {
+		$(this).removeClass("dimmed").siblings().addClass("dimmed");
+	});
+
+	// 이메일 인증하기
+	$(".validateEmail").on("click", function () {
+		showBlackAlert("이메일이 발송되었습니다. 메일함을 확인해주세요.");
+	});
+
+	// 개인정보 수정 버튼
+	$(".setPersonalInfo").on("click", function () {
+		showLayer($("#editPersonalInfoLayer"));
+	});
+
+	// 저장 버튼 (닫기)
+	$("#editProfileLayer .bottomButton").click(function () {
+		hideLayer("#editProfileLayer");
+	});
+</script>
