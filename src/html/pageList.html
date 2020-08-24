@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+@@include('../html/include/head.html', {
+	title : "Amore - 페이지 리스트"
+})
+<style type="text/css">
+h4 { margin: 30px; }
+h4 span { font-size: 15px; color: #aaaaaa; }
+#wrap { display: flex; margin: 30px; flex-wrap: wrap; }
+#wrap li > .listTitle { display: block; padding: 10px 0px; color: #777777; font-size: 13px; margin:0; }
+#wrap li > .listTitle a { color: #aaaaaa; font-size: 12px; text-decoration: underline; }
+#wrap li > .listTitle a:hover { color:#777777; }
+iframe { border:1px solid #e0e0e0; box-sizing: content-box; box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05); display: block; position: static; width: 320px; margin: 0px 30px 30px 0; height: auto; height: 568px; }
+iframe:hover { border-color: black; }
+</style>
+<body>
+	<h4>페이지 리스트 <span>0</span></h4>
+	<ul id="wrap">
+		<li>
+			<label class="listTitle">My - <a href="my.html">my.html</a></label>
+			<iframe src="my.html" width="320" height="568"></iframe>
+		</li>
+		<li>
+			<label class="listTitle">브랜드 리스트 - <a href="brandList.html">brandList.html</a></label>
+			<iframe src="brandList.html" width="320" height="568"></iframe>
+		</li>
+		<li>
+			<label class="listTitle">브랜드 디테일 - <a href="brandDetail.html">brandDetail.html</a></label>
+			<iframe src="brandDetail.html" width="320" height="568"></iframe>
+		</li>
+		<li>
+			<label class="listTitle">브랜드 디테일 2 - <a href="brandDetail2.html">brandDetail2.html</a></label>
+			<iframe src="brandDetail2.html" width="320" height="568"></iframe>
+		</li>
+		<li>
+			<label class="listTitle">브랜드 디테일 3 - <a href="brandDetail3.html">brandDetail2.html</a></label>
+			<iframe src="brandDetail3.html" width="320" height="568"></iframe>
+		</li>
+	</ul>
+
+	<script type="text/javascript">
+	var count = $("iframe").length;
+	$("body > h4 span").text("(" + count + ")");
+	</script>
+</body>
+</html>

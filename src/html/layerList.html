@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+@@include('../html/include/head.html', {
+	title : "Amore - 레이어 리스트"
+})
+<style type="text/css">
+h4 { margin: 30px; }
+h4 span { font-size: 15px; color: #aaaaaa; }
+#wrap { display: flex; margin: 30px; flex-wrap: wrap; }
+#wrap > li { flex: 0 0 0; display: flex; flex-direction: column; }
+#wrap li > .listTitle { display: block; padding: 10px 0px; color: #777777; font-size: 13px; margin:0; }
+#wrap li > .listTitle a { color: #aaaaaa; font-size: 12px; text-decoration: underline; }
+#wrap li > .listTitle a:hover { color:#777777; }
+.layer { border:1px solid #e0e0e0; box-sizing: content-box; box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05); flex: 0 0 auto; display: block; position: static; width: 320px; margin: 0px 30px 30px 0; height: auto; min-height: 568px; }
+.layer:hover { border-color: black; }
+</style>
+<body>
+	<h4>레이어 리스트 <span>0</span></h4>
+	<ul id="wrap">
+		<li>
+			<label class="listTitle">내 프로필 수정 레이어 - <a href="../../src/html/layer/editProfile.html">layer/editProfile.html</a></label>
+			@@include('layer/editProfile.html', { title : "111" })
+
+			<label class="listTitle">스타일 설정 레이어 - <a href="../../src/html/layer/setStyle.html">layer/setStyle.html</a></label>
+			@@include('layer/setStyle.html')
+
+			<label class="listTitle">팔로워/팔로잉 정보 리스트 레이어 - <a href="../../src/html/layer/followInfo.html">layer/followInfo.html</a></label>
+			@@include('layer/followInfo.html')
+		</li>
+		<li>
+			<label class="listTitle">다른 유저 프로필 보기 레이어 - <a href="../../src/html/layer/otherProfile.html">layer/otherProfile.html</a></label>
+			@@include('layer/otherProfile.html')
+
+			<label class="listTitle">나의 컬러칩 레이어 - <a href="../../src/html/layer/myColorChips.html">layer/myColorChips.html</a></label>
+			@@include('layer/myColorChips.html')
+
+			<label class="listTitle">컬러칩 추가 레이어 - <a href="../../src/html/layer/addColorChips.html">layer/addColorChips.html</a></label>
+			@@include('layer/addColorChips.html')
+		</li>
+		<li>
+			<label class="listTitle">개인정보 수정 레이어 - <a href="../../src/html/layer/editPersonalInfo.html">layer/editPersonalInfo.html</a></label>
+			@@include('layer/editPersonalInfo.html')
+
+			<label class="listTitle">개인정보 수정 레이어 2 - <a href="../../src/html/layer/editPersonalInfo2.html">layer/editPersonalInfo2.html</a></label>
+			@@include('layer/editPersonalInfo2.html')
+
+			<label class="listTitle">라벨 설정하기 리스트 레이어 - <a href="../../src/html/layer/setLabel.html">layer/setLabel.html</a></label>
+			@@include('layer/setLabel.html')
+		</li>
+		<li>
+			<label class="listTitle">라벨 추가하기 레이어 - <a href="../../src/html/layer/addLabel.html">layer/addLabel.html</a></label>
+			@@include('layer/addLabel.html')
+
+			<label class="listTitle">라벨 설정 저장 레이어 - <a href="../../src/html/layer/saveLabel.html">layer/saveLabel.html</a></label>
+			@@include('layer/saveLabel.html')
+		</li>
+	</ul>
+
+	<script type="text/javascript">
+	var count = $("#wrap > li > .layer").length;
+	$("body > h4 span").text("(" + count + ")");
+	</script>
+</body>
+</html>
