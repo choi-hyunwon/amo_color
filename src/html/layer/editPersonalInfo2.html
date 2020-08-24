@@ -1,0 +1,31 @@
+<div class="layer flex column" id="editPersonalInfoLayer2">
+	<div>
+		<header class="showLeft showTitle">
+		@@include('../include/header.html', { title : "개인정보수정"})
+		</header>
+
+		<div class="paddingFrame">
+			<label class="subTitle">이름(선택)</label>
+			<input class="inputStyle" name="name" type="text" placeholder="이름을 입력해 주세요." />
+			
+			<label class="subTitle">휴대전화(선택)</label>
+			<input class="inputStyle" name="phone" type="tel" placeholder="전화번호를 입력해 주세요." />
+			
+			<label class="subTitle addressSelectTitle">주소(선택)</label>
+			<ul>
+				<li class="flex"><input class="inputStyle" name="zipCode" type="text" placeholder="우편번호" /><button type="button" class="black marginLeft16">우편번호 검색</button></li>
+				<li><input class="inputStyle" name="address" type="text" placeholder="주소" /></li>
+				<li><input class="inputStyle" name="address2" type="text" placeholder="주소2" /></li>
+			</ul>
+		</div>
+	</div>
+	<div>
+		<button type="button" class="bottomButton savePersonalInfoButton">저장하기</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(".savePersonalInfoButton").click(function(){
+	hideLayer($(this));
+});
+</script>

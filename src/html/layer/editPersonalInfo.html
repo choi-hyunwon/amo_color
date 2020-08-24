@@ -1,0 +1,32 @@
+<div class="layer flex column" id="editPersonalInfoLayer">
+	<div>
+		<header class="showLeft showTitle">
+		@@include('../include/header.html', { title : "개인정보수정" })
+		</header>
+			<p class="layerSubtitle">소중한 정보보호를 위해<br/>비밀번호를 입력해 주세요.</p>
+			<div class="paddingFrame">
+				<label class="subTitle" placeholder="비밀번호를 입력해 주세요.">비밀번호</label>
+				<input class="inputStyle" name="personalPassword" type="password" />
+			</div>
+	</div>
+
+	<div>
+		<button type="button" class="bottomButton nextPersonalInfoButton" disabled>다음</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+//비밀번호 필드 활성화/비활성화
+$("[name='personalPassword']").on("keyup", function(){
+	if ($(this).val()) {
+		$(".nextPersonalInfoButton").removeAttr("disabled");
+	} else {
+		$(".nextPersonalInfoButton").attr("disabled", true);
+	}
+});
+
+$(".nextPersonalInfoButton").on("click", function(){
+	hideLayer($("#editPersonalInfoLayer"));
+	showLayer($("#editPersonalInfoLayer2"));
+});
+</script>
