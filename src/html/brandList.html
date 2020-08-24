@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+
+<header class="showLeft showTitle">
+@@include('include/header.html', { title : "브랜드" })
+</header>
+<main>
+@@include("partial/brandList.html", {
+	display : "block",
+	sticky : '<li class="sticky">이벤트중인 브랜드</li>'
+})
+@@include("partial/brandList.html", {
+	display : "block",
+	sticky : '<li class="sticky">신규입점 한 브랜드</li>'
+})
+@@include("partial/brandList.html", {
+	display : "block",
+	sticky : '<li class="sticky">기타</li>'
+})
+</main>
+
+<script type="text/javascript">
+</script>
+</body>
+</html>
