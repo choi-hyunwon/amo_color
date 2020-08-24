@@ -11,6 +11,8 @@
 
 main { display: block; }
 
+body { font-family: sans-serif; }
+
 ul { margin: 0; padding: 0; list-style: none; }
 figure { margin: 0; }
 a { font-size: inherit; color: inherit; outline: none; }
@@ -43,7 +45,10 @@ button { transition: color 0.5s, border-color 0.5s; white-space: nowrap; }
 button[disabled] { color: #cccccc !important; border-color: #ededed !important; }
 i { font-style: normal; }
 p { text-align: justify; word-break: break-all;  }
+label { display: inline; margin: 0; }
 label + label { margin-left: 8px; }
+
+span.textCount { font-size: 12px; color: #cccccc; }
 
 .flex { display: flex !important; }
 .flex.column { flex-direction: column; }
@@ -76,7 +81,7 @@ button.black { color: black; border-color: black; }
 // 아이콘
 .plusProductIcon { width: 36px; height: 36px; background: url("../img/common/plusIcon.png") no-repeat center transparent; background-size: 27px 27px; padding: 6px; }
 .snsSmallLikeIcon,
-.snsSmallLikeIcon:before { background: url("../img/common/snsLikeIcon.png") no-repeat center; width: 25px; height: 23px; background-size: 15px 14px;  }
+.snsSmallLikeIcon:before { background: url("../img/common/snsLikeIcon.png") no-repeat center; width: 18px; height: 18px; background-size: 15px 14px;  }
 .snsSmallLikeIcon:before { content: ""; display: block; transition: transform 0.4s, opacity 0.4s; transform: scale(2); position: absolute; opacity: 0; background-image: url("../img/common/snsLikeIconOn.png"); }
 .snsSmallLikeIcon.on:before { opacity: 1; transform: scale(1); }
 .snsSmallReplyIcon { background: url("../img/common/snsReplyIcon.png") no-repeat center; width: 15px; height: 14px; background-size: 15px 14px; }
@@ -136,7 +141,7 @@ header.showTitle h1 { display: block; }
 header.showLeft > .leftIcons { display: flex; }
 header.showRight > .rightIcons { display: flex; }
 
-header h1 { top: 18px; display:none; position: absolute; margin: auto; left: 0; right: 0; font-size: 20px; color: #000000; text-align: center; }
+header h1 { font-weight: bold; top: 18px; display:none; position: absolute; margin: auto; left: 0; right: 0; font-size: 20px; color: #000000; text-align: center; }
 header > * { flex: 0 0 auto; color: #333333; }
 header .leftIcons, header .rightIcons { display: none; position: absolute; top: 18px; };
 header .leftIcons { left: 16px; };
@@ -160,6 +165,7 @@ header .bellIcon { position: relative; }
 .profileBox > h2.userInfo { margin-top: 24px; white-space: nowrap; font-size: 16px; color: #333333; font-weight: bold; }
 .profileBox > h2.userInfo .levelText { font-size: 14px; color: var(--pinkColor); margin-left: 4px; }
 .profileBox .follwInfo { color: #999999; font-size: 14px; margin-top: 4px;  }
+.profileBox .introduceMe { font-size: 14px; color: #cccccc; margin-top: 16px; }
 .profileBox .profileEmail { display: flex; align-items: center; color: #666666; font-size: 12px; margin-top: 10px; text-align: center; }
 .profileBox .profileEmail .fa-facebook{ font-size: 18px; color: #445d98; margin-right: 8px; }
 .profileBox .profileEmail .fa-check { font-size: 14px; color: #3396ff; margin-left: 8px; }
@@ -257,7 +263,7 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 .paddingFrame { padding: 0 16px; width: 100%; box-sizing: border-box; }
 
 /* 하단 알림 상자 */
-.blackAlert { line-height: 1.7; text-align: left; z-index: 1; transition: bottom 0.5s; padding: 20px 16px; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; color: white; font-size: 16px; position: fixed; bottom: -100px; left: 16px; right: 16px; z-index: 10; }
+.blackAlert { text-align: center; line-height: 1.7; z-index: 1; transition: bottom 0.5s; padding: 20px 16px; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; color: white; font-size: 16px; position: fixed; bottom: -100px; left: 16px; right: 16px; z-index: 10; }
 
 /* 작은 버튼 형 탭 */
 .buttonTabs { padding: 16px; overflow-x: auto; }
@@ -341,7 +347,7 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .socialInfoBox > div { display: flex; align-items: center; }
 .socialInfoBox > div:first-child { justify-content: flex-start; }
 .socialInfoBox > div:last-child { justify-content: flex-end; }
-.socialInfoBox > div span { font-size: 12px; color: #999999; margin-right: 8px; }
+.socialInfoBox > div span { font-size: 12px; color: #999999; }
 .socialInfoBox > div span:last-child { margin-right: 0; }
 .socialInfoBox .snsSmallLikeIcon,
 .socialInfoBox .snsSmallReplyIcon,
@@ -350,13 +356,14 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .socialInfoBox > div > span { margin-left: 4px; }
 .socialInfoBox > div > *:first-child { margin-left: 0; }
 
-.socialInfoBox > div:last-child > * { margin-left: 16px; }
+.socialInfoBox > div:last-child > * { margin-left: 25px; }
 
 
 /* 제품 정보 박스 */
 .productInfoBox { height: 70px; padding: 9px 24px; border: 1px solid #ededed; background-color: white; position: relative; }
-.productInfoBox .productPhoto { background-color: lightGray; height: 50px; width: 50px; position: absolute; top: 9px; left: 24px; }
-.productInfoBox > ul { margin-left: 73px; }
+.productInfoBox figure { background-color: lightGray; height: 50px; width: 25px; position: absolute; top: 9px; left: 24px; }
+.productInfoBox figure img { width: 25px; height: 50px; object-fit: cover; object-position: center; }
+.productInfoBox > ul { margin-left: 49px; }
 .productInfoBox .productBrand { font-size: 12px; color: #999999; }
 .productInfoBox .productName { font-size: 16px; color: #333333; font-weight: bold; }
 .productInfoBox .productType { font-size: 12px; color: #333333; }
@@ -373,11 +380,11 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .pinkSmallButton { border-radius: 2px; color: var(--pinkColor); border: 1px solid var(--pinkColor); background-color: white; padding: 2px 4px; font-size: 10px; }
 
 .productReviewReplyList { font-size: 14px; color: #666666; line-height: 1.8; }
-.productReviewReplyList li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.productReviewReplyList li:before { border-radius: 50%; vertical-align: middle; content:""; display: inline-block; width: 24px; height: 24px; margin-right: 16px; background-color: lightGray;  }
-.productReviewReplyList li.thumbUp:before {   }
-.productReviewReplyList li.thumbDown:before {   }
-.productReviewReplyList li.tip:before {   }
+.productReviewReplyList li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 9px; }
+.productReviewReplyList li:before { vertical-align: middle; content:""; display: inline-block; width: 24px; height: 24px; margin-right: 16px;  }
+.productReviewReplyList li.thumbUp:before { background: url("../img/common/iconThumbUp.png") no-repeat center; background-size: 24px 24px; }
+.productReviewReplyList li.thumbDown:before { background: url("../img/common/iconThumbDown.png") no-repeat center; background-size: 24px 24px; }
+.productReviewReplyList li.tip:before { background: url("../img/common/iconTip.png") no-repeat center; background-size: 24px 24px; }
 .productReviewReplyList + .showMore { margin-top: 8px; display: inline-block; }
 
 /* 제품 평가 */
@@ -433,9 +440,9 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 
 /* 프로필 수정 */
 .profileBox.editMode {  }
-label.subTitle { margin: 40px 0 0px; display: block; font-style: normal; font-size: 14px; color: #666666; }
+label.subTitle { margin: 40px 0 0px; display: block; font-style: normal; font-size: 14px; color: #666666; padding-left: 8px; }
 label.subTitle:first-child { margin-top: 32px; }
-.isValid { margin-top: 4px; color: #666666; font-size: 12px; display: inline-block; }
+.isValid { margin-top: 4px; color: #666666; font-size: 12px; display: inline-block; padding-left: 8px; }
 .isValid.pink { color: var(--pinkColor); }
 .isValid.blue { color: var(--blueColor); }
 #editProfileLayer .buttonBox { margin-top: 8px; }
@@ -459,7 +466,7 @@ label.subTitle:first-child { margin-top: 32px; }
 /* 프로필 수정의 SNS 계정 */
 .snsAccounts { margin-top: 19px; }
 .snsAccounts > li { margin-top: 35px; display: flex; align-items: center; position: relative; }
-.snsAccounts > li.isValid { padding-left: 40px; margin-top: 4px; }
+.snsAccounts > li .isValid { padding-left: 40px; position: absolute; bottom: -17px; left: 0; }
 .snsAccounts > li:first-child { margin-top: 0; }
 .snsAccounts > li > * { flex: 0 0 auto;  }
 .snsAccounts > li > input[type='text'] { height: 24px; color: #333333; margin-top: 0 !important; flex: 1 0 0; font-size: 14px;  }
@@ -497,10 +504,11 @@ label.subTitle:first-child { margin-top: 32px; }
 /* 컬러칩 추가 레이어 */
 .colorChipList { background-color: #f7f7f7; padding: 14px 14px 14px 22px; }
 .colorChipList > li { margin-bottom: 9px; display: flex; flex-wrap: wrap; position: relative; }
-.colorChipList > li:before { content: ""; display: block; position: absolute; top: 0; left: -11px; width: 5px; height: calc(100% - 2px); border-radius: 4px; }
+.colorChipList > li .beforeColorChip { flex: 0 0 auto; position: absolute; width: 5px; height: calc(100% - 2px); top: 0; left: -11px; }
+/*.colorChipList > li:before { content: ""; display: block; position: absolute; top: 0; left: -11px; width: 5px; height: calc(100% - 2px); border-radius: 4px; }
 .colorChipList > li:nth-child(1):before { background-color: #dc0e0e; }
 .colorChipList > li:nth-child(2):before { background-color: #ff85b5; }
-.colorChipList > li:nth-child(3):before { background-color: #ff6a1e; }
+.colorChipList > li:nth-child(3):before { background-color: #ff6a1e; } */
 .colorChipList > li > div { flex: 0 0 auto; width: 44px; height: 44px;border-radius: 4px; margin: 0 3px 2px 0; background-color: lightGray; }
 .colorChipList > li > div.on { display: flex; align-items: center; justify-content: center; font-family: "Font Awesome 5 Free"; font-weight: 900; color: white; }
 .colorChipList > li > div.on:before { content: "\f00c" }
@@ -546,11 +554,13 @@ input.agreeForExpose { float: left; margin-top: 4px; }
 /* 제품 라벨 설정 레이어 */
 #saveLabelLayer .paddingFrame .flex label { font-size: 14px; color: #333333; } 
 #saveLabelLayer .paddingFrame .flex span { vertical-align: middle; } 
-#saveLabelLayer .grayBox { position: relative; color: #666666; } 
+#saveLabelLayer .grayBox { position: relative; color: #666666; margin-top: 16px; } 
 #saveLabelLayer .grayBox p { margin-left: 34px; } 
 #saveLabelLayer .grayBox .itemTag { position: absolute; top: 24px; left: 8px; } 
-#saveLabelLayer textarea { color: #333333; margin-top: 16px; width: 100%; font-size: 14px; margin-top: 16px; border: 1px solid #ededed; padding: 16px; border-radius: 4px; resize: none; min-height: 132px; appearance: none; -webkit-appearance: none; }
+#saveLabelLayer textarea { color: #333333; margin-top: 16px; width: 100%; font-size: 14px; margin-top: 16px; border: 1px solid #ededed; padding: 16px; border-radius: 4px; resize: none; min-height: 132px; appearance: none; -webkit-appearance: none; display: block; }
+#saveLabelLayer .textCount { position: absolute; right: 16px; bottom: 8px; }
 #saveLabelLayer .grayInfo { margin-top: 19px; color: #666666; }
+#saveLabelLayer .buttonBox { margin-top: 8px; }
 #saveLabelLayer .buttonBox { margin-top: 8px; }
 
 /* 브랜드관 (brandDetail) */
@@ -573,7 +583,7 @@ h3 { font-size: 20px; font-weight: bold; color: #000000; }
 h3 + .productScrollBox { margin-top: 18px; }
 .productScrollBox > ul { display: inline-flex; }
 .productScrollBox > ul > li { overflow: hidden; background-color: white; border: 1px solid #ededed; width: 120px; /* height:201px; */ margin-right: 16px;  }
-.productScrollBox > ul > li > img { width: 100%; height: 131px; border-bottom: 1px solid #ededed; object-fit: cover; }
+.productScrollBox > ul > li > img { width: 100%; height: 131px; border-bottom: 1px solid #ededed; object-fit: contain; }
 .productScrollBox > ul > li > ul { padding: 16px 16px; }
 .productScrollBox > ul > li > ul > li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .productScrollBox > ul > li > ul > li:nth-child(1) { font-size: 12px; color: #999999; }
@@ -595,7 +605,7 @@ h3 + .productScrollBox { margin-top: 18px; }
 .replyList > li ul li:nth-child(3) { font-size: 12px; color: #cccccc; margin-top: 12px; }
 .replyList + .infoBox { border-radius: 0; padding: 20px 0; text-align: center; font-size: 16px; color: #333333; }
 .replyList + .infoBox span { font-weight: bold; }
-.replyList .snsSmallLikeIcon { position: absolute; top: calc(50% - 12px); right: 16px; }
+.replyList .snsSmallLikeIcon { position: absolute; top: calc(50% - 9px); right: 21px; }
 
 .replyList .reply { background-color: #f7f7f7;  padding-left: 48px; }
 .replyList .reply figure { left: 48px; }

@@ -18,13 +18,21 @@
 	</div>
 
 	<h2 class="userInfo"><span class="nickName">테일러 스위프트</span><span class="levelText">16Lv.</span></h2>
-	<h3 class="follwInfo"><span>팔로워 1,200</span> &VerticalBar; <span>팔로잉 2,094,123</span></h3>
-	<h3 class="hashTags"><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>구려</a><a>마징가</a></h3>
+	<div class="follwInfo"><span>팔로워 1,200</span> &VerticalBar; <span>팔로잉 2,094,123</span></div>
+	<div class="hashTags"><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>졸리다</a><a>배고프다</a><a>앙꼬빵</a><a>구려</a><a>마징가</a></div>
+	<div class="introduceMe">나를 소개하는 태그를 설정해주세요.</div>
 	<ul class="snsBox">
 		<li class="snsInstagram"></li>
 		<li class="snsYoutube"></li>
 		<li class="snsFacebook"></li>
 		<li class="snsNaver"></li>
+	</ul>
+	
+	<ul class="snsBox">
+		<li class="snsInstagram dimmed"></li>
+		<li class="snsYoutube dimmed"></li>
+		<li class="snsFacebook dimmed"></li>
+		<li class="snsNaver dimmed"></li>
 	</ul>
 </div>
 	<div class="paddingFrame">
@@ -39,13 +47,15 @@
 			<div class="remainLevel"><strong>17</strong>레벨까지 <strong>26</strong>컬러가 남았어요!</div>
 		</div>
 		<button class="pinkButton attendencyCheck">출석체크 하기</button>
-		
-		<div class="infoBox validateEmailBox">
-			<p>이메일을 인증하고 다양한 혜택을 누려보세요!</p>
-			<button type="button" class="okButton">이메일 인증</button>
-		</div>
 	</div>
-
+	<div class="paddingFrame">
+		<button class="pinkButton attendencyCheck" disabled>출석체크 하기</button>
+	</div>
+	
+	<div class="infoBox validateEmailBox">
+		<p>이메일을 인증하고 다양한 혜택을 누려보세요!</p>
+		<button type="button" class="okButton">이메일 인증</button>
+	</div>
 
 
 	<ul class="tabs" data-tab-id="mainTabs">
@@ -221,7 +231,11 @@
 					<i>립밤 (9)</i>
 					<div class="scrollBox">
 						<ul class="scrollItems">
-							
+							<li class="item">
+								<div class="shadow"></div>
+								<figure><img src="../img/common/samplePouchProduct01.jpg" /></figure>
+								<div class="itemName">로즈버디</div>
+							</li>
 						</ul>
 					</div>
 				</li>
@@ -419,7 +433,11 @@
 
 						<div class="paddingFrame">
 							<div class="productInfoBox">
-								<div class="productPhoto"></div>
+
+								<figure>
+									<img src="../img/common/sampleLipStick01.jpg" />
+								</figure>
+
 								<ul>
 									<li class="productBrand">메이크업포에버</li>
 									<li class="productName">버시컬러 스테인</li>
@@ -495,7 +513,9 @@
 
 						<div class="paddingFrame">
 							<div class="productInfoBox">
-								<div class="productPhoto"></div>
+								<figure>
+									<img src="../img/common/sampleLipStick02.jpg" />
+								</figure>
 								<ul>
 									<li class="productBrand">메이크업포에버</li>
 									<li class="productName">버시컬러 스테인</li>
@@ -710,7 +730,9 @@
 
 						<div class="paddingFrame">
 							<div class="productInfoBox">
-								<div class="productPhoto"></div>
+								<figure>
+									<img src="../img/common/sampleLipStick03.jpg" />
+								</figure>
 								<ul>
 									<li class="productBrand">메이크업포에버</li>
 									<li class="productName">버시컬러 스테인</li>
@@ -786,7 +808,9 @@
 
 						<div class="paddingFrame">
 							<div class="productInfoBox">
-								<div class="productPhoto"></div>
+								<figure>
+									<img src="../img/common/sampleLipStick04.jpg" />
+								</figure>
 								<ul>
 									<li class="productBrand">메이크업포에버</li>
 									<li class="productName">버시컬러 스테인</li>
@@ -1156,7 +1180,7 @@
 
 	// 이메일 인증하기
 	$(".validateEmailBox .okButton").on("click", function(){
-		showBlackAlert("이메일이 발송되었습니다. 메일함을 확인해주세요.");
+		showBlackAlert("이메일이 발송되었습니다.<br />메일함을 확인해주세요.");
 	});
 
 	// 스크롤 엔드 이벤트 생성
@@ -1254,7 +1278,7 @@
 
 	function showBlackAlert(string, time) {
 		if (!time) time = 2000;
-		$(".blackAlert").text(string);
+		$(".blackAlert").html(string);
 		$(".blackAlert").css("bottom", 16);
 		setTimeout(function(){
 			$(".blackAlert").css("bottom", -100);
