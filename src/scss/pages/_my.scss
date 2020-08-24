@@ -12,7 +12,7 @@
 main { display: block; }
 
 ul { margin: 0; padding: 0; list-style: none; }
-
+figure { margin: 0; }
 a { font-size: inherit; color: inherit; outline: none; }
 a, a:link, a:hover, a:active, a:visited { text-decoration: none; }
 
@@ -26,31 +26,118 @@ a, a:link, a:hover, a:active, a:visited { text-decoration: none; }
 /* 버튼 아웃라인 없애기 */
 button:focus { outline: none; }
 
+
+/* 셈플 이미지용 ( 삭제 가능 ) */
+.samplePhoto01 { background-image: url("../img/common/sampleProfilePicture2.jpg") !important; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.samplePhoto02 { background-image: url("../img/common/sampleProfilePicture3.jpg") !important; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.samplePhoto03 { background-image: url("../img/common/sampleProfilePicture4.jpg") !important; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.samplePhoto04 { background-image: url("../img/common/sampleProfilePicture5.jpg") !important; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.samplePhoto05 { background-image: url("../img/common/sampleProfilePicture6.jpg") !important; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.samplePhoto06 { background-image: url("../img/common/sampleProfilePicture7.jpg") !important; background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+
 /* 공통 */
-.flex { display: flex; }
+input::placeholder,
+textarea::placeholder { color: #cccccc; }
+button { transition: color 0.5s, border-color 0.5s; white-space: nowrap; }
+button[disabled] { color: #cccccc !important; border-color: #ededed !important; }
+i { font-style: normal; }
+p { text-align: justify; word-break: break-all;  }
+label + label { margin-left: 8px; }
+
+.flex { display: flex !important; }
 .flex.column { flex-direction: column; }
+.flex1 { flex: 1; }
 .showMore { font-size: 14px; color: #cccccc; }
+.lookAtMe { position: relative; }
 .lookAtMe:before { content: ""; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: var(--pinkColor); }
-button[disabled] { color: #cccccc !important; }
 .dimmed { opacity: 0.3; }
 .textLeft { text-align: left; }
 .textRight { text-align: right; }
 .textCenter { text-align: center; }
 .inlineBlock { display: inline-block; }
-
 .pink { color: var(--pinkColor); }
+.blue { color: var(--blueColor); }
+.relative { position: relative; }
+.none { display: none; }
 
+.marginLeft16 { margin-left: 16px; }
+.marginRight16 { margin-right: 16px; }
+
+
+.layer.flex > div:first-child { flex: 1 0 auto; }
+
+// 버튼 스타일
+button { background-color: white; font-size: 14px; color: #333333; border: 1px solid #ededed; padding: 8px 16px; background-color: white; border-radius: 2px; }
+button + button { margin-left: 8px; }
+button.default { color: var(--pinkColor); }
+button.black { color: black; border-color: black; }
+
+// 아이콘
+.plusProductIcon { width: 36px; height: 36px; background: url("../img/common/plusIcon.png") no-repeat center transparent; background-size: 27px 27px; padding: 6px; }
+.snsSmallLikeIcon,
+.snsSmallLikeIcon:before { background: url("../img/common/snsLikeIcon.png") no-repeat center; width: 25px; height: 23px; background-size: 15px 14px;  }
+.snsSmallLikeIcon:before { content: ""; display: block; transition: transform 0.4s, opacity 0.4s; transform: scale(2); position: absolute; opacity: 0; background-image: url("../img/common/snsLikeIconOn.png"); }
+.snsSmallLikeIcon.on { background-image: url("../img/common/snsLikeIconOn.png"); }
+.snsSmallLikeIcon.on:before { opacity: 1; transform: scale(1); }
+.snsSmallReplyIcon { background: url("../img/common/snsReplyIcon.png") no-repeat center; width: 15px; height: 14px; background-size: 15px 14px; }
+.snsSmallWatchIcon { background: url("../img/common/snsWatchIcon.png") no-repeat center; width: 18px; height: 12px; background-size: 18px 12px; }
+
+.snsLikeIcon,
+.snsLikeIcon:before
+{ position: relative; transition: background-image 0.4s; background: url("../img/common/snsLikeIcon.png") no-repeat center; width: 25px; height: 23px; background-size: 25px 23px;  }
+.snsLikeIcon:before { content: ""; display: block; transition: transform 0.4s, opacity 0.4s; transform: scale(2); position: absolute; opacity: 0; background-image: url("../img/common/snsLikeIconOn.png"); }
+.snsLikeIcon.on { background-image: url("../img/common/snsLikeIconOn.png"); }
+.snsLikeIcon.on:before { opacity: 1; transform: scale(1); }
+.snsBookmarkIcon { background: url("../img/common/snsBookmarkIcon.png") no-repeat center; width: 18px; height: 23px; background-size: 18px 23px;  }
+
+.brandTag { border-radius: 2px; font-size: 9px; margin-left: 10px; color: white; padding: 2px 5px; width: 40px; height: 14px; background-size: cover }
+.brandTag.event { background-image: url("../img/common/tagEvent.png"); }
+.brandTag.new { background-image: url("../img/common/tagNew.png"); }
+
+.tagNewPlate { width: 30px; height: 14px; background: url("../img/common/tagNewPlate.png") no-repeat; background-size: 30px 14px; display: block; }
+.more { width: 9px; height: 18px; background: url("../img/common/replyMoreIcon.png") no-repeat; background-size: cover; display: block;}
+.backArrow { width: 24px; height: 24px; background: url("../img/common/backArrow.png") no-repeat; background-size: cover; display: block; }
+.bellIcon { width: 24px; height: 24px; background: url("../img/common/bellIcon.png") no-repeat; background-size: cover; display: block; }
+.gearIcon { width: 24px; height: 24px; background: url("../img/common/gearIcon.png") no-repeat; background-size: cover; display: block; }
+
+// 인풋스타일
+input[type='text'].inputStyle,
+input[type='tel'].inputStyle,
+input[type='email'].inputStyle,
+input[type='password'].inputStyle
+{ transition: border-color .5s; padding: 7px 8px; height: 26px; width: 100%; border: none; border-bottom: 1px solid #cccccc; color: #333333; font-size: 16px; margin-top: 16px; }
+input[type='text'].inputStyle:focus,
+input[type='tel'].inputStyle:focus,
+input[type='email'].inputStyle:focus,
+input[type='password'].inputStyle:focus
+{ border-bottom-color: black; }
+input[type='text'].inputStyle.pink,
+input[type='tel'].inputStyle.pink,
+input[type='email'].inputStyle.pink,
+input[type='password'].inputStyle.pink
+{ border-bottom-color: var(--pinkColor); }
+
+input[type='checkbox'] { border: none; vertical-align: middle; border-radius: 50%; width: 20px; height: 20px; appearance: none; -webkit-appearance: none; color: white; background: url("../img/common/checkBox.png") no-repeat 45% center #cccccc; background-size: 60%; }
+input[type='checkbox']:checked { background-color: var(--pinkColor); }
+input[type='radio'] { margin-right: 4px; vertical-align: middle; width: 20px; height: 20px; appearance: none; -webkit-appearance: none; border: 1px solid #ededed; border-radius: 50%; background-color: white; position: relative; }
+input[type='radio']:checked { border-color: var(--pinkColor); }
+input[type='radio']:before { content: ""; opacity: 0; display: block; width: 12px; height: 12px; border-radius: 50%; background-color: var(--pinkColor); position: absolute; top: 3px; left: 3px; }
+input[type='radio']:checked:before { content: ""; opacity: 1; }
+
+input { transition: background-color 0.4s, border-color 0.4s; }
+input:before { transition: opacity 0.4s; }
 
 /* 최하단 버튼 */
 .bottomButton { border: none; padding: 20px; width: 100%; background-color: black; color: white; font-size: 16px; font-weight: bold;  }
-.bottomButton[disabled] { background-color: #cccccc;  }
+.bottomButton[disabled] { background-color: #cccccc; color: white !important; }
 
 /* 헤더 메뉴 */
+header { position: relative; padding: 0 16px; height: 60px; background-color: white; }
 header.showTitle h1 { display: block; }
 header.showLeft > .leftIcons { display: flex; }
 header.showRight > .rightIcons { display: flex; }
 
-header { position: relative; padding: 0 16px; height: 60px; background-color: white; }
 header h1 { top: 18px; display:none; position: absolute; margin: auto; left: 0; right: 0; font-size: 20px; color: #000000; text-align: center; }
 header > * { flex: 0 0 auto; color: #333333; }
 header .leftIcons, header .rightIcons { display: none; position: absolute; top: 18px; };
@@ -58,41 +145,38 @@ header .leftIcons { left: 16px; };
 header .rightIcons { right: 16px; };
 header .leftIcons > *, header .rightIcons > * { margin-right: 16px; border-radius: 50%; }
 header .leftIcons > *:last-child, header .rightIcons > *:last-child { margin-right: 0; };
-header .fa-bell { position: relative; }
-header .fa-cog { font-size: 24px; }
-header .fa-chevron-left { font-size: 24px; color: #333333; }
+header .bellIcon { position: relative; }
 
 /* 아이콘들 */
-.fa-bell .lookAtMe:before { position: absolute; top:0; right: 0; }
+.bellIcon .lookAtMe { position: absolute; top:0; right: 0; }
 
 /* 프로필 박스 */
 .profileBox { margin: 4px 0 24px; display: flex; align-items: center; flex-direction: column; }
 .layer .profileBox { margin-bottom: 0; }
 .profileBox > * { flex: 0 0 auto; }
-.profileBox figure { background: url("../img/common/profilePicture.jpg") no-repeat center; background-size: cover; margin: 0 0 16px; position: relative; border-radius: 50%; width: 100px; height: 100px; background-color: lightGray; }
-.profileBox figure .editButton { position: absolute; width: 30px; height: 30px; border-radius: 50%; background-color: white; filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .15)); right: 0; bottom: 0; }
-.profileBox.editMode figure { margin: 0; }
-.profileBox.editMode figure .editButton { background-color: var(--pinkColor); }
-.profileBox figure .personalColor { position: absolute; width: 30px; height: 30px; border-radius: 50%; filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .15)); right: 0; top: 0; }
-.profileBox > h2.userId { white-space: nowrap; font-size: 16px; color: #333333; font-weight: bold; }
-.profileBox > h2.userId .levelText { font-size: 14px; color: var(--pinkColor); margin-left: 4px; }
+.profileBox figure { overflow: hidden; background: url("../img/common/sampleProfilePicture1.jpg") no-repeat center; background-size: cover; position: relative; border-radius: 50%; width: 100px; height: 100px; background-color: lightpink; }
+.profileBox figure img { display: block; object-fit: cover; object-position: center; width: 100px; height: 100px;  }
+.profileBox .relative .editButton { position: absolute; width: 32px; height: 32px; border-radius: 50%; background: url("../img/common/smallPencilIcon.png") no-repeat white center; background-size: 18px 18px; filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .15)); right: 0; bottom: 0; }
+.profileBox.editMode .relative .editButton { background: url("../img/common/cameraIcon.png") no-repeat center var(--pinkColor); background-size: 32px 32px; }
+.profileBox .relative .personalColor { position: absolute; width: 30px; height: 30px; border-radius: 50%; filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .15)); right: 0; top: 0; }
+.profileBox > h2.userInfo { margin-top: 24px; white-space: nowrap; font-size: 16px; color: #333333; font-weight: bold; }
+.profileBox > h2.userInfo .levelText { font-size: 14px; color: var(--pinkColor); margin-left: 4px; }
 .profileBox .follwInfo { color: #999999; font-size: 14px; margin-top: 4px;  }
 .profileBox .profileEmail { display: flex; align-items: center; color: #666666; font-size: 12px; margin-top: 10px; text-align: center; }
 .profileBox .profileEmail .fa-facebook{ font-size: 18px; color: #445d98; margin-right: 8px; }
 .profileBox .profileEmail .fa-check { font-size: 14px; color: #3396ff; margin-left: 8px; }
-.profileBox .bottomButton { margin-top: 64px; }
+.my .pinkButton { margin-top: 16px; }
 
 
 /* personalColor Box */
 .personalColorBox { display: flex; align-items: center; justify-content: space-between; }
-.profileBox .personalColorBox { margin-top: 18px; padding: 0 26px; }
 .personalColorBox .personalColor { width: 33px; height: 33px; }
-.personalColorBox div.flex.column { align-items: center; }
-.personalColorBox .personalColorTitle { margin-top: 8px; font-size: 14px; }
-.personalColorBox .personalColorTitle.spring { color: var(--springColor); }
-.personalColorBox .personalColorTitle.summer { color: var(--summerColor); }
-.personalColorBox .personalColorTitle.autumn { color: var(--autumnColor); }
-.personalColorBox .personalColorTitle.winter { color: var(--winterColor); }
+.personalColorBox div.flex.column { align-items: center; transition: opacity 0.3s;}
+.personalColorBox .personalColorText { margin-top: 8px; font-size: 14px; }
+.personalColorText.spring { color: var(--springColor); }
+.personalColorText.summer { color: var(--summerColor); }
+.personalColorText.autumn { color: var(--autumnColor); }
+.personalColorText.winter { color: var(--winterColor); }
 
 
 /* 프로필 내 해시태그 */
@@ -101,12 +185,18 @@ header .fa-chevron-left { font-size: 24px; color: #333333; }
 .hashTags > a:before { content: "#"; }
 .hashTags > a:last-child { margin-right: 0; }
 
-/* sns 모음 */
+/* 프로필  정보 sns 모음 */
 .snsBox { justify-content: center; width: 100%; list-style: none; margin: 0; padding: 0; display: flex; margin-top: 16px; }
-.snsBox li { margin: 4px; height: 36px; flex: 0 0 36px; border-radius: 50%; background-color: lightGray; }
+.snsBox li { margin: 4px; height: 36px; flex: 0 0 36px; border-radius: 50%; }
+
+.snsInstagram { background-image: linear-gradient(215deg, purple, orange); }
+.snsYoutube { background-color: #f43434; }
+.snsFacebook { background-color: #003980; }
+.snsNaver { background-color: green; }
 
 /* 레벨 진행상황 박스 */
-.levelInfoBox { border-radius: 2px; padding: 24px 16px; margin-top: 24px; border: 1px solid #ededed; }
+.infoBox { border-radius: 2px; padding: 24px 16px; border: 1px solid #ededed; }
+.levelInfoBox { margin-top: 24px; }
 .levelInfoBox .levelInfos { font-size: 14px; display: flex; justify-content: space-between; }
 .levelInfoBox .levelInfos .level { color: var(--pinkColor); }
 .levelInfoBox .levelInfos .levelFraction { color: #333333; text-align: right; }
@@ -115,12 +205,12 @@ header .fa-chevron-left { font-size: 24px; color: #333333; }
 .levelInfoBox .remainLevel { margin-top: 4px; color: #999999; font-size: 12px; }
 
 /* 핑크 버튼 */
-.pinkButton { width: 100%; background-color: white; border-radius: 2px; margin-top: 16px; padding: 17px 0; border: 1px solid var(--pinkColor); color: var(--pinkColor); font-size: 16px; font-weight: bold; text-align: center;  }
+.pinkButton { width: 100%; background-color: white; border-radius: 2px; padding: 17px 0; border: 1px solid var(--pinkColor); color: var(--pinkColor); font-size: 16px; font-weight: bold; text-align: center;  }
 .pinkButton[disabled] { background-color: #f7f7f7; border-color: #ededed; }
 .pinkButton.fullColor { border-radius: 4px; color: white; background-color: var(--pinkColor); border: none;  }
 
 /* 이메일 인증박스 */
-.validateEmailBox { margin-top: 24px; text-align: center; border-radius: 2px; border: 1px solid #ededed; padding: 16px 20px; }
+.validateEmailBox { margin-top: 24px; text-align: center; }
 .validateEmailBox p { letter-spacing: -0.9px; font-size: 14px; color: black; }
 .validateEmailBox button { margin-top: 13px; }
 
@@ -142,18 +232,20 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 .drawer .item .photo { position: relative; width: 66px; height: 108px; background-color: white; }
 .drawer .item .itemTag { position: absolute; top: 16px; left: 58px;  }
 .drawer .item .itemName { width: 66px; text-align: center; margin-top: 4px; color: #999999; font-size: 12px; font-weight: bold; }
-.drawer li.noItem { padding: 0 0 30px; }
+.pouch li.noItem { padding: 0 0 30px; min-height: 183px; }
 
 /* 중앙의 큰 버튼 라벨 설정하기, 제품 추가하기 */
 .centerButtonBox { display: flex; padding: 16px 16px 24px; background-color: #f7f7f7; }
-.centerButtonBox button { font-size: 14px; padding: 16px 26px; flex: 1; border: 1px solid #ededed; color: #333333; background-color: white; }
+.centerButtonBox button { padding: 16px 26px; flex: 1; }
 .centerButtonBox button:last-child { border-left: none; }
 
-/* 파우치 아이템의 태크, 인생탬,민거템 등, 컬로로 분리 */
-.itemTag { white-space: nowrap; padding: 4px 3px; color: white; transform: rotate(90deg); /* width: 34px; height: 18px; */ font-size: 10px; font-weight: bold; text-align: center; background-image: linear-gradient(#ff336c, #ff336c, #c91145); }
-.itemTag.brownTag { background-image: linear-gradient(#70593f, #70593f, #433423); }
-.itemTag.greenTag { background-image: linear-gradient(#12c815, #12c815, #069c09); }
-.itemTag.blueTag { background-image: linear-gradient(#3396ff, #3396ff, #016acb); }
+/* 아이템태그 라벨, 인생탬, 민거템 등 */
+// .itemTag { white-space: nowrap; padding: 4px 3px; color: white; transform: rotate(90deg); /* width: 34px; height: 18px; */ font-size: 10px; font-weight: bold; text-align: center; }
+.itemTag { white-space: nowrap; color: white; transform: rotate(90deg); width: 34px; height: 18px; font-size: 10px; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center; }
+.itemTag.pinkTag { background-image: linear-gradient(#ff336c, #ff336c 81%, #c91145); }
+.itemTag.brownTag { background-image: linear-gradient(#70593f, #70593f 81%, #433423); }
+.itemTag.greenTag { background-image: linear-gradient(#12c815, #12c815 81%, #069c09); }
+.itemTag.blueTag { background-image: linear-gradient(#3396ff, #3396ff 81%, #016acb); }
 
 /* 메인 탭 파우치, 나의 글, 스크랩 */
 .tabs { display: flex; list-style: none; margin: 0; padding: 0; }
@@ -165,7 +257,7 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 .paddingFrame { padding: 0 16px; width: 100%; box-sizing: border-box; }
 
 /* 하단 알림 상자 */
-.blackAlert { line-height: 1.7; text-align: left; z-index: 1; transition: bottom 0.5s; padding: 20px 16px; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; color: white; font-size: 16px; position: fixed; bottom: -100px; left: 16px; right: 16px; }
+.blackAlert { line-height: 1.7; text-align: left; z-index: 1; transition: bottom 0.5s; padding: 20px 16px; background-color: rgba(0, 0, 0, 0.75); border-radius: 4px; color: white; font-size: 16px; position: fixed; bottom: -100px; left: 16px; right: 16px; z-index: 10; }
 
 /* 작은 버튼 형 탭 */
 .buttonTabs { padding: 16px; overflow-x: auto; }
@@ -175,9 +267,9 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 .buttonTabs button.on { background-color: #333333; color: white; }
 
 /* 빈 아이템 목록 */
-li.noItem { display: flex; align-items: center; justify-content: center !important; text-align: center; font-size: 12px; color: #cccccc; min-height: 171px; }
+li.noItem { display: flex; align-items: center; justify-content: center !important; text-align: center; font-size: 12px; color: #cccccc; min-height: 250px; }
 li.noItem p { padding-top: 48px; background-repeat: no-repeat; background-position: center 0; background-size: 36px 36px; }
-li.noItem p.pencil { background-image: url("../img/common/pencil.png"); }
+li.noItem p.pencil { background-image: url("../img/common/pencilIcon.png"); }
 li.noItem p.bookmark { background-image: url("../img/common/bookmark.png"); }
 li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 
@@ -198,16 +290,14 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .messageBox p { line-height: 1.3; white-space: pre-wrap; font-size: 14px; color: #333333; margin: 8px 0 16px; }
 
 .buttonBox { text-align: right; }
-.buttonBox button { background-color: white; font-size: 14px; color: #333333; border: 1px solid #ededed; padding: 8px 16px; }
-.buttonBox button.default { color: var(--pinkColor); }
 
 
 /* personalColor Icons */
 .personalColor { width: 18px; height: 18px; background-repeat: no-repeat; background-size: contain; background-position: center; }
-.personalColor.spring { background-image: url("../img/common/spring.png"); }
-.personalColor.summer { background-image: url("../img/common/summer.png"); }
-.personalColor.autumn { background-image: url("../img/common/autumn.png"); }
-.personalColor.winter { background-image: url("../img/common/winter.png"); }
+.personalColor.spring { background-image: url("../img/common/personColor_spring.png"); }
+.personalColor.summer { background-image: url("../img/common/personColor_summer.png"); }
+.personalColor.autumn { background-image: url("../img/common/personColor_autumn.png"); }
+.personalColor.winter { background-image: url("../img/common/personColor_winter.png"); }
 
 /* 뷰티팁 리스트 */
 .beautyTipList { background-color: #ededed; }
@@ -217,16 +307,17 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .beautyTipList article + .showMore { display: inline-block; margin-top: 8px; }
 
 /* 리스트 내 포토 */
-.listPhoto { overflow-x: auto; display: flex; padding: 0; scroll-snap-type: x mandatory; }
+.listPhoto { height: 100vw; overflow-x: auto; display: flex; padding: 0; scroll-snap-type: x mandatory; }
 .listPhoto img { flex-shrink: 0; display: block; width: 100vw; scroll-snap-align: start;}
 
 /* 리스트의 작성자 정보 */
 .writerInfo { align-items: center; display: flex; justify-content: space-between; height: 74px; padding: 16px; background-color: white; }
 .writerInfo > div:first-child { align-items: center; display: flex;}
-.writerInfo .writerPhoto { background-color: lightGray; width: 42px; height: 42px; border-radius: 50%; }
-.writerInfo .writerName { margin-left: 8px; color: #333333; font-size: 16px; font-weight: bold; }
+.writerInfo .userPhoto { width: 42px; height: 42px; position: relative; }
+.writerInfo .userPhoto img { width: 42px; height: 42px; object-fit: cover; object-position: center; border-radius: 50%; }
+.writerInfo .nickName { margin-left: 8px; color: #333333; font-size: 16px; font-weight: bold; }
 .writerInfo .personalColor {  margin-left: 4px; }
-.writerInfo .personalColorText {  margin-left: 2px; color: #ff8a75; font-size: 12px; font-weight: bold; }
+.writerInfo .personalColorText {  margin-left: 2px; font-size: 12px; font-weight: bold; }
 .writerInfo .whenDidShe { font-size: 12px; text-align: right; color: #cccccc; }
 
 .productScrollButtons { display: flex; justify-content: center; padding: 8px 0 16px; height: 28px; }
@@ -248,13 +339,19 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 /* 하단 소셜인포박스 (좋아요, 덧글 수 등등) */
 .socialInfoBox { margin-top: 16px; border-top: 1px solid #ededed; padding: 16px; display: flex; align-items: center; justify-content: space-between; }
 .socialInfoBox > div { display: flex; align-items: center; }
+.socialInfoBox > div:first-child { justify-content: flex-start; }
+.socialInfoBox > div:last-child { justify-content: flex-end; }
 .socialInfoBox > div span { font-size: 12px; color: #999999; margin-right: 8px; }
 .socialInfoBox > div span:last-child { margin-right: 0; }
-.socialInfoBox .smallSocialIcons { margin-right: 4px; background-color: lightGray; border-radius: 50%; }
-.socialInfoBox .socialIcons { margin-left: 16px; background-color: lightGray; border-radius: 50%; }
+.socialInfoBox .snsSmallLikeIcon,
+.socialInfoBox .snsSmallReplyIcon,
+.socialInfoBox .snsSmallWatchIcon
+{ margin-left: 8px; }
+.socialInfoBox > div > span { margin-left: 4px; }
+.socialInfoBox > div > *:first-child { margin-left: 0; }
 
-.smallSocialIcons { width: 18px; height: 18px;  }
-.socialIcons { width: 30px; height: 30px; }
+.socialInfoBox > div:last-child > * { margin-left: 16px; }
+
 
 /* 제품 정보 박스 */
 .productInfoBox { height: 70px; padding: 9px 24px; border: 1px solid #ededed; background-color: white; position: relative; }
@@ -297,67 +394,59 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .freeTalkList .talkTitle { overflow: hidden; text-overflow: ellipsis; white-space:  nowrap; font-size: 16px; color: #333333; font-weight: bold;  }
 .freeTalkList .talkContent { margin-top: 8px; overflow: hidden; text-overflow: ellipsis; white-space:  nowrap; font-size: 14px; color: #666666; }
 .freeTalkList .talkContent + .showMore { margin-top: 8px; display: inline-block; }
-.freeTalkList img { margin-top: 24px; width: 100%; display: block; }
+.freeTalkList .paddingFrame img { margin-top: 24px; width: 100%; display: block; }
 
 /* 브랜드 리스트 */
-.brandList {  }
+.brandList > li.sticky { z-index: 1; font-size: 12px; padding: 12px 16px 12px 24px; position: sticky; top: 0px; background-color: #f7f7f7; color: #999999; }
 .brandList > li { justify-content: flex-start; display: flex; align-items: center; border-bottom: 1px solid #ededed; padding: 12px 16px;  }
-.brandList > li .productLogo { flex-shrink: 0; background-size: cover; position: relative; width: 52px; height: 52px; background-color: lightGray; border-radius: 50%; }
-.brandList > li .productLogo .lookAtMe:before { position: absolute; top: 0; right: 0; }
-.brandList .productName, .brandList .productCount { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.brandList .productName { margin-left: 16px; color: #333333; font-size: 14px; }
-.brandList .productCount { margin-left: 14px; color: #999999; font-size: 14px; }
-.brandList .productTag { border-radius: 2px; font-size: 9px; margin-left: 10px; color: white; padding: 2px 5px;  }
-.brandList .productTag.event { background-color: var(--pinkColor); }
-.brandList .productTag.new { background-color: #3396ff; }
-.brandList .productTag.event:before { content: "NEW"; }
-.brandList .productTag.new:before { content: "EVENT"; }
+.brandList > li figure.brandLogo { position: relative; width: 52px; height: 52px; }
+.brandList > li .brandLogo img { border-radius: 50%; width: 52px; height: 52px; object-fit: cover; object-position: center; border-radius: 50%; border: 1px solid #ededed; }
+.brandList > li .brandLogo.lookAtMe:before { position: absolute; top: 0; right: 0; }
+.brandList .brandName, .brandList .brandCount { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.brandList .brandName { margin-left: 16px; color: #333333; font-size: 14px; }
+.brandList .brandCount { margin-left: 14px; color: #999999; font-size: 14px; }
 
 /* 제품 리스트 */
 .productList {  }
-.productList > li { display: flex; padding: 8px 16px; height:136px; align-items: center; }
-.productList .productPhoto { flex: 0 0 auto; border-radius: 14px; background-color: lightGray; width: 80px; height: 120px;  }
-.productList .productPhoto2 { flex: 0 0 auto; margin-left: 16px; background-color: gray; width: 50px; height: 100px;  }
-.productList > li > ul { overflow: hidden; margin-left: 24px; }
-.productList > li > ul li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.productList > li > ul li:nth-child(1) { color: #999999; font-size:12px;  }
-.productList > li > ul li:nth-child(2) { color: #333333; font-size:19px; font-weight: bold; }
-.productList > li > ul li:nth-child(3) { color: #333333; font-size:12px; margin-top: 4px; }
-.productList > li > ul li:nth-child(4) { color: #999999; font-size:12px; margin-top:17px; }
-.productList > li > ul li .personalColor { margin-right: 4px; display: inline-block; vertical-align: middle; }
+.productList > li { position: relative; display: flex; padding: 10px 24px; align-items: center; }
+.productList figure.productPhoto { flex: 0 0 auto;  background-color: lightGray; width: 50px; height: 100px;  }
+.productList figure.productPhoto img { overflow: hidden; width: 50px; height: 100px; object-fit: cover; }
+.productList > li ul { overflow: hidden; margin-left: 24px; }
+.productList > li ul li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.productList > li ul li:nth-child(1) { color: #999999; font-size:12px;  }
+.productList > li ul li:nth-child(2) { color: #333333; font-size:16px; font-weight: bold; }
+.productList > li ul li:nth-child(3) { color: #333333; font-size:12px; margin-top: 4px; }
+.productList > li ul li:nth-child(4) { color: #999999; font-size:12px; margin-top:17px; }
+.productList > li ul li .personalColor { margin-right: 4px; display: inline-block; vertical-align: middle; }
 
+.productList .plusProductIcon { position: absolute; top: 50%; right: 24px; transform: translateY(-50%); }
+
+.productList.two > li { padding: 8px 16px; }
+.productList.two figure.productPhoto { margin-left: 16px; }
+.productList.two figure.productDetailPhoto  {  flex: 0 0 auto; background-color: gray; width: 80px; height: 120px; border-radius: 14px; }
+.productList.two figure.productDetailPhoto img { overflow: hidden; width: 80px; height: 120px; object-fit: cover; border-radius: 14px; }
 
 /* layer */
-.layer { overflow-y: auto; box-shadow: 0px 0 80px rgba(0, 0, 0, 0); transition: left 0.4s, box-shadow 0.4s; position: fixed; top: 0; left:100%; background-color: white; width: 100%; height:  100%; }
+.layer { z-index: 2; overflow-y: auto; box-shadow: 0px 0 80px rgba(0, 0, 0, 0); transition: left 0.4s, box-shadow 0.4s; position: fixed; top: 0; left:100%; background-color: white; width: 100%; height:  100%; }
 .layer.show { left: 0; box-shadow: 0px 0 50px rgba(0, 0, 0, 0.2); }
+.layer.prev { left: -50%; box-shadow: 0px 0 50px rgba(0, 0, 0, 0.2); }
 
 /* 프로필 수정 */
 .profileBox.editMode {  }
-.profileBox.editMode i { margin: 40px 0 0px; display: block; font-style: normal; font-size: 14px; color: #666666; }
-.profileBox.editMode i.sub { margin-top: 4px; color: #666666; font-size: 12px; }
-.profileBox.editMode i.sub.pink { color: var(--pinkColor); }
-.profileBox.editMode i.sub.blue { color: var(--blueColor); }
-.profileBox.editMode i:first-child { margin-top: 32px; }
-.profileBox.editMode input[type='text'],
-.profileBox.editMode input[type='tel'],
-.profileBox.editMode input[type='email']
-{ transition: border-color .5s; padding: 7px 8px; height: 26px; width: 100%; border: none; border-bottom: 1px solid #cccccc; color: #333333; font-size: 16px; margin-top: 16px; }
-.profileBox.editMode input[type='text']:focus,
-.profileBox.editMode input[type='tel']:focus,
-.profileBox.editMode input[type='email']:focus
-{ border-bottom-color: black; }
-.profileBox.editMode input[type='text'].pink,
-.profileBox.editMode input[type='tel'].pink,
-.profileBox.editMode input[type='email'].pink
-{ border-bottom-color: var(--pinkColor); }
-.profileBox.editMode .buttonBox { margin-top: 8px; }
-.profileBox.editMode .validateEmail { margin-top: 35px; }
-.profileBox.editMode .setStyleButton { margin-top: 16px; }
-
+label.subTitle { margin: 40px 0 0px; display: block; font-style: normal; font-size: 14px; color: #666666; }
+label.subTitle:first-child { margin-top: 32px; }
+.isValid { margin-top: 4px; color: #666666; font-size: 12px; display: inline-block; }
+.isValid.pink { color: var(--pinkColor); }
+.isValid.blue { color: var(--blueColor); }
+#editProfileLayer .buttonBox { margin-top: 8px; }
+#editProfileLayer .validateEmail { margin-top: 35px; }
+#editProfileLayer .setStyleButton { margin-top: 16px; }
+#editProfileLayer .grayBox { margin-top: 24px; }
+#editProfileLayer .bottomButton { margin-top: 64px; }
+#editProfileLayer .personalColorBox { margin-top: 18px; padding: 0 26px; }
 
 /* 회색 박스 */
-.grayBox { background-color: #f7f7f7; padding: 16px; color: #999999; font-size: 14px; line-height: 17px; }
-.profileBox.editMode .grayBox { margin-top: 24px; }
+.grayBox { background-color: #f7f7f7; padding: 16px; color: #999999; font-size: 14px; line-height: 1.3; }
 .grayBox p { text-align: justify; white-space: pre-line; }
 .grayBox .title { text-align: center; color: #333333; margin-bottom: 8px; }
 .grayBox .title.left { text-align: left;  }
@@ -370,11 +459,179 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 /* 프로필 수정의 SNS 계정 */
 .snsAccounts { margin-top: 19px; }
 .snsAccounts > li { margin-top: 35px; display: flex; align-items: center; position: relative; }
-.snsAccounts > li:first-child { margin-top: 0;; }
+.snsAccounts > li.isValid { padding-left: 40px; margin-top: 4px; }
+.snsAccounts > li:first-child { margin-top: 0; }
 .snsAccounts > li > * { flex: 0 0 auto;  }
-.snsAccounts > li > input[type='text'] { color: #cccccc; margin-top: 0 !important; flex: 1 0 0; font-size: 14px;  }
-.snsAccounts > li > input[type='text']::placeholder { color: #cccccc; }
-.snsAccounts > li  span { background-color: lightGray; width: 24px; height: 24px; border-radius: 50%; margin-right: 8px;  }
-.snsAccounts > li  button { position: absolute; bottom: 1px; right: 0; padding: 9px 16px 4px; color: #cccccc; border: none; background-color: white; font-size: 14px; }
-
+.snsAccounts > li > input[type='text'] { height: 24px; color: #333333; margin-top: 0 !important; flex: 1 0 0; font-size: 14px;  }
+.snsAccounts > li  span { width: 24px; height: 24px; border-radius: 50%; margin-right: 8px;  }
+.snsAccounts > li  button { position: absolute; bottom: 1px; right: 0; padding: 9px 16px 4px; color: black; border: none; background-color: white; font-size: 14px; }
 .snsAccount + .grayBox title { margin-bottom: 16px; }
+
+/* 프로필 태그 설정 레이어 */
+.layerSubtitle { margin: 48px auto 0; color: black; font-size: 20px; text-align: center; }
+.setStyleTagCount { color: var(--pinkColor); font-size: 14px; text-align: center; margin: 8px auto 0; }
+#setStyleLayer .styleTags { justify-content: center; }
+#setStyleLayer .styleTags a { color: #999999; padding: 13px 24px; border-radius: 30px; transition: background-color 0.3s, color 0.3s; }
+#setStyleLayer .styleTags a.on { background-color: var(--pinkColor); color: white; }
+
+/* 팔로잉 정보 레이어 */
+#showFollowInfoLayer .grayInfo { font-size: 14px; color: #999999; padding: 12px 24px; background-color: #f7f7f7; margin: 0; }
+
+.peopleList { padding:0; background-color: #ededed; }
+.peopleList li { padding: 16px; background-color: #f9f9f9; margin-bottom: 1px; display: flex; align-items: center; }
+.peopleList li i { font-style: normal; }
+.peopleList li > * { flex: 0 0 auto; }
+.peopleList li figure { overflow: hidden; position: relative; border-radius: 50%; width: 42px; height: 42px; background-color: lightGray; margin:0 8px 0 0; }
+.peopleList li .userPhoto { position: relative; }
+.peopleList li .userPhoto.lookAtMe:before { position: absolute; top: 0; right: 0; }
+.peopleList li figure img { width: 42px; height: 42px; object-fit: cover; }
+.peopleList li span { font-size: 16px; color: #333333; font-weight: bold; margin-right: 4px; }
+.peopleList li .personalColor { margin-right: 2px; }
+.peopleList li .personalColorText { font-size: 12px; font-weight: bold; }
+
+/* 컬러칩 추가 레이어 */
+.colorChipList { background-color: #f7f7f7; padding: 14px 14px 14px 22px; }
+.colorChipList > li { margin-bottom: 9px; display: flex; flex-wrap: wrap; position: relative; }
+.colorChipList > li:before { content: ""; display: block; position: absolute; top: 0; left: -11px; width: 5px; height: calc(100% - 2px); border-radius: 4px; }
+.colorChipList > li:nth-child(1):before { background-color: #dc0e0e; }
+.colorChipList > li:nth-child(2):before { background-color: #ff85b5; }
+.colorChipList > li:nth-child(3):before { background-color: #ff6a1e; }
+.colorChipList > li > div { flex: 0 0 auto; width: 44px; height: 44px;border-radius: 4px; margin: 0 3px 2px 0; background-color: lightGray; }
+.colorChipList > li > div.on { display: flex; align-items: center; justify-content: center; font-family: "Font Awesome 5 Free"; font-weight: 900; color: white; }
+.colorChipList > li > div.on:before { content: "\f00c" }
+
+.colorChipBar { padding: 21px 16px; color: white; font-size: 16px; font-weight: bold; }
+
+/* 나의 컬러칩 레이어 */
+#myColorChipsLayer .buttonTabs { margin-left: 100px; }
+#myColorChipsLayer .paddingFrame { position: relative; }
+#myColorChipsLayer .paddingFrame i { position: absolute; top: 23px; left: 19px; font-style: normal; color: #999999; font-size: 14px; }
+#myColorChipsLayer .colorChipBar { display: block; }
+
+/* 개인정보 수정 2 */
+#editPersonalInfoLayer2 li { margin-bottom: 6px; }
+
+/* 레이어 하단 버튼 */
+#colorChipsLayer .bottomButton,
+#setStyleLayer .bottomButton,
+#editPersonalInfoLayer .bottomButton,
+#editPersonalInfoLayer2 .bottomButton { margin-top: 60px; }
+
+/* 프로필 수정 2 */
+#editPersonalInfoLayer2 label.subTitle.addressSelectTitle { margin-bottom: 7px }
+
+/* 라벨 설정 리스트 레이어 */
+#setLabelLayer > div:first-child { display: flex; flex-direction: column; flex: 1 0 auto; }
+.setLabelList { flex: 1; display: flex; flex-direction: column; }
+.setLabelList > li { padding-bottom: 32px; }
+.setLabelList > li.noItem { flex-grow: 1; }
+.setLabelList .grayLabelInfo { font-size: 14px; color: #999999; background-color: #f7f7f7; padding: 12px 24px; }
+.grayLineBox { min-height: 117px; line-height: 17px; border-radius: 4px; border: 1px solid #ededed; padding: 16px; color: #333333; text-align: justify; word-break: break-all; font-size: 14px; }
+.setLabelList .grayLineBox { margin-bottom: 16px; }
+input.agreeForExpose { float: left; margin-top: 4px; }
+.grayInfo { line-height: 1.4; margin-left: 28px; color: #cccccc; font-size: 12px; text-align: justify; word-break: break-all; }
+.setLabelList .grayInfo { margin-left: 24px; }
+.setLabelList .buttonBox { margin-top: 8px; }
+
+/* 제품 추가 */
+#pouchProductLayer .productList > li { padding-right: 16px; margin-bottom: 8px; }
+#pouchProductLayer .productList > li:last-child { margin-bottom: 0; }
+#pouchProductLayer .productList .plusProductIcon { flex: 0 0 auto; }
+
+/* 제품 라벨 설정 레이어 */
+#saveLabelLayer .paddingFrame .flex label { font-size: 14px; color: #333333; } 
+#saveLabelLayer .paddingFrame .flex span { vertical-align: middle; } 
+#saveLabelLayer .grayBox { position: relative; color: #666666; } 
+#saveLabelLayer .grayBox p { margin-left: 34px; } 
+#saveLabelLayer .grayBox .itemTag { position: absolute; top: 24px; left: 8px; } 
+#saveLabelLayer textarea { color: #333333; margin-top: 16px; width: 100%; font-size: 14px; margin-top: 16px; border: 1px solid #ededed; padding: 16px; border-radius: 4px; resize: none; min-height: 132px; appearance: none; -webkit-appearance: none; }
+#saveLabelLayer .grayInfo { margin-top: 19px; color: #666666; }
+#saveLabelLayer .buttonBox { margin-top: 8px; }
+
+/* 브랜드관 (brandDetail) */
+.brandInfoBox { margin-top: 16px; display: flex; flex-direction: column; align-items: center; position: relative; }
+.brandInfoBox figure { background-color: #e1e1e1; width: 120px; height: 120px; background-color: #ffd7d7; border-radius: 50%; overflow: hidden; }
+.brandInfoBox figure img { width: 120px; height: 120px; display: block; object-fit:cover; object-position: center; }
+.brandInfoBox.eventTag .relative:before { content: ""; display: block; position: absolute; width: 40px; height: 14px; background: url("../img/common/event.png") no-repeat center; top: 8px; right: 0; }
+.brandInfoBox .brandName { margin-top: 16px; text-align: center; font-weight: bold; color: black; font-size: 20px; }
+.brandInfoBox + .infoBox { margin: 16px 0 8px; text-align: center; border-left: none; border-right: 0; border-bottom: 0; padding: 16px; line-height: 17px; font-size: 14px; text-align: center; }
+
+
+.brandDetailPhoto { width: 100%; height: auto; }
+
+
+h3 { font-size: 20px; font-weight: bold; color: #000000; }
+.brandDetail h3 { margin-top: 48px; padding: 0 16px; }
+.brandDetail p + h3 { margin-top: 32px; }
+
+.productScrollBox { padding: 0 16px; overflow-x: auto; overflow-y: hidden; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+h3 + .productScrollBox { margin-top: 18px; }
+.productScrollBox > ul { display: inline-flex; }
+.productScrollBox > ul > li { overflow: hidden; background-color: white; border: 1px solid #ededed; width: 120px; /* height:201px; */ margin-right: 16px;  }
+.productScrollBox > ul > li > img { width: 100%; height: 131px; border-bottom: 1px solid #ededed; object-fit: cover; }
+.productScrollBox > ul > li > ul { padding: 16px 16px; }
+.productScrollBox > ul > li > ul > li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.productScrollBox > ul > li > ul > li:nth-child(1) { font-size: 12px; color: #999999; }
+.productScrollBox > ul > li > ul > li:nth-child(2) { font-size: 16px; color: #333333; font-weight: bold; }
+.productScrollBox > ul > li > ul > li:nth-child(3) { font-size: 12px; color: #333333; margin-top: 4px; }
+.productScrollBox > ul > li:last-child { margin-right: 0;  }
+.productScrollBox::-webkit-scrollbar { display: none; }
+
+.brandDetail .socialInfoBox { margin-top: 32px; }
+
+/* 덧글 리스트 (브랜드 디테일 2) */
+.replyList {  }
+.replyList > li { padding: 16px; position: relative; }
+.replyList > li figure { width: 24px; height: 24px; position: absolute; top: 16px; left: 16px; }
+.replyList > li figure img { width: 24px; height: 24px; object-fit: cover; border-radius: 50%; }
+.replyList > li ul { margin-left: 24px; padding: 0 42px 0 8px; }
+.replyList > li ul li:nth-child(1) { font-size: 16px; color: #333333; font-weight: bold; position: relative; }
+.replyList > li ul li:nth-child(2) { font-size: 14px; color: #333333; margin-top: 9px; line-height: 17px; text-align: justify; }
+.replyList > li ul li:nth-child(3) { font-size: 12px; color: #cccccc; margin-top: 12px; }
+.replyList + .infoBox { border-radius: 0; padding: 20px 0; text-align: center; font-size: 16px; color: #333333; }
+.replyList + .infoBox span { font-weight: bold; }
+.replyList .snsSmallLikeIcon { position: absolute; top: calc(50% - 12px); right: 16px; }
+
+.replyList .reply { background-color: #f7f7f7;  padding-left: 48px; }
+.replyList .reply figure { left: 48px; }
+.replyList .addReply { font-size: 12px; color: #999999; margin-left: 9px; }
+.replyList .more { position: absolute; top: 16px; right: 24px; }
+
+.brandDetail .pinkButton, .brandDetail3 .pinkButton { margin-top: 24px; }
+.brandDetail .socialInfoBox { border-bottom: 1px solid #ededed; }
+
+/* 풀 다운 제품 (브랜드 디테일 2) */
+.pullDownProductList {  }
+.pullDownProductList > li { padding: 0 16px; }
+.pullDownProductList > li > div { height: 120px; position: relative; padding: 10px 24px 10px 0; }
+.pullDownProductList > li > div figure { position: absolute; top: 10px; left: 24px; width: 50px; height: 100px;  }
+.pullDownProductList > li > div img {  width: 50px; height: 100px; object-fit: cover; }
+.pullDownProductList > li > div ul { margin-left: 122px; }
+.pullDownProductList > li > div ul li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pullDownProductList > li > div ul li:nth-child(1) { font-size: 12px; color: #999999; margin-top: 6px; }
+.pullDownProductList > li > div ul li:nth-child(2) { font-size: 16px; color: #333333; margin-top: 4px; font-weight: bold; }
+.pullDownProductList > li > div ul li:nth-child(3) { font-size: 12px; color: #999999; margin-top: 23px; }
+.pullDownProductList > li > div ul li:nth-child(4) { display: flex; align-items: center; color: #cccccc; margin-top: 4px; font-size: 12px; }
+.pullDownProductList > li > div ul li:nth-child(4) span { vertical-align: middle; display: inline-block; height: 12px; width: 12px; margin-right: 4px; }
+.pullDownProductList > li > div ul li:nth-child(4) span:last-child { display: flex; align-items: center; justify-content: center; margin-right: 0; }
+.pullDownProductList > li > ul { font-size: 14px; color: #333333; }
+.pullDownProductList > li > ul li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; position: relative; display: flex;  align-items: center; margin-top: 8px; }
+.pullDownProductList > li > ul li > * { flex: 0 0 auto; }
+.pullDownProductList > li > ul li img { margin-right: 24px; border-radius: 12px; width: 96px; height: 60px; object-fit: cover; object-position: center; }
+.pullDownProductList > li > ul li .personalColor { margin-right: 4px; }
+.pullDownProductList > li > ul li .tagNewPlate { position: absolute; top: calc(50% - 7px); right: 0;  }
+
+main.brandDetail { padding-bottom: 60px; }
+
+.pullDownArrow { width: 24px; height: 24px; background: url("../img/common/pullDownArrow.png") no-repeat center; background-size: 24px 24px;  }
+.pullDownProductList .pullDownArrow { transition: transform 0.4s; transform: rotate(180deg); position: absolute; right:0; top: calc(50% - 12px); }
+.pullDownProductList .pullDownArrow.on { transform: rotate(0deg); }
+
+main.brandDetail3 .paddingFrame { padding-bottom: 48px; border-bottom: 1px solid #ededed; }
+main.brandDetail3 .replyInputBox { margin-top: 64px; }
+
+.replyInputBox { box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08); font-size: 14px; display: flex; align-items: center; justify-content: space-between; padding: 20px 16px; }
+.replyInputBox > div:first-child { display: flex; align-items: center; flex: 1; }
+.replyInputBox img { flex-basis: auto; border-radius: 50%; width: 24px; height: 24px; object-fit: cover; object-position: center; }
+.replyInputBox input { flex: 1; border: 0; height: 24px; padding-left: 8px; }
+.replyInputBox button { padding: 0; border: 0; height: 24px; flex: 0 0 auto; color: #cccccc; font-weight: bold; }
