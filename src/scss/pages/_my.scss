@@ -650,3 +650,49 @@ main.brandDetail3 .replyInputBox { margin-top: 64px; }
 .replyInputBox img { flex-basis: auto; border-radius: 50%; width: 24px; height: 24px; object-fit: cover; object-position: center; }
 .replyInputBox input { flex: 1; border: 0; height: 24px; padding-left: 8px; }
 .replyInputBox button { padding: 0; border: 0; height: 24px; flex: 0 0 auto; color: #cccccc; font-weight: bold; }
+
+.lineBanner { background: url("../img/common/iconLandscape.png") no-repeat center #f7f7f7; background-size: 20px 20px; min-height: 60px; }
+.lineBanner img { width: 100%; height: auto; object-fit: cover; object-position: center; }
+
+.seriesListBox { padding: 0;  }
+.seriesListBox.scrollBox { background-color: #f1f2f5; height: 128px; overflow-y: visible; padding: 24px 16px; }
+.seriesListBox .scrollList {  display: inline-flex;  }
+.seriesListBox .scrollList li { margin-left: 8px; position: relative; }
+.seriesListBox .scrollList li.new:after { content: ""; display: block; position: absolute; width: 40px; height: 14px; background: url(../img/common/tagNew.png) no-repeat center; top: -4px; right: -4px; }
+.seriesListBox .scrollList li .blur { transition: opacity 0.5s; opacity: 0; width: 80px; height: 80px; border-radius: 8px; filter: blur(10px); top: 10px; left: 0; position: absolute; }
+.seriesListBox .scrollList li div:nth-child(2) { position: relative; width: 80px; height: 80px; flex: 0 0 auto; background-repeat: no-repeat; background-size: cover; }
+.seriesListBox .scrollList li.on .blur { opacity: 0.8; }
+.seriesListBox .scrollList li:nth-child(1) {  margin-left: 0; }
+.seriesListBox .scrollList li.item1 div:nth-child(2) { background-image: url("../img/common/seriesListItem01.png"); margin-left: 0; }	    /* item1 : 신상은타이밍 */
+.seriesListBox .scrollList li.item2 div:nth-child(2) { background-image: url("../img/common/seriesListItem02.png"); }	    /* item2 : 발색의정석 */
+.seriesListBox .scrollList li.item3 div:nth-child(2) { background-image: url("../img/common/seriesListItem03.png"); }	    /* item3 : 에디터의쇼핑백 */
+.seriesListBox .scrollList li.item4 div:nth-child(2) { background-image: url("../img/common/seriesListItem04.png"); }	    /* item4 : 세상에이런립이 */
+.seriesListBox .scrollList li.item5 div:nth-child(2) { background-image: url("../img/common/seriesListItem05.png"); }	    /* item5 : 톤알못 */
+.seriesListBox .scrollList li.item6 div:nth-child(2) { background-image: url("../img/common/seriesListItem06.png"); }	    /* item6 : 월간잘쓴템 */
+.seriesListBox .scrollList li.item7 div:nth-child(2) { background-image: url("../img/common/seriesListItem07.png"); }	    /* item7 : 립VS립 */
+.seriesListBox .scrollList li.item8 div:nth-child(2) { background-image: url("../img/common/seriesListItem08.png"); }	    /* item8 : 브랜드매거진 */
+.seriesListBox .scrollList li.item9 div:nth-child(2) { background-image: url("../img/common/seriesListItem09.png"); }	    /* item9 : 그외 */	    
+.seriesListBox .scrollList li.item1 div.blur { background-color: #008a3e; }
+.seriesListBox .scrollList li.item2 div.blur { background-color: #ff7171; }
+.seriesListBox .scrollList li.item3 div.blur { background-color: #9353d5; }
+.seriesListBox .scrollList li.item4 div.blur { background-color: #fcaa45; }
+.seriesListBox .scrollList li.item5 div.blur { background-color: #2ab8a0; }
+.seriesListBox .scrollList li.item6 div.blur { background-color: #4075dc; }
+.seriesListBox .scrollList li.item7 div.blur { background-color: #d85758; }
+.seriesListBox .scrollList li.item8 div.blur { background-color: #97b729; }
+.seriesListBox .scrollList li.item9 div.blur { background-color: #d13ca9; }
+
+
+
+.seriesCollections { margin-top: 32px; }
+.seriesCollections > li { display: none; }
+.seriesCollections > li.on { display: list-item; }
+.seriesCollections > li p { margin-top: 8px; font-size: 14px; color: #333333; }
+.seriesCollections .scrollBox { margin-top: 16px; }
+.seriesCollections .scrollList { display: inline-flex; }
+.seriesCollections .scrollList li { width: 224px; height: 168px; margin-right: 16px; }
+.seriesCollections .scrollList li:last-child { margin-right: 0px; }
+.seriesCollections .scrollList figure { width: 100%; height: 126px; }
+.seriesCollections .scrollList figure img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.seriesCollections h3, .seriesCollections h4 { margin-left: 16px; }
+h4 { font-size: 14px; color: #999999; }
