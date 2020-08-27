@@ -1,12 +1,12 @@
 <div class="layer" id="saveLabelLayer">
-	<header class="showLeft showTitle">
+	<header class="showBack showTitle">
 	@@include('../include/header.html', { title : "라벨 설정" })
 	</header>
 
 	<ul class="productList">
 		<li>
 			<figure class="productPhoto">
-				<img src="../img/common/sampleLipStick01.jpg" />
+				<img src="../img/common/sampleLipstick01.jpg" />
 			</figure>
 			<ul>
 				<li>스틸라 </li>
@@ -25,7 +25,7 @@
 			<label><input type="radio" name="temType" /><span>믿거템</span></label>
 		</div>
 		<div class="grayBox">
-			<div class="itemTag pinkTag">인생템</div>
+			<div class="itemTag pinkTag"></div>
 			<p>이건 정말 인생이야. 단종 안돼요!	나에게 찰떡, 추천하고 싶은 인생 립</p>
 		</div>
 
@@ -47,7 +47,6 @@
 <script type="text/javascript">
 $("#saveLabelLayer [name='temType']").on("click", function(){
 	var color;
-	var text = $(this).siblings("span").text();
 	switch ($(this).parent().index()) {
 		case 0:
 			color = "pinkTag";
@@ -63,7 +62,7 @@ $("#saveLabelLayer [name='temType']").on("click", function(){
 			break;
 	}
 
-	$("#saveLabelLayer .itemTag").attr("class", "itemTag " + color).text(text);
+	$("#saveLabelLayer .itemTag").attr("class", "itemTag " + color);
 });
 
 
