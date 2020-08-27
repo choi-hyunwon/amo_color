@@ -92,7 +92,12 @@ button.black { color: black; border-color: black; }
 { position: relative; transition: background-image 0.4s; background: url("../img/common/snsLikeIcon.png") no-repeat center; width: 30px; height: 30px; background-size: 30px 30px;  }
 .snsLikeIcon:before { content: ""; display: block; transition: transform 0.4s, opacity 0.4s; transform: scale(2); position: absolute; opacity: 0; background-image: url("../img/common/snsLikeIconOn.png"); }
 .snsLikeIcon.on:before { opacity: 1; transform: scale(1); }
-.snsBookmarkIcon { background: url("../img/common/snsBookmarkIcon.png") no-repeat center; width: 30px; height: 30px; background-size: 30px 30px;  }
+
+.snsBookmarkIcon,
+.snsBookmarkIcon:before
+{ position: relative; transition: background-image 0.4s; background: url("../img/common/snsBookmarkIcon.png") no-repeat center; width: 30px; height: 30px; background-size: 30px 30px;  }
+.snsBookmarkIcon:before { content: ""; display: block; transition: transform 0.4s, opacity 0.4s; transform: scale(2); position: absolute; opacity: 0; background-image: url("../img/common/bookmarkFillIcon.png"); }
+.snsBookmarkIcon.on:before { opacity: 1; transform: scale(1); }
 
 .brandTag { border-radius: 2px; font-size: 9px; margin-left: 10px; color: white; padding: 2px 5px; width: 40px; height: 14px; background-size: cover }
 .brandTag.event { background-image: url("../img/common/tagEvent.png"); }
