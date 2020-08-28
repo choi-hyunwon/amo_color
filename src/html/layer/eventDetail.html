@@ -1,0 +1,100 @@
+<div class="layer" id="eventDetailLayer">
+
+	<header class="showBack showTitle">
+	@@include('../include/header.html', { "title" : "브랜드 이벤트" })
+	</header>
+	<main class="brandDetail3 flex column">
+		<div class="flex1">
+			<img class="brandDetailPhoto" src="../img/common/sampleBrandEventImage.jpg" />
+
+			<div class="paddingFrame">
+				<button type="button" class="pinkButton">해당 이벤트 페이지로 이동하기</button>
+			</div>
+
+			<ul class="replyList">
+				<li>
+					<figure>
+						<img src="../img/common/sampleProfilePicture1.jpg" />
+					</figure>
+					<ul>
+						<li>쿨톤지영</li>
+						<li>홍시라네님 왤케 이뻐염? 저는 2번스타일 좋아하긴 하는데 홍시라네님한테는 1번 룩이랑 립이 잘 어울릴거 같아요! 1번 강추!</li>
+						<li>23분전 좋아요 12개<a class="addReply">답글달기</a></li>
+					</ul>
+					<div class="snsSmallLikeIcon"></div>
+					<div class="more"></div>
+				</li>
+				
+				<li class="reply">
+					<figure>
+						<img src="../img/common/sampleProfilePicture3.jpg" />
+					</figure>
+					<ul>
+						<li>블랙맘마</li>
+						<li>@봄웜인 마자여.. 요즘 나온 신상 다 왤케 이뿜요? 자꾸자꾸 저는.. 텅장행이랍니다 ㅠ</li>
+						<li>23분전 좋아요 12개<a class="addReply">답글달기</a></li>
+					</ul>
+					<div class="snsSmallLikeIcon"></div>
+					<div class="more"></div>
+				</li>
+				
+				<li class="reply">
+					<figure>
+						<img src="../img/common/sampleProfilePicture4.jpg" />
+					</figure>
+					<ul>
+						<li>사쿠라</li>
+						<li>@봄웜인 마자여.. 요즘 나온 신상 다 왤케 이뿜요? 자꾸자꾸 저는.. 텅장행이랍니다 ㅠ</li>
+						<li>23분전 좋아요 12개<a class="addReply">답글달기</a></li>
+					</ul>
+					<div class="snsSmallLikeIcon"></div>
+					<div class="more"></div>
+				</li>
+				
+				<li>
+					<figure>
+						<img src="../img/common/sampleProfilePicture2.jpg" />
+					</figure>
+					<ul>
+						<li>테드창</li>
+						<li>홍시라네님 왤케 이뻐염? 저는 2번스타일 좋아하긴 하는데 홍시라네님한테는 1번 룩이랑 립이 잘 어울릴거 같아요! 1번 강추!</li>
+						<li>23분전 좋아요 12개<a class="addReply">답글달기</a></li>
+					</ul>
+					<div class="snsSmallLikeIcon"></div>
+					<div class="more"></div>
+				</li>
+				
+				<li>
+					<figure>
+						<img src="../img/common/sampleProfilePicture3.jpg" />
+					</figure>
+					<ul>
+						<li>러블리수</li>
+						<li>홍시라네님 왤케 이뻐염? 저는 2번스타일 좋아하긴 하는데 홍시라네님한테는 1번 룩이랑 립이 잘 어울릴거 같아요! 1번 강추!</li>
+						<li>23분전 좋아요 12개<a class="addReply">답글달기</a></li>
+					</ul>
+					<div class="snsSmallLikeIcon"></div>
+					<div class="more"></div>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="replyInputBox">
+				<div>
+					<img src="../img/common/sampleProfilePicture1.jpg" />
+					<input type="text" placeholder="덧글을 남겨주세요." />
+				</div>
+				<div>
+					<button type="button">등록</button>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+
+<script type="text/javascript">
+	// 좋아요 토글
+	$("#eventDetailLayer .snsSmallLikeIcon").click(function(){
+		$(this).toggleClass("on");
+	});
+</script>
