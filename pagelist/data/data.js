@@ -19,6 +19,12 @@ data.common = {
 			'url': 'talk',
 			'category': 'Talk',
 			'page': '토크'
+		},
+		{
+			'stateClass': 'complete',
+			'url': 'search',
+			'category': 'Search',
+			'page': '검색'
 		}
 	]
 }

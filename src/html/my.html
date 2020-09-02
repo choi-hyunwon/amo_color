@@ -52,9 +52,11 @@
 		<button class="pinkButton attendencyCheck" disabled>출석체크 하기</button>
 	</div>
 	
-	<div class="infoBox validateEmailBox">
-		<p>이메일을 인증하고 다양한 혜택을 누려보세요!</p>
-		<button type="button" class="okButton">이메일 인증</button>
+	<div class="paddingFrame">
+		<div class="infoBox validateEmailBox">
+			<p>이메일을 인증하고 다양한 혜택을 누려보세요!</p>
+			<button type="button" class="okButton">이메일 인증</button>
+		</div>
 	</div>
 
 
@@ -249,7 +251,7 @@
 			
 			<div class="centerButtonBox">
 				<button type="button" class="setLabelButton">라벨 설정하기</button>
-				<button type="button" class="addProductButton" disabled>제품 추가하기</button>
+				<button type="button" class="addProductButton">제품 추가하기</button>
 			</div>
 
 			<div class="colorChipBox">
@@ -1330,7 +1332,7 @@
 
 	// 이메일 인증하기
 	$(".validateEmailBox .okButton").on("click", function(){
-		showBlackAlert("이메일이 발송되었습니다.<br />메일함을 확인해주세요.");
+		showBlackAlert("이메일이 발송되었습니다. 메일함을 확인해주세요.");
 	});
 
 	// 스크롤 엔드 이벤트 생성

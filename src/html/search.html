@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Color Tailor" })
+<body id="search">
+<header class="searchHeader">
+@@include('include/searchHeader.html')
+</header>
+<main>
+	<ul class="tabs" data-tab-id="mainTabs">
+		<li>추천 키워드</li>
+		<li class="on">컬러칩</li>
+		<li>브랜드</li>
+		<li>이미지 검색</li>
+	</ul>
+
+	<div id="mainTabs" class="tabContents">
+		<!-- 추천 키워드 -->
+		<section style="display: none">
+			
+		</section>
+		<!-- 추천 키워드 끝 -->
+		
+		<!-- 컬러칩 -->
+		<section>
+			
+			<div class="buttonTabs scrollBox">
+				<div class="scrollItems">
+					<button type="button" class="on">봄웜</button>
+					<button type="button">여름쿨</button>
+					<button type="button">가을웜</button>
+					<button type="button">겨울쿨</button>
+				</div>
+			</div>
+
+			<div class="buttonTabsContents">
+<!-- 컬러칩 봄 -->
+@@include("partial/colorChips_spring.html", { style : "" })
+<!-- 컬러칩 봄 끝 -->
+
+
+<!-- 컬러칩 여름 -->
+@@include("partial/colorChips_summer.html", { style : "display:none" })
+<!-- 컬러칩 여름 끝 -->
+
+
+<!-- 컬러칩 가을 -->
+@@include("partial/colorChips_autumn.html", { style : "display:none" })
+<!-- 컬러칩 가을 끝 -->
+
+
+<!-- 컬러칩 겨울 -->
+@@include("partial/colorChips_winter.html", { style : "display:none" })
+<!-- 컬러칩 겨울 끝 -->
+			</div>
+
+		</section>
+		<!-- 컬러칩 끝 -->
+		
+		<!-- 브랜드 리스트 -->
+		<section style="display: none">
+@@include("partial/brandList.html", {
+	display : "block",
+	sticky : '<li class="sticky">이벤트중인 브랜드</li>'
+})
+@@include("partial/brandList.html", {
+	display : "block",
+	sticky : '<li class="sticky">신규입점 브랜드</li>'
+})
+@@include("partial/brandList.html", {
+	display : "block",
+	sticky : '<li class="sticky">신제품이 출시된 브랜드</li>'
+})
+		</section>
+		<!-- 브랜드 리스트 끝 -->
+
+		<!-- 이미지 검색 -->
+		<section style="display: none">
+
+		</section>
+		<!-- 이미지 검색 끝 -->
+	</div>
+
+</main>
+
+<!-- 브랜드 상세 레이어 -->
+@@include("layer/brandDetail.html",)
+
+<!--  이벤트 브랜드 상세 레이어 -->
+@@include("layer/eventBrandDetail.html",)
+
+<!-- 이베트 디테일 -->
+@@include("layer/eventDetail.html")
+
+
+<script type="text/javascript">
+
+// 탭 기능
+$(".tabs li").on("click", function(){
+	$(this).addClass("on").siblings().removeClass("on");
+	var $tabContents = $("#" + $(this).parent(".tabs").attr("data-tab-id"));
+	if (!$tabContents.length) return;
+	var index = $(this).index();
+	$tabContents.children().hide();
+	$tabContents.children().eq(index).show();
+});
+
+$(".brandList > li").click(function(){
+	if (!$(this).find(".event").length) {
+		showLayer($("#brandDetailLayer"));
+	} else {
+		showLayer($("#eventBrandDetailLayer"));
+	}
+});
+
+// 레이어 닫기
+$(".layer header .backArrow").click(function() {
+	hideLayer($(this));
+});
+
+// 버튼형 탭
+$(".buttonTabs button").on("click", function() {
+	var index = $(this).index();
+	$(this).addClass("on").siblings().removeClass("on");
+	var $tabContents = $(this).parents(".buttonTabs").next(".buttonTabsContents");
+	if (!$tabContents.length) return;
+	$tabContents.children().eq(index).removeAttr("style").siblings().attr("style", "display: none !important");
+});
+
+function showLayer($element, title) {
+	var $layer;
+	if (typeof($element) == "string") $element = $($element);
+	if ($element.hasClass("layer")) {
+		$layer = $element;
+	} else {
+		$layer = $element.parents(".layer");
+	}
+	if (title) {
+		$layer.find("header h1").text(title);
+	}
+	if ($layer.length) {
+		console.log("Layer id : " + $layer.attr("id"));
+		$layer.addClass("show");
+	} else {
+		console.error("Can not find the layer.", $element);
+	}
+}
+
+function hideLayer($element) {
+	var $layer;
+	if (typeof($element) == "string") $element = $($element);
+	if ($element.hasClass("layer")) {
+		$layer = $element;
+	} else {
+		$layer = $element.parents(".layer");
+	}
+	if ($layer.length) $layer.removeClass("show");
+}
+
+// 컬러칩 클릭
+$(".colorChipList > li div").on("click", function(){
+
+if ($(this).hasClass("on")) {
+	$(this).removeClass("on");
+} else {
+	var $colorChipList = $(this).parents(".colorChipList");
+	$colorChipList.find("div").removeClass("on");
+	$(this).addClass("on");
+}
+
+var color = $(this).css("backgroundColor");
+
+var count = $colorChipList.find("div.on").length;
+var $colorBar = $colorChipList.next(".colorChipBar");
+if (count > 0) {
+	$colorBar.css("backgroundColor", color).show();
+	$colorBar.children("strong").text("체리코랄");
+	$colorBar.children("span").text("24개");
+} else {
+	$colorBar.css("backgroundColor", "transparent");
+	$colorBar.children("strong, span").text("");
+}
+});
+</script>
+</body>
+</html>

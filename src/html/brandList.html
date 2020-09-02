@@ -46,34 +46,34 @@ $(".layer header .backArrow").click(function() {
 });
 
 function showLayer($element, title) {
-		var $layer;
-		if (typeof($element) == "string") $element = $($element);
-		if ($element.hasClass("layer")) {
-			$layer = $element;
-		} else {
-			$layer = $element.parents(".layer");
-		}
-		if (title) {
-			$layer.find("header h1").text(title);
-		}
-		if ($layer.length) {
-			console.log("Layer id : " + $layer.attr("id"));
-			$layer.addClass("show");
-		} else {
-			console.error("Can not find the layer.", $element);
-		}
+	var $layer;
+	if (typeof($element) == "string") $element = $($element);
+	if ($element.hasClass("layer")) {
+		$layer = $element;
+	} else {
+		$layer = $element.parents(".layer");
 	}
+	if (title) {
+		$layer.find("header h1").text(title);
+	}
+	if ($layer.length) {
+		console.log("Layer id : " + $layer.attr("id"));
+		$layer.addClass("show");
+	} else {
+		console.error("Can not find the layer.", $element);
+	}
+}
 
-	function hideLayer($element) {
-		var $layer;
-		if (typeof($element) == "string") $element = $($element);
-		if ($element.hasClass("layer")) {
-			$layer = $element;
-		} else {
-			$layer = $element.parents(".layer");
-		}
-		if ($layer.length) $layer.removeClass("show");
+function hideLayer($element) {
+	var $layer;
+	if (typeof($element) == "string") $element = $($element);
+	if ($element.hasClass("layer")) {
+		$layer = $element;
+	} else {
+		$layer = $element.parents(".layer");
 	}
+	if ($layer.length) $layer.removeClass("show");
+}
 </script>
 </body>
 </html>
