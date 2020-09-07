@@ -710,7 +710,7 @@ main.brandDetail3 .replyInputBox { margin-top: 64px; }
 .seriesListBox .scrollList li { margin-left: 8px; position: relative; }
 .seriesListBox .scrollList li.new:after { content: ""; display: block; position: absolute; width: 40px; height: 14px; background: url(../img/common/tagNew.png) no-repeat center; top: -4px; right: -4px; background-size: cover; }
 .seriesListBox .scrollList li .blur { transition: opacity 0.5s; opacity: 0; width: 80px; height: 80px; border-radius: 8px; filter: blur(10px); top: 10px; left: 0; position: absolute; }
-.seriesListBox .scrollList li div:nth-child(2) { position: relative; width: 80px; height: 80px; flex: 0 0 auto; background-repeat: no-repeat; background-size: cover; }
+.seriesListBox .scrollList li div:nth-child(2) { position: relative; width: 80px; height: 80px; flex: 0 0 auto; background-repeat: no-repeat; background-size: cover; color: white; font-size: 16px; font-weight: bold; display: flex; align-items: center; justify-content: center; line-height: 19px; text-align: center;}
 .seriesListBox .scrollList li.on .blur { opacity: 0.8; }
 .seriesListBox .scrollList li:nth-child(1) {  margin-left: 0; }
 .seriesListBox .scrollList li.item1 div:nth-child(2) { background-image: url("../img/common/seriesListItem01.png"); margin-left: 0; }	    /* item1 : 신상은타이밍 */
