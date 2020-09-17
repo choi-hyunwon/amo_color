@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Color Tailor" })
+
+<body>
+	<main class="personal_color_season spring">
+		<!-- 계졀 결과 클래스 -->
+		<div class="pccg">
+			<div class="color_graph">
+				<div class="ctxt">봄웜</div>
+				<svg>
+					<path class="spring" />
+					<path class="summer" />
+					<path class="autumn" />
+					<path class="winter" />
+				</svg>
+			</div>
+
+			<div class="personalColorBox">
+				<div class="personalColorGroup spring">
+					<div class="personalColor"></div>
+					<div class="personalColorText">봄웜</div>
+					<div class="pct">65%</div>
+				</div>
+				<div class="personalColorGroup winter">
+					<div class="personalColor"></div>
+					<div class="personalColorText">겨울쿨</div>
+					<div class="pct">35%</div>
+				</div>
+			</div>
+		</div>
+		<div class="season_slider">
+			<div class="sst"><strong>살랑살랑봄웜</strong>님은<br /><b>봄웜</b>으로 추정돼요!</div>
+
+			<div class="sdw noScrollBar">
+				<div class="box">
+					<div class="inner">
+						<div class="center">
+							<span class="lbl">세부톤</span>
+							<div class="ttl">라이트</div>
+						</div>
+						<div class="stl">추천 컬러</div>
+						<p>우유를 섞은 듯한 파스텔톤이 잘 어울리며, 연핑크 컬러의 립과 딸기 우유 또는 라벤더 컬러의 블러셔로 포인트를 주는 것이 좋아요.</p>
+						<div class="stl">추천 메이크업</div>
+						<div class="emm">"파스텔 블러셔를 얹은 여리여리한 메이크업이 좋아요.”</div>
+						<p>음영 메이크업이나 진한 아이메이크업 대신, 투명하고 여리여리한 메이크업을 추천해요. 립은 풀립보다는 그라데이션이 좋고, 우유를 섞은 듯한 라벤더나 딸기 우유 컬러
+							블러셔는 빠뜨리지 마세요!</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="inner">
+						<div class="center">
+							<span class="lbl">세부톤</span>
+							<div class="ttl">뮤트</div>
+						</div>
+						<div class="stl">추천 컬러</div>
+						<p>회색빛이 도는 차분한 파스텔 계열의 컬러들이 잘 어울리며, 메이크업은 옅을수록 좋고, 톤 다운된 핑크 색상의 립을 추천합니다.</p>
+						<div class="stl">추천 메이크업</div>
+						<div class="emm">"절대 실패할리 없는 장미 컬러!"</div>
+						<p>봄 트루는 장미 컬러와 너무나도 잘 어울려요. 말린 장미 컬러의 립과 로즈 핑크 블러셔, 톤 다운된 로즈 컬러 섀도우 등으로 고급스럽고 우아한 이미지를 연출해보세요.
+						</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="inner">
+						<div class="center">
+							<span class="lbl">세부톤</span>
+							<div class="ttl">뮤트</div>
+						</div>
+						<div class="stl">추천 컬러</div>
+						<p>회색빛이 도는 차분한 파스텔 계열의 컬러들이 잘 어울리며, 메이크업은 옅을수록 좋고, 톤 다운된 핑크 색상의 립을 추천합니다.</p>
+						<div class="stl">추천 메이크업</div>
+						<div class="emm">"절대 실패할리 없는 장미 컬러!"</div>
+						<p>봄 트루는 장미 컬러와 너무나도 잘 어울려요. 말린 장미 컬러의 립과 로즈 핑크 블러셔, 톤 다운된 로즈 컬러 섀도우 등으로 고급스럽고 우아한 이미지를 연출해보세요.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="sldidc">
+				<div class="on"></div>
+				<div></div>
+				<div></div>
+			</div>
+
+		</div>
+
+
+
+		<div class="mpsc">
+			<div class="ttl">
+				나의 퍼스널컬러와<br />
+				내 파우치 속 제품 <b>매칭률은?</b>
+			</div>
+			<p>파우치에 내가 사용하는 제품들을 담고<br />
+				내 퍼스널컬러와의 매칭률을 알아보세요!</p>
+			<div class="pct">86%</div>
+			<button type="button">파우치에 제품담기</button>
+		</div>
+
+		<hr class="thick" />
+
+		<div class="paddingFrame">
+
+			@@include("partial/colorTest.html")
+
+			<button type="button" class="blackButton">컬러카드 신청하기</button>
+
+			<hr />
+
+			@@include("partial/colorDiagnostic.html")
+
+		</div>
+
+		<hr class="thick" />
+
+		<h3 class="pdl"><span>ooo님을 위한</span><br />봄웜톤 립</h3>
+		@@include("partial/prdts.html")
+	</main>
+	<script type="text/javascript">
+		$(function () {
+
+			var color_data = {
+				spring: 65,
+				summer: 0,
+				autumn: 0,
+				winter: 35
+			};
+
+
+			setColorChart(color_data);
+		});
+	</script>
+</body>
+
+</html>

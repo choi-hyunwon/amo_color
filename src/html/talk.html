@@ -32,16 +32,6 @@
 	</main>
 
 	<script type="text/javascript">
-		// 큰 탭 (뷰티톡, 자유톡, 캐스트)
-		$(".tabs li").on("click", function () {
-			$(this).addClass("on").siblings().removeClass("on");
-			var $tabContents = $("#" + $(this).parent(".tabs").attr("data-tab-id"));
-			if (!$tabContents.length) return;
-			var index = $(this).index();
-			$tabContents.children().hide();
-			$tabContents.children().eq(index).show();
-		});
-
 		$(".seriesListBox .scrollList li").on("click", function () {
 			$(this).addClass("on").siblings().removeClass("on");
 			var index = $(this).index();

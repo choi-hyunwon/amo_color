@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Color Tailor" })
+
+<body>
+	<main class="personal_color">
+		<div class="paddingFrame">
+			<p class="psnc">
+				<strong>살랑살랑봄웜</strong>님의<br />
+				<b>퍼스널컬러</b>는?
+			</p>
+			<span>지금 바로 진단을 통해 알아보세요!</span>
+
+			<div class="color_graph">
+				<div class="ctxt">?</div>
+				<svg>
+					<path class="spring" />
+					<path class="summer" />
+					<path class="autumn" />
+					<path class="winter" />
+				</svg>
+			</div>
+
+			<div class="personalColorBox">
+				<div class="personalColorGroup spring">
+					<div class="personalColor"></div>
+					<div class="personalColorText">봄웜</div>
+				</div>
+				<div class="personalColorGroup summer">
+					<div class="personalColor"></div>
+					<div class="personalColorText">여름쿨</div>
+				</div>
+				<div class="personalColorGroup autumn">
+					<div class="personalColor"></div>
+					<div class="personalColorText">가울웜</div>
+				</div>
+				<div class="personalColorGroup winter">
+					<div class="personalColor"></div>
+					<div class="personalColorText">겨울쿨</div>
+				</div>
+			</div>
+
+			@@include("partial/colorTest.html")
+
+			<button type="button" class="blackButton">컬러카드 신청하기</button>
+
+			<hr />
+
+			@@include("partial/colorDiagnostic.html")
+		</div>
+	</main>
+	<script type="text/javascript">
+	$(function(){
+
+		var color_data = {
+			spring: 25,
+			summer: 25,
+			autumn: 25,
+			winter: 25
+		};
+
+
+		setColorChart(color_data);
+	});
+	</script>
+</body>
+
+</html>

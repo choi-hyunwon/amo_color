@@ -16,7 +16,7 @@ body { font-family: sans-serif; }
 ul { margin: 0; padding: 0; list-style: none; }
 figure { margin: 0; }
 a { font-size: inherit; color: inherit; outline: none; }
-a, a:link, a:hover, a:active, a:visited { text-decoration: none; }
+a, a:link, a:hover, a:active, a:visited { color:inherit; text-decoration: none; }
 
 /* 크롬, 안드로이드 테두리 없애기 */
 * { -webkit-tap-highlight-color: transparent; outline: none; }
@@ -43,7 +43,7 @@ input::placeholder,
 textarea::placeholder { color: #cccccc; }
 button { transition: color 0.5s, border-color 0.5s; white-space: nowrap; }
 button[disabled] { color: #cccccc !important; border-color: #ededed !important; }
-i { font-style: normal; }
+i { font-style: normal; display: inline-block; vertical-align: middle;}
 p { text-align: justify; word-break: break-all;  }
 label { display: inline; margin: 0; }
 label + label { margin-left: 8px; }
@@ -110,6 +110,7 @@ button.black { color: black; border-color: black; }
 .backArrow { width: 24px; height: 24px; background: url("../img/common/backArrow.png") no-repeat; background-size: cover; display: block; }
 .bellIcon { width: 24px; height: 24px; background: url("../img/common/bellIcon.png") no-repeat; background-size: cover; display: block; }
 .gearIcon { width: 24px; height: 24px; background: url("../img/common/gearIcon.png") no-repeat; background-size: cover; display: block; }
+.dotsIcon { width: 12px; height: 24px; background: url("../img/common/menu_dots.png") no-repeat; background-size: cover; display: block; }
 .bookmarkIcon { width: 24px; height: 24px; background: url("../img/common/bookmarkIcon.png") no-repeat; background-size: cover; display: block; }
 .bookmarkFillIcon { width: 24px; height: 24px; background: url("../img/common/bookmarkFillIcon.png") no-repeat; background-size: cover; display: block; }
 
@@ -165,6 +166,7 @@ header .bookmarkIcon,
 header .bookmarkFillIcon,
 header .bellIcon,
 header .gearIcon,
+header .dotsIcon,
 header .backArrow
 { display: none; }
 
@@ -172,10 +174,11 @@ header.showBookmark .bookmarkIcon,
 header.showBookmarkFill .bookmarkFillIcon,
 header.showBell .bellIcon,
 header.showConfig .gearIcon,
+header.showDots .dotsIcon,
 header.showBack .backArrow
 { display: block; }
 
-header.searchHeader { display: flex; align-items: center;  height: 60px; padding: 12px 16px; }
+header.searchHeader { position: relative; display: flex; align-items: center;  height: 60px; padding: 12px 16px; }
 header.searchHeader input { height: 36px; border: 1px solid #ededed; flex: 1; font-size: 14px; padding: 11px 25px 8px 16px; vertical-align:  middle;}
 .iconMagnify { width: 24px; height: 24px; background: url("../img/common/icon_magnify.png") no-repeat center; background-size: 24px; }
 header.searchHeader .iconMagnify { display: inline-block; vertical-align:  middle; flex: 0 0 auto; margin-right: 16px; }
@@ -204,9 +207,22 @@ header.searchHeader .iconMagnify { display: inline-block; vertical-align:  middl
 
 /* personalColor Box */
 .personalColorBox { display: flex; align-items: center; justify-content: space-between; }
+.personalColorGroup { display: flex; flex-direction: column; align-items: center; }
+
+.personalColorGroup.spring .personalColor { background-image: url("../img/common/personColor_spring.png"); }
+.personalColorGroup.summer .personalColor { background-image: url("../img/common/personColor_summer.png"); }
+.personalColorGroup.autumn .personalColor { background-image: url("../img/common/personColor_autumn.png"); }
+.personalColorGroup.winter .personalColor { background-image: url("../img/common/personColor_winter.png"); }
+
+.personalColorGroup.spring .personalColorText { color: var(--springColor); }
+.personalColorGroup.summer .personalColorText { color: var(--summerColor); }
+.personalColorGroup.autumn .personalColorText { color: var(--autumnColor); }
+.personalColorGroup.winter .personalColorText { color: var(--winterColor); }
+
 .personalColorBox .personalColor { width: 33px; height: 33px; }
 .personalColorBox div.flex.column { align-items: center; transition: opacity 0.3s;}
 .personalColorBox .personalColorText { margin-top: 8px; font-size: 14px; }
+
 .personalColorText.spring { color: var(--springColor); }
 .personalColorText.summer { color: var(--summerColor); }
 .personalColorText.autumn { color: var(--autumnColor); }
@@ -393,7 +409,7 @@ li.noItem p.lipstick { background-image: url("../img/common/lipstick.png"); }
 .socialInfoBox > div > *:first-child { margin-left: 0; }
 
 .socialInfoBox > div:last-child > * { margin-left: 16px; }
-
+.socialInfoBox + .replyList { border-top: 0; }
 
 /* 제품 정보 박스 */
 .productInfoBox { height: 70px; padding: 9px 24px; border: 1px solid #ededed; background-color: white; position: relative; }
@@ -622,7 +638,7 @@ input.agreeForExpose { float: left; }
 .brandDetailPhoto { width: 100%; height: auto; }
 
 
-h3 { font-size: 20px; font-weight: bold; color: #000000; }
+h3 { font-size: 20px; font-weight: bold; color: #000000; line-height: 24px; }
 h4 { font-size: 14px; color: #999999; }
 
 .brandDetail h3 { margin-top: 48px; padding: 0 16px; }
@@ -644,7 +660,7 @@ h3 + .productScrollBox { margin-top: 18px; }
 .brandDetail .socialInfoBox { margin-top: 32px; }
 
 /* 덧글 리스트 (브랜드 디테일 2) */
-.replyList {  }
+.replyList { border-top: 1px solid #ededed; }
 .replyList > li { padding: 16px; position: relative; }
 .replyList > li figure { width: 24px; height: 24px; position: absolute; top: 16px; left: 16px; }
 .replyList > li figure img { width: 24px; height: 24px; object-fit: cover; border-radius: 50%; }
@@ -663,6 +679,7 @@ h3 + .productScrollBox { margin-top: 18px; }
 
 .brandDetail .pinkButton, .brandDetail3 .pinkButton, #editProfileLayer .pinkButton { margin-top: 24px; }
 .brandDetail .socialInfoBox { border-bottom: 1px solid #ededed; }
+
 
 /* 풀 다운 제품 (브랜드 디테일 2) */
 .pullDownProductList {  }
@@ -692,7 +709,7 @@ main.brandDetail { padding-bottom: 60px; }
 .pullDownProductList .pullDownArrow { transition: transform 0.4s; transform: rotate(180deg); position: absolute; right:0; top: calc(50% - 12px); }
 .pullDownProductList .pullDownArrow.on { transform: rotate(0deg); }
 
-main.brandDetail3 .paddingFrame { padding-bottom: 48px; border-bottom: 1px solid #ededed; }
+main.brandDetail3 .paddingFrame { padding-bottom: 48px; }
 main.brandDetail3 .replyInputBox { margin-top: 64px; }
 
 .replyInputBox { box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08); font-size: 14px; display: flex; align-items: center; justify-content: space-between; padding: 20px 16px; }
@@ -767,3 +784,164 @@ main.brandDetail3 .replyInputBox { margin-top: 64px; }
 /* search.html */
 #search .colorChipBar { margin-bottom: 24px; }
 #search .paddingFrame + .buttonTabs { padding: 8px 16px 24px; border-bottom: 8px solid #ededed; }
+
+/* search_result.html */
+.search_clear { background: url("../img/common/search_close.png") no-repeat center; background-size: cover; width: 24px; height: 24px; position: absolute; top: center; right: 24px;  }
+
+.castList { display: flex; flex-wrap: wrap; padding: 16px; justify-content: space-between;}
+.castList li {  width: 48%; margin-bottom: 16px; }
+.castList li figure { width: 100%; margin-bottom: 8px; }
+.castList li figure img { width: 100%; object-fit: cover; object-position: center; }
+.castList li p { text-align: left; height: 34px; color: #333333; font-size: 14px; line-height: 17px; }
+.castList li .rtx { color: #ff336c; font-size: 14px; font-weight: bold; margin-right: 3px;}
+
+/* event.html */
+main.event_detail { display: flex; flex-direction:  column; }
+main.event_detail .replyInputBox { margin-top: 64px; }
+main.event_detail .replyList { border-top: 1px solid #ededed; margin-top: 48px; }
+.events .ev { margin-bottom: 24px; }
+.ev { position: relative; }
+.ev.end:after { content: "종료"; position: absolute; display: block; width: 62px; height: 39px; background-color: black; top: 0; right: 0; color: white; font-size: 14px; display: flex; justify-content: center; align-items: center; }
+.ev.end figure:after { content: ""; position: absolute; background-color: rgba(0, 0, 0, .5); top: 0; left: 0; width: 100%; height: 100%; display: block; }
+.ev figure { width: 100%; position: relative; }
+.ev figure img { width: 100%; position: relative; }
+.ev .etl { margin: 16px 0 0 16px; display: inline-block; border-radius: 4px; background-color: #ededed; color: #666666; font-size: 12px; padding: 4px 8px; }
+.ev .tit { margin-top: 8px; padding: 0 16px; font-size: 14px; color: #333333; font-weight: bold; line-height: 17px; }
+.ev .dt { margin-top: 4px; padding: 0 16px; font-size: 12px; color: #999999;}
+
+
+/* notification.html */
+.notiList, .noti_header { font-size: 14px; line-height: 17px; color: #333333;  }
+.noti_header, .notiList li { padding: 16px 24px 10px 24px; border-bottom: 1px solid #ededed; }
+.notiList li .dt, .noti_header .dt { margin-top: 2px; color: #cccccc; font-size: 12px; line-height: 15px; }
+.notification_detail p { text-align: justify; word-break: break-all; padding: 24px 24px 48px; font-size: 14px; line-height: 19px; color: #333333; }
+.notification_detail .replyInputBox { margin-top: 64px; }
+
+
+/* personal_color_.html */
+.psnc { margin-top: 48px; font-size: 20px; color: black; line-height: 24px; }
+.psnc strong, .psnc b { font-weight: bold; }
+.psnc + span { margin-top: 4px; display: inline-block; color: #999999; font-size: 14px; line-height: 17px; }
+.color_graph { position: relative; display: flex; justify-content: center; align-items: center; background: url("../img/common/psc_chart.png") no-repeat center; background-size: 272px 272px; height: 292px;}
+.color_graph svg { position: absolute; width: 288px; height: 292px; top: 50%; left: 50%; margin: -146px 0 0 -144px; }
+.color_graph svg path { stroke-width: 15px; fill: none; }
+.color_graph svg path.spring { stroke: var(--springColor); }
+.color_graph svg path.summer { stroke: var(--summerColor); }
+.color_graph svg path.autumn { stroke: var(--autumnColor); }
+.color_graph svg path.winter { stroke: var(--winterColor); }
+.color_graph .ctxt { font-size: 60px; font-weight: bold; color: #cccccc; }
+.spring .ctxt { font-size: 24px; color: var(--springColor); }
+.summer .ctxt { font-size: 24px; color: var(--summerColor); }
+.autumn .ctxt { font-size: 24px; color: var(--autumnColor); }
+.winter .ctxt { font-size: 24px; color: var(--winterColor); }
+
+.personal_color .personalColorBox,
+.personal_color_final .personalColorBox { padding: 0 24px; margin-bottom: 64px; }
+.personal_color .personalColorBox .personalColor,
+.personal_color_final .personalColorBox .personalColor { width: 36px; height: 36px; }
+.personal_color .personalColorBox .personalColorText,
+.personal_color_final .personalColorBox .personalColorText { font-size: 16px; font-weight: bold; margin-top: 4px; }
+.personal_color_season .personalColorBox, .personal_color_final .personalColorBox { justify-content: center; }
+.personal_color_season .personalColorBox .personalColorGroup,
+.personal_color_final .personalColorBox .personalColorGroup { margin-left: 32px; }
+.personal_color_season .personalColorBox .personalColorGroup:first-child,
+.personal_color_final .personalColorBox .personalColorGroup:first-child { margin-left: 0; }
+.personalColorBox .pct { display: inline-block; font-size: 16px; color: #333333; margin-top: 8px; }
+
+.jdhg { display: flex; justify-content: space-between; }
+.personal_color .jdhg,
+.personal_color_season .jdhg { margin-top: 16px; }
+.jdhg > a { margin-left: 12px; padding: 16px 0; align-items: center; display: flex; flex-direction: column; border-radius: 2px; background-color: #f7f7f7; flex-grow: 1; flex-shrink: 1; flex-basis: 88px; }
+.jdhg > a:first-child { margin-left: 0; }
+.jdhg > a p { font-size: 16px; text-align: center; }
+.jdhg > a i { margin-top: 8px; width: 56px; height: 56px; background-repeat: no-repeat; background-position: center; background-size: 56px 56px; }
+
+.blackButton { background-color: black; font-size: 16px; color: white; border-radius: 4px; height: 48px; }
+.jdhg + .blackButton { width: 100%; margin-top: 32px; }
+
+.personal_color hr,
+.personal_color_season hr { margin: 32px 0; border-color: #ededed; }
+
+.ptit { color: #333333; font-size: 16px; font-weight: bold; }
+.ptit + p { margin: 4px 0 0px; font-size: 14px; color: #666666; text-align: justify; word-break: break-all; line-height: 1.3; }
+
+i.ic-questionnaire { background-image: url("../img/common/ic-questionnaire.png"); }
+i.ic-selfie { background-image: url("../img/common/ic-selfie.png"); }
+i.ic-colorcard { background-image: url("../img/common/ic-colorcard.png"); }
+
+.season_slider { height: 586px; padding-top: 48px; }
+.spring .season_slider { background: linear-gradient(#ffffff, #ffbaba); }
+.summer .season_slider { background: linear-gradient(#ffffff, #73e9e4); }
+.autumn .season_slider { background: linear-gradient(#ffffff, #ff8a75); }
+.winter .season_slider { background: linear-gradient(#ffffff, #9293ff); }
+.season_slider .sst { text-align: center; font-size: 20px; line-height: 1.4; }
+.season_slider .sdw { scroll-snap-type: x mandatory; width: 100vw; overflow-x: auto; overflow-y: hidden; margin-top: 24px; display: flex; }
+.season_slider .box { scroll-snap-align: center;  flex-shrink: 0; padding: 0px 8px 10px 8px;  }
+.season_slider .box .personalColor { width: 36px; height: 36px; margin: auto; margin-top: 88px; }
+.season_slider .box:first-child { padding-left: 10vw; }
+.season_slider .box:last-child { padding-right: 10vw; }
+.season_slider .inner { padding: 32px 24px; border-radius: 16px; background-color: white; height: 420px; width: 80vw; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); }
+.season_slider .box .center { text-align: center; }
+.season_slider .box .lbl { border-radius: 8px; background-color: #ededed; padding: 3px 7px; color: #333333; font-size: 10px; font-weight: bold;  }
+.season_slider .box .ttl { font-size: 20px; font-weight: bold; color: #333333; margin-top: 8px; }
+.season_slider .box .stl { margin-top: 16px; font-size: 14px; font-weight: bold; line-height: 19px; }
+.spring .season_slider .box .stl { color: var(--springColor); }
+.summer .season_slider .box .stl { color: var(--summerColor); }
+.autumn .season_slider .box .stl { color: var(--autumnColor); }
+.winter .season_slider .box .stl { color: var(--winterColor); }
+
+.sldidc { display: flex; justify-content:  center;}
+.sldidc div { transition: width 0.4s, background-color 0.4s; width: 4px; height: 4px; background-color: white; border-radius: 2px; margin: 0 2px; }
+.sldidc div.on { background-color: black; width: 14px;  }
+
+.season_slider .box .emm { margin-top: 4px; font-style: normal; color: black; font-size: 14px; }
+.season_slider .box .emmm { margin-top: 18px; font-style: normal; color: #333333; font-size: 20px; font-weight: bold; }
+.season_slider .box .emmm + p { margin-top: 8px; }
+.season_slider .box p { margin-top: 4px; font-size: 14px; color: #666666; line-height: 19px; }
+
+.mpsc { padding: 48px 16px 0; text-align: center; }
+.mpsc .ttl { font-size: 20px; color: #333333;line-height: 1.2; }
+.mpsc .ttl + p { margin-top: 8px; color: #999999; font-size: 14px; line-height: 17px; text-align: center; }
+.mpsc .pct { font-size: 60px; font-weight: bold; margin-top: 24px; }
+.spring .mpsc .pct { color: var(--springColor); }
+.summer .mpsc .pct { color: var(--summerColor); }
+.autumn .mpsc .pct { color: var(--autumnColor); }
+.winter .mpsc .pct { color: var(--winterColor); }
+.mpsc button { margin-top: 32px; width: 100%; color: black; border: 1px solid #ededed; border-radius: 4px; height: 48px; }
+
+hr.thick { border-width: 8px; margin: 32px 0; }
+
+.prdts .tit { font-size: 20px; line-height: 24px; margin-bottom: 8px; }
+
+.prdts { padding: 0px 16px; display: flex; flex-wrap: wrap; justify-content: center;}
+.prdts .itm { width: 140px; height: 216px; }
+.prdts .itm ul { display: flex; align-items: center; flex-direction: column; }
+.prdts .itm li:nth-child(1) { width: 50px; height: 100px }
+.prdts .itm li:nth-child(1) img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.prdts .itm li:nth-child(2) { font-size: 12px; color: #999999; margin-top: 16px; }
+.prdts .itm li:nth-child(3) { font-size: 16px; color: #333333; font-weight: bold; margin-top: 2px; }
+.prdts .itm li:nth-child(4) { font-size: 12px; color: #333333; margin-top: 4px; }
+.prdts .itm li:nth-child(5) { font-size: 12px; color: #999999; margin-top: 8px; }
+
+.pdl { padding-left: 16px; }
+h3 span { font-weight: normal; }
+
+main.personal_color, main.personal_color_final, main.personal_color_season { padding-bottom: 64px; }
+.personal_color_final h3, .personal_color_season h3,
+.personal_color_final .writerInfo { margin-bottom: 8px; }
+.personal_color_final .productList { border: 0; margin: 8px 0 48px; }
+.personal_color_final .showMeMoreButton { margin-top: 16px; color: #999999; text-align: left; }
+.personal_color_final .socialInfoBox { border-bottom: 1px solid #ededed }
+
+i.more_icon { background: url("../img/common/more_icon.png") no-repeat center; width: 12px; height: 22px; background-size: cover; }
+.showMeMoreButton i.more_icon { margin: 0 10px 0 6px; }
+
+.more_center { height: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #333333; text-align: center; }
+.more_center i { margin-left: 8px; }
+i.forward { background: url("../img/common/forwardArrow.png") no-repeat center; width: 18px; height: 18px; background-size: cover; }
+
+.pccg { background-size: contain; height: 642px; background-repeat: no-repeat; background-repeat-x: repeat; background-repeat-y: no-repeat; background-position: center top; padding: 245px 16px 0; }
+.spring .pccg { background-image: url("../img/common/img-spring.png") }
+.summer .pccg { background-image: url("../img/common/img-summer.png") }
+.autumn .pccg { background-image: url("../img/common/img-autumn.png") }
+.winter .pccg { background-image: url("../img/common/img-winter.png") }

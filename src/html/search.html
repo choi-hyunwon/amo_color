@@ -3,7 +3,7 @@
 @@include('include/head.html', { title : "Color Tailor" })
 <body id="search">
 <header class="searchHeader">
-@@include('include/searchHeader.html')
+@@include('include/searchHeader.html', { value : "" })
 </header>
 <main>
 	<ul class="tabs" data-tab-id="mainTabs">
@@ -94,16 +94,7 @@
 
 <script type="text/javascript">
 
-// 탭 기능
-$(".tabs li").on("click", function(){
-	$(this).addClass("on").siblings().removeClass("on");
-	var $tabContents = $("#" + $(this).parent(".tabs").attr("data-tab-id"));
-	if (!$tabContents.length) return;
-	var index = $(this).index();
-	$tabContents.children().hide();
-	$tabContents.children().eq(index).show();
-});
-
+// 브랜드 탭 브랜드 리스트
 $(".brandList > li").click(function(){
 	if (!$(this).find(".event").length) {
 		showLayer($("#brandDetailLayer"));
@@ -111,50 +102,6 @@ $(".brandList > li").click(function(){
 		showLayer($("#eventBrandDetailLayer"));
 	}
 });
-
-// 레이어 닫기
-$(".layer header .backArrow").click(function() {
-	hideLayer($(this));
-});
-
-// 버튼형 탭
-$(".buttonTabs button").on("click", function() {
-	var index = $(this).index();
-	$(this).addClass("on").siblings().removeClass("on");
-	var $tabContents = $(this).parents(".buttonTabs").next(".buttonTabsContents");
-	if (!$tabContents.length) return;
-	$tabContents.children().eq(index).removeAttr("style").siblings().attr("style", "display: none !important");
-});
-
-function showLayer($element, title) {
-	var $layer;
-	if (typeof($element) == "string") $element = $($element);
-	if ($element.hasClass("layer")) {
-		$layer = $element;
-	} else {
-		$layer = $element.parents(".layer");
-	}
-	if (title) {
-		$layer.find("header h1").text(title);
-	}
-	if ($layer.length) {
-		console.log("Layer id : " + $layer.attr("id"));
-		$layer.addClass("show");
-	} else {
-		console.error("Can not find the layer.", $element);
-	}
-}
-
-function hideLayer($element) {
-	var $layer;
-	if (typeof($element) == "string") $element = $($element);
-	if ($element.hasClass("layer")) {
-		$layer = $element;
-	} else {
-		$layer = $element.parents(".layer");
-	}
-	if ($layer.length) $layer.removeClass("show");
-}
 
 // 컬러칩 클릭
 $(".colorChipList > li div").on("click", function(){

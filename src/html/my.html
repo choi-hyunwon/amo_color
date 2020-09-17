@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ko">
-@@include('../html/include/head.html', { title : "Amore" })
+@@include('include/head.html', { title : "Amore" })
 <body>
 
 <header class="showBell  showConfig">
-@@include('../html/include/header.html')
+@@include('include/header.html')
 </header>
 <main class="my">
 <div class="profileBox">
@@ -1285,16 +1285,6 @@
 
 	<script type="text/javascript">
 
-	// 큰 탭 (파우치, 나의 글, 스크랩)
-	$(".tabs li").on("click", function(){
-		$(this).addClass("on").siblings().removeClass("on");
-		var $tabContents = $("#" + $(this).parent(".tabs").attr("data-tab-id"));
-		if (!$tabContents.length) return;
-		var index = $(this).index();
-		$tabContents.children().hide();
-		$tabContents.children().eq(index).show();
-	});
-
 	// 출석체크 메세지 보여주기
 	$(".pinkButton.attendencyCheck").on("click", function(){
 		showBlackAlert("12월 12일 출석이 완료되었습니다.");
@@ -1308,16 +1298,6 @@
 	// 메세지 박스내 닫는 버튼
 	$(".messageBox button").on("click", function(){
 		$(this).parents(".messageBox").css("bottom", -250);
-	});
-
-	// 버튼형 탭
-	$(".buttonTabs button").on("click", function() {
-		var index = $(this).index();
-		$(this).addClass("on").siblings().removeClass("on");
-		var $tabContents = $(this).parents(".buttonTabs").next(".buttonTabsContents");
-		if (!$tabContents.length) return;
-		$tabContents.children().hide();
-		$tabContents.children().eq(index).show();
 	});
 
 	// 프로필 수정 버튼
@@ -1334,19 +1314,6 @@
 	$(".validateEmailBox .okButton").on("click", function(){
 		showBlackAlert("이메일이 발송되었습니다. 메일함을 확인해주세요.");
 	});
-
-	// 스크롤 엔드 이벤트 생성
-	$.fn.scrollEnd = function(callback, timeout) {          
-		$(this).scroll(function(){
-			var $this = $(this);
-			if ($this.data('scrollTimeout')) {
-				clearTimeout($this.data('scrollTimeout'));
-			}
-			$this.data('scrollTimeout', setTimeout(function(){
-				callback($this);
-			}, timeout));
-		});
-	};
 
 	// 메인 프로필 사진 하단의 팔로잉 정보 보기
 	$(".follwInfo span").on("click", function(){
@@ -1408,64 +1375,12 @@
 		showLayer($("#myColorChipsLayer header h1"), "나의 컬러칩");
 	});
 
-	// 사진 스크롤시 하단 표시버튼 변경
-	$(".listPhoto").scrollEnd(function($this){
-		var scrollLeft = $this[0].scrollLeft;
-		var itemWidth = $(window).width();
-		var index = Math.round(scrollLeft / itemWidth);
-		var $scrollBox = $this.next(".productScrollButtons");
-		if (!$scrollBox.length) return;
-		$scrollBox.children().eq(index).addClass("on").siblings().removeClass("on");
-	}, 100);
-
 	// 라벨 설정하기 버튼
 	$(".setLabelButton").on("click", function() {
 		showLayer("#setLabelLayer");
 	});
 
-	// 좋아요, 북마크 토글
-	$(".snsLikeIcon, .snsBookmarkIcon").click(function(){
-		$(this).toggleClass("on");
-	});
-
-	function showBlackAlert(string, time) {
-		if (!time) time = 2000;
-		$(".blackAlert").html(string);
-		$(".blackAlert").css("bottom", 16);
-		setTimeout(function(){
-			$(".blackAlert").css("bottom", -100);
-		}, time);
-	}
-
-	function showLayer($element, title) {
-		var $layer;
-		if (typeof($element) == "string") $element = $($element);
-		if ($element.hasClass("layer")) {
-			$layer = $element;
-		} else {
-			$layer = $element.parents(".layer");
-		}
-		if (title) {
-			$layer.find("header h1").text(title);
-		}
-		if ($layer.length) {
-			console.log("Layer id : " + $layer.attr("id"));
-			$layer.addClass("show");
-		} else {
-			console.error("Can not find the layer.", $element);
-		}
-	}
-
-	function hideLayer($element) {
-		var $layer;
-		if (typeof($element) == "string") $element = $($element);
-		if ($element.hasClass("layer")) {
-			$layer = $element;
-		} else {
-			$layer = $element.parents(".layer");
-		}
-		if ($layer.length) $layer.removeClass("show");
-	}
+	
 	</script>
 </body>
 </html>
