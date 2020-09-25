@@ -306,7 +306,7 @@ button.okButton { background-color: white; border: 1px solid var(--pinkColor); b
 
 /* 메인 탭 파우치, 나의 글, 스크랩 */
 .tabs { display: flex; list-style: none; margin: 0; padding: 0; }
-.tabs > li { white-space: nowrap; padding: 16px 8px; font-size: 14px; flex: 1; text-align: center; color: #cccccc;  }
+.tabs > li { white-space: nowrap; padding: 16px 8px; font-size: 14px; flex: 1; text-align: center; color: #cccccc;  font-weight: bold; }
 .tabs > li.on { color: #333333; border-bottom: 2px solid #333333; }
 
 
@@ -614,11 +614,11 @@ input.agreeForExpose { float: left; }
 #pouchProductLayer .productList .plusProductIcon { flex: 0 0 auto; }
 
 /* 제품 라벨 설정 레이어 */
-#saveLabelLayer .paddingFrame .flex label { font-size: 14px; color: #333333; } 
-#saveLabelLayer .paddingFrame .flex span { vertical-align: middle; } 
-#saveLabelLayer .grayBox { position: relative; color: #666666; margin-top: 16px; } 
-#saveLabelLayer .grayBox p { margin-left: 34px; } 
-#saveLabelLayer .grayBox .itemTag { position: absolute; top: 16px; left: 16px; } 
+#saveLabelLayer .paddingFrame .flex label { font-size: 14px; color: #333333; }
+#saveLabelLayer .paddingFrame .flex span { vertical-align: middle; }
+#saveLabelLayer .grayBox { position: relative; color: #666666; margin-top: 16px; }
+#saveLabelLayer .grayBox p { margin-left: 34px; }
+#saveLabelLayer .grayBox .itemTag { position: absolute; top: 16px; left: 16px; }
 #saveLabelLayer textarea { color: #333333; margin-top: 16px; width: 100%; font-size: 14px; margin-top: 16px; border: 1px solid #ededed; padding: 16px; border-radius: 4px; resize: none; min-height: 132px; appearance: none; -webkit-appearance: none; display: block; }
 #saveLabelLayer .textCount { position: absolute; right: 16px; bottom: 8px; }
 #saveLabelLayer .grayInfo { border-radius: 4px; margin-top: 19px; color: #666666; }
@@ -738,7 +738,7 @@ main.brandDetail3 .replyInputBox { margin-top: 64px; }
 .seriesListBox .scrollList li.item6 div:nth-child(2) { background-image: url("../img/common/seriesListItem06.png"); }	    /* item6 : 월간잘쓴템 */
 .seriesListBox .scrollList li.item7 div:nth-child(2) { background-image: url("../img/common/seriesListItem07.png"); }	    /* item7 : 립VS립 */
 .seriesListBox .scrollList li.item8 div:nth-child(2) { background-image: url("../img/common/seriesListItem08.png"); }	    /* item8 : 브랜드매거진 */
-.seriesListBox .scrollList li.item9 div:nth-child(2) { background-image: url("../img/common/seriesListItem09.png"); }	    /* item9 : 그외 */	    
+.seriesListBox .scrollList li.item9 div:nth-child(2) { background-image: url("../img/common/seriesListItem09.png"); }	    /* item9 : 그외 */
 .seriesListBox .scrollList li.item1 div.blur { background-color: #008a3e; }
 .seriesListBox .scrollList li.item2 div.blur { background-color: #ff7171; }
 .seriesListBox .scrollList li.item3 div.blur { background-color: #9353d5; }
