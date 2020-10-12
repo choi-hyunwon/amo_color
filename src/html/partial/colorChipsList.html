@@ -1,8 +1,7 @@
 <div>
 	<div class="paddingFrame">
-		<i class="label">질감을 선택해주세요</i>
+		<i class="label">질감을 선택해주세요.</i>
 	</div>
-	
 	<div class="buttonTabs scrollBox dark">
 		<div class="scrollItems">
 			<button type="button" class="on">매트</button>
@@ -10,8 +9,21 @@
 			<button type="button">촉촉</button>
 		</div>
 	</div>
+  <!--  ver 0.5.0 펄감 추가-->
+  <div class="paddingFrame">
+		<i class="label">펄감을 선택해주세요.</i>
+	</div>
+	<div class="buttonTabs scrollBox dark">
+		<div class="scrollItems">
+			<button type="button" class="on">펄이 없는</button>
+			<button type="button">펄이 있는</button>
+			<button type="button">메탈릭한</button>
+		</div>
+	</div>
 
-	<div class="relative">
+
+  <!--  ver 0.5.0 gap-top 추가-->
+	<div class="relative gap-top">
 		<select class="wideSelect">
 			<option>정확도순</option>
 		</select>
@@ -19,4 +31,4 @@
 
 	<!-- 프로덕트리스트 -->
 	@@include("../partial/productList.html", { type : "two" })
-</div>	
+</div>
