@@ -36,7 +36,7 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: $modal-dialog-margin;
+  margin: 0 20px;
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
 
@@ -104,6 +104,7 @@
 
 // Actual modal
 .modal-content {
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -116,6 +117,7 @@
   @include box-shadow($modal-content-box-shadow-xs);
   // Remove focus outline from opened modal
   outline: 0;
+  border-radius: 8px;
 }
 
 // Modal background
@@ -136,12 +138,11 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  display: flex;
-  align-items: flex-start; // so the close btn always stays on the upper right corner
-  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+  text-align: center;
   padding: $modal-header-padding;
   background: $modal-header-bg;
   font-size: $modal-header-font-size;
+  margin-top: 24px;
   .close {
     color: $modal-header-close-button-color;
     padding: $modal-header-padding;
@@ -153,8 +154,11 @@
 // Title text within header
 .modal-title {
   margin-bottom: 0;
-  color: $modal-header-title-color;
-  line-height: $modal-title-line-height;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.19;
+  text-align: center;
+  color: #333333;
 }
 
 // Modal body
@@ -165,6 +169,10 @@
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
   padding: $modal-inner-padding;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  color: #666666;
 }
 
 // Footer (for actions)
@@ -173,16 +181,30 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: center; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding / 2;
+  padding : 16px 16px 24px;
   @include border-bottom-radius($modal-content-inner-border-radius);
 
-  // Place margin between footer elements
-  // This solution is far from ideal because of the universal selector usage,
-  // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
-  // stylelint-disable-next-line selector-max-universal
-  > * {
-    margin: $modal-footer-margin-between / 2;
+  & .btn {
+    width: 50%;
+    line-height: 34px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #000000;
+    margin: 0;
+    border: solid 1px #ededed;
+    border-radius: 0 8px 8px 0;
+    &.dismiss {
+      color: #999999;
+    }
+    &:first-child {
+      -webkit-border-radius: 8px 0 0 8px;
+      -moz-border-radius: 8px 0 0 8px;
+      border-radius: 8px 0 0 8px;
+      border-right: 0;
+    }
   }
+
 }
 
 // Measure scrollbar width for padding body during modal show/hide
