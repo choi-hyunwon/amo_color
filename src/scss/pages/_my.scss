@@ -164,6 +164,59 @@ input[type="password"].inputStyle.pink {
   border-bottom-color: var(--pinkColor);
 }
 
+
+
+// 인풋스타일
+input[type="text"].inputStyleBox,
+input[type="tel"].inputStyleBox,
+input[type="email"].inputStyleBox,
+input[type="password"].inputStyleBox {
+  transition: border-color .5s;
+  padding: 0px 8px;
+  width: 100%;
+  border: 1px solid #ededed;
+  color: #333333;
+  font-size: 16px;
+  margin-top: 16px;
+  line-height: 47px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+input[type="text"].inputStyleBox:focus,
+input[type="tel"].inputStyleBox:focus,
+input[type="email"].inputStyleBox:focus,
+input[type="password"].inputStyleBox:focus {
+  border-color: black;
+}
+
+
+textarea.inputStyleBox {
+  transition: border-color .5s;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ededed;
+  color: #333333;
+  font-size: 14px;
+  margin-top: 16px;
+  line-height: 1.12;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+textarea.inputStyleBox:focus {
+  border-color: black;
+}
+
+
+
+
+
+
+
+
+
 input[type="checkbox"] {
   border: 1px solid #cccccc;
   vertical-align: middle;
@@ -2789,5 +2842,58 @@ i.forward {
     border: 1px solid #ededed;
     font-size: 14px;
     padding-left: 16px;
+  }
+}
+
+
+/**
+  제품 등록 요청
+  add_product.html
+*/
+
+.add_product {
+  position: relative;
+  & .title {
+    padding : 32px 0 12px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #333333;
+
+    & span {
+      font-weight: bold;
+    }
+  }
+  & .subTitle {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.19;
+    color: #333333;
+    vertical-align: middle;
+    & span {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    & .ico-ic-write {
+      background :  center / 24px  no-repeat url(../img/common/ic-write@2x.png);
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+    & .essential {
+      font-size: 16px;
+      line-height: 1.19;
+      color: #999999;
+      font-weight: normal;
+    }
+  }
+  & .desc {
+    font-size: 14px;
+    line-height: 1.21;
+    color: #ff336c;
+  }
+  & .btn_add_product {
+    margin-top: 64px;
+    width: 100%;
+    background-color: #ff336c;
   }
 }
