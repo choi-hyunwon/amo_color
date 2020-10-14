@@ -3015,6 +3015,10 @@ i.forward {
         position: absolute;
         top: 0;
         right: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
       }
       & .title {
         position: absolute;
