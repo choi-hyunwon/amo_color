@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+@@include('../html/include/head.html', { title : "Amore"})
+
+<body>
+
+	<header class="showBack showTitle">
+		@@include('../html/include/header.html', { "title" : "문의하기" })
+	</header>
+	<main class="add_product">
+    <div class="paddingFrame">
+      <h3 class="title">제안하거나 궁금한 점이 있으시다면<span>컬러테일러에 문의해주세요.</span></h3>
+
+      <label class="subTitle"><span class="ico-ic-write"></span><span>문의 유형을 선택해주세요.</span><span class="essential">(필수)</span></label>
+      <input class="inputStyleBox" name="name" type="text">
+
+      <label class="subTitle"><span class="ico-ic-write"></span><span>문의 사항을 입력해주세요.</span><span class="essential">(필수)</span></label>
+      <textarea class="inputStyleBox" name="name" rows="13"></textarea>
+
+      <label class="subTitle"><span class="ico-ic-write"></span><span>이메일 주소를 입력해주세요.</span><span class="essential">(필수)</span></label>
+      <input class="inputStyleBox" name="name" type="text">
+      <p class="desc">입력하신 이메일 주소로 문의 결과가 전달됩니다. </p>
+    </div>
+    <div>
+      <button type="button" class="bottomButton btn_add_product">제출하기</button>
+<!--      <button type="button" disabled class="bottomButton btn_add_product">제출하기</button>-->
+    </div>
+	</main>
+  <div class="blackAlert" style="bottom: -100px;"></div>
+
+  <script>
+    $(function () {
+// 이메일 인증하기
+      $(".btn_add_product").on("click", function () {
+        showBlackAlert("이메일 주소를 입력해주세요.");
+      });
+    });
+  </script>
+</body>
+</html>
