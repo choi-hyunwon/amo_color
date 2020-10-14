@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Amore" })
+<body>
+
+	<header class="showBack showTitle">
+		@@include('../html/include/mw-header.html')
+	</header>
+	<main class="talk">
+		<ul class="tabs" data-tab-id="mainTabs">
+			<li>홈</li>
+			<li>뷰티톡</li>
+			<li class="on">자유톡</li>
+			<li>캐스트</li>
+		</ul>
+
+    <div class="buttonTabs scrollBox">
+      <div class="scrollItems">
+        <button type="button" class="on">전체</button>
+        <button type="button">일상</button>
+        <button type="button">질문</button>        <button type="button">정보</button>
+      </div>
+    </div>
+
+    <div class="buttonTabsContents">
+      <ul class="freeTalkList" >
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture2.jpg" />
+              </figure>
+              <div class="nickName">벵봉</div>
+              <div class="personalColor winter"></div>
+              <div class="personalColorText winter">겨울쿨</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">22시간전</div>
+            </div>
+          </div>
+
+          <div class="paddingFrame">
+            <div class="talkType">일상톡</div>
+            <div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+            <div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+            <a class="showMore">더보기</a>
+
+            <img src="../img/common/sampleProductPhoto03.jpg" />
+
+            <div class="hashButtons">
+              <a>이뻐</a>
+              <a>비싸</a>
+              <a>빨갛다</a>
+            </div>
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBoxTalk.html")
+
+        </li>
+
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture3.jpg" />
+              </figure>
+              <div class="nickName">벵봉</div>
+              <div class="personalColor summer"></div>
+              <div class="personalColorText summer">여름쿨</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">22시간전</div>
+            </div>
+          </div>
+
+          <div class="paddingFrame">
+            <div class="talkType">일상톡</div>
+            <div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+            <div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+            <a class="showMore">더보기</a>
+
+
+
+            <div class="hashButtons">
+              <a>이뻐</a>
+              <a>비싸</a>
+              <a>빨갛다</a>
+            </div>
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBox.html")
+
+        </li>
+
+
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture4.jpg" />
+              </figure>
+              <div class="nickName">홍시라네</div>
+              <div class="personalColor summer"></div>
+              <div class="personalColorText summer">여름쿨</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">0시간전</div>
+            </div>
+          </div>
+
+          <div class="paddingFrame">
+            <div class="talkType">일상톡</div>
+            <div class="talkTitle">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+            <div class="talkContent">하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</div>
+            <a class="showMore">더보기</a>
+
+            <div class="hashButtons">
+              <a>비싸</a>
+            </div>
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBox.html")
+
+        </li>
+
+        <li class="noItem">
+          <p class="bookmark">아직 스크랩한 자유톡이 없어요.</p>
+        </li>
+      </ul>
+
+
+    </div>
+
+	</main>
+
+	<script type="text/javascript">
+	</script>
+</body>
+
+</html>

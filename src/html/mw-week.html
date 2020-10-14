@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Color Tailor" })
+<body id="search">
+<header class="showBack showTitle">
+@@include('include/header.html', { title : "주간 핫 립" })
+</header>
+<main>
+	<ul class="tabs" data-tab-id="mainTabs">
+		<li class="on">종류</li>
+		<li>제형</li>
+		<li>퍼스널컬러</li>
+	</ul>
+	<div id="mainTabs" class="tabContents">
+
+		<!-- 종류 -->
+		<section>
+
+			<div class="buttonTabs scrollBox">
+				<div class="scrollItems">
+					<button type="button" class="on">매트</button>
+					<button type="button">세미글로시</button>
+					<button type="button">글로시</button>
+				</div>
+			</div>
+
+			<div class="buttonTabsContents">
+        <!-- 프로덕트리스트 -->
+        @@include("partial/productList.html", { type : "two rank" , display : "block" })
+        <!-- 프로덕트리스트 -->
+        @@include("partial/productList.html", { type : "two rank" , display : "none" })
+        <!-- 프로덕트리스트 -->
+        @@include("partial/productList.html", { type : "two rank" , display : "none" })
+
+			</div>
+
+		</section>
+		<!-- 종류 끝 -->
+
+    <!-- 제형 검색 -->
+    <section style="display: none">
+
+    </section>
+    <!-- 제형 검색 끝 -->
+		<!-- 퍼스널컬러 검색 -->
+		<section style="display: none">
+
+		</section>
+		<!-- 퍼스널컬러 검색 끝 -->
+	</div>
+
+</main>
+
+
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>

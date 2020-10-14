@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Amore" })
+<body>
+
+	<header class="showBack showTitle">
+		@@include('../html/include/mw-header.html')
+	</header>
+	<main class="talk">
+		<ul class="tabs" data-tab-id="mainTabs">
+			<li>홈</li>
+			<li class="on">뷰티톡</li>
+			<li>자유톡</li>
+			<li>캐스트</li>
+		</ul>
+
+    <div class="buttonTabs scrollBox">
+      <div class="scrollItems">
+        <button type="button" class="on">전체</button>
+        <button type="button">봄웜</button>
+        <button type="button">여름쿨</button>
+        <button type="button">가을웜</button>
+        <button type="button">겨울쿨</button>
+      </div>
+    </div>
+
+    <div class="buttonTabsContents">
+      <ul class="beautyTipList">
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture2.jpg" />
+              </figure>
+              <div class="nickName">쿨톤미현</div>
+              <div class="personalColor summer"></div>
+              <div class="personalColorText summer">여름쿨</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">22시간전</div>
+            </div>
+          </div>
+
+          <div class="listPhoto noScrollBar">
+            <img src="../img/common/sampleProductPhoto01.jpg" />
+            <img src="../img/common/sampleProductPhoto02.jpg" />
+            <img src="../img/common/sampleProductPhoto01.jpg" />
+            <img src="../img/common/sampleProductPhoto02.jpg" />
+          </div>
+
+          <div class="productScrollButtons">
+            <div class="on"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="paddingFrame">
+            <article>하우스의 신상립. 컬러풀 타투 틴트 전색상을 리뷰해볼거에요!!! ... RD 302 #레드온베어. RD 303 ... 낫 카인드 색상은 형광형광하게. 쨍한 느낌이 ..</article>
+            <a class="showMore">더보기</a>
+            <div class="hashButtons">
+              <a>태그</a>
+              <a>캔디</a>
+              <a>이뻐</a>
+              <a>비싸</a>
+              <a>빨갛다</a>
+            </div>
+
+            <button class="showMeMoreButton">
+              <i class="more_icon"></i><span>237개의 관련 제품보기</span>
+            </button>
+
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBoxTalk.html")
+        </li>
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture3.jpg" />
+              </figure>
+              <div class="nickName">웜톤미현</div>
+              <div class="personalColor winter"></div>
+              <div class="personalColorText winter">가을웜</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">22시간전</div>
+            </div>
+          </div>
+
+          <div class="listPhoto noScrollBar">
+            <img src="../img/common/sampleProductPhoto02.jpg" />
+            <img src="../img/common/sampleProductPhoto01.jpg" />
+            <img src="../img/common/sampleProductPhoto02.jpg" />
+          </div>
+
+          <div class="productScrollButtons">
+            <div class="on"></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="paddingFrame">
+            <article>카인드베어 당신의 케이스에 그림같은 순간을 입혀드립니다 . 작가 추가 하는 작가 메시지 후원하기 공유하기. 홈 스토리 판매 작품 금손 클래스 구매 후기 프로필 ...</article>
+            <a class="showMore">더보기</a>
+            <div class="hashButtons">
+              <a>태그</a>
+              <a>캔디</a>
+              <a>이뻐</a>
+              <a>비싸</a>
+              <a>빨갛다</a>
+            </div>
+
+            <button class="showMeMoreButton">
+              <i class="more_icon"></i><span>237개의 관련 제품보기</span>
+            </button>
+
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBoxTalk.html")
+
+        </li>
+      </ul>
+
+      <ul class="productReviewList">
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture4.jpg">
+              </figure>
+              <div class="nickName">이쁘니</div>
+              <div class="personalColor spring"></div>
+              <div class="personalColorText spring">봄웜</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">202시간전</div>
+            </div>
+          </div>
+
+          <div class="listPhoto noScrollBar">
+            <img src="../img/common/sampleProductPhoto02.jpg">
+            <img src="../img/common/sampleProductPhoto01.jpg">
+            <img src="../img/common/sampleProductPhoto02.jpg">
+            <img src="../img/common/sampleProductPhoto01.jpg">
+          </div>
+
+          <div class="productScrollButtons">
+            <div class="on"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="paddingFrame">
+            <div class="productInfoBox">
+
+              <figure>
+                <img src="../img/common/sampleLipstick01.jpg">
+              </figure>
+
+              <ul>
+                <li class="productBrand">메이크업포에버</li>
+                <li class="productName">버시컬러 스테인</li>
+                <li class="productType">핫 스트릭</li>
+              </ul>
+            </div>
+
+            <div class="starBox">
+              <div>
+                <ul class="stars">
+                  <li class="on"></li>
+                  <li class="on"></li>
+                  <li class="on"></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div class="averageStar">3</div>
+              </div>
+
+              <div>
+                <button type="button" class="pinkSmallButton firstReview"></button>
+              </div>
+
+            </div>
+
+            <ul class="productReviewReplyList">
+              <li class="thumbUp">너무 부드럽고 저렴한데다가 발색도 너무 좋아요.</li>
+              <li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+              <li class="tip">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+            </ul>
+            <a class="showMore">더보기</a>
+
+            <div class="hashButtons">
+              <a>캔디</a>
+              <a>이뻐</a>
+              <a>비싸</a>
+            </div>
+
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBoxTalk.html")
+
+
+        </li>
+
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture5.jpg">
+              </figure>
+              <div class="nickName">더워죽겠다</div>
+              <div class="personalColor autumn"></div>
+              <div class="personalColorText autumn">가을웜</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">202시간전</div>
+            </div>
+          </div>
+
+          <div class="listPhoto noScrollBar">
+            <img src="../img/common/sampleProductPhoto01.jpg">
+            <img src="../img/common/sampleProductPhoto02.jpg">
+            <img src="../img/common/sampleProductPhoto02.jpg">
+          </div>
+
+          <div class="productScrollButtons">
+            <div class="on"></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="paddingFrame">
+            <div class="productInfoBox">
+              <figure>
+                <img src="../img/common/sampleLipstick02.jpg">
+              </figure>
+              <ul>
+                <li class="productBrand">메이크업포에버</li>
+                <li class="productName">버시컬러 스테인</li>
+                <li class="productType">핫 스트릭</li>
+              </ul>
+            </div>
+
+            <div class="starBox">
+              <div>
+                <ul class="stars">
+                  <li class="on"></li>
+                  <li class="on"></li>
+                  <li class="on"></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div class="averageStar">3</div>
+              </div>
+
+              <div>
+                <button type="button" class="pinkSmallButton firstReview"></button>
+              </div>
+
+            </div>
+
+            <ul class="productReviewReplyList">
+              <li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+            </ul>
+            <a class="showMore">더보기</a>
+
+            <div class="hashButtons">
+              <a>캔디</a>
+              <a>비싸</a>
+              <a>빨갛다</a>
+            </div>
+
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBoxTalk.html")
+
+
+        </li>
+
+        <li class="noItem">
+          <p class="pencil">아직 작성한 제품 평가가 없어요.</p>
+        </li>
+      </ul>
+    </div>
+
+	</main>
+
+	<script type="text/javascript">
+	</script>
+</body>
+
+</html>

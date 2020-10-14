@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Amore" })
+<body>
+
+	<header class="showBack showTitle">
+		@@include('../html/include/header.html', { title : "뷰티팁"})
+	</header>
+	<main class="talk">
+		<div class="buttonTabsContents">
+      <ul class="productReviewList">
+        <li>
+          <div class="writerInfo">
+            <div>
+              <figure class="userPhoto">
+                <img src="../img/common/sampleProfilePicture4.jpg">
+              </figure>
+              <div class="nickName">이쁘니</div>
+              <div class="personalColor spring"></div>
+              <div class="personalColorText spring">봄웜</div>
+            </div>
+
+            <div>
+              <div class="whenDidShe">202시간전</div>
+            </div>
+          </div>
+
+          <div class="paddingFrame">
+            <div class="productInfoBox">
+
+              <figure>
+                <img src="../img/common/sampleLipstick01.jpg">
+              </figure>
+
+              <ul>
+                <li class="productBrand">메이크업포에버</li>
+                <li class="productName">버시컬러 스테인</li>
+                <li class="productType">핫 스트릭</li>
+              </ul>
+            </div>
+
+            <div class="starBox">
+              <div>
+                <ul class="stars">
+                  <li class="on"></li>
+                  <li class="on"></li>
+                  <li class="on"></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div class="averageStar">3</div>
+              </div>
+
+              <div>
+                <button type="button" class="pinkSmallButton firstReview"></button>
+              </div>
+
+            </div>
+
+            <ul class="productReviewReplyList no-overflow">
+              <li class="thumbUp">너무 부드럽고 저렴한데다가 발색도 너무 잘 되고 좋아요. 일주일 동안 가지고 다녔는데 벌써 거의 반은 없어진 것 같아요 진짜 데일리로 추천드려요</li>
+              <li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버리는 사악한 용량? 하지만 넘나 좋아서 대반족이예요.</li>
+              <li class="tip">단점을 고르자면 비싼 가격과 금방 다 써버리는 사악한 용량? 하지만 넘나 좋아서 대반족이예요.</li>
+              <li class="recommend"><span class="personalColor summer"></span> <span class="personalColorText summer">여름쿨</span></li>
+            </ul>
+            <a class="showMore">더보기</a>
+
+            <div class="hashButtons">
+              <a>캔디</a>
+              <a>이뻐</a>
+              <a>비싸</a>
+            </div>
+
+          </div>
+
+          <!-- 소셜 인포 박스 -->
+          @@include("partial/socialInfoBoxTalk.html")
+
+        </li>
+
+      </ul>
+
+
+      <ul class="replyList">
+        <li>
+          <figure>
+            <img src="../img/common/sampleProfilePicture1.jpg">
+          </figure>
+          <ul>
+            <li>쿨톤지영</li>
+            <li>홍시라네님 왤케 이뻐염? 저는 2번스타일 좋아하긴 하는데 홍시라네님한테는 1번 룩이랑 립이 잘 어울릴거 같아요! 1번 강추!</li>
+            <li>23분전 좋아요<span class="like">12개</span><a class="addReply">답글달기</a></li>
+          </ul>
+          <div class="snsSmallLikeIcon"></div>
+          <div class="more"></div>
+        </li>
+
+        <li class="reply">
+          <figure>
+            <img src="../img/common/sampleProfilePicture3.jpg">
+          </figure>
+          <ul>
+            <li>블랙맘마</li>
+            <li>@봄웜인 마자여.. 요즘 나온 신상 다 왤케 이뿜요? 자꾸자꾸 저는.. 텅장행이랍니다 ㅠ</li>
+            <li>23분전 좋아요<span class="like">12개</span><a class="addReply">답글달기</a></li>
+          </ul>
+          <div class="snsSmallLikeIcon"></div>
+          <div class="more"></div>
+        </li>
+
+        <li class="reply">
+          <figure>
+            <img src="../img/common/sampleProfilePicture4.jpg">
+          </figure>
+          <ul>
+            <li>사쿠라</li>
+            <li>@봄웜인 마자여.. 요즘 나온 신상 다 왤케 이뿜요? 자꾸자꾸 저는.. 텅장행이랍니다 ㅠ</li>
+            <li>23분전 좋아요<span class="like">12개</span><a class="addReply">답글달기</a></li>
+          </ul>
+          <div class="snsSmallLikeIcon"></div>
+          <div class="more"></div>
+        </li>
+
+        <li>
+          <figure>
+            <img src="../img/common/sampleProfilePicture2.jpg">
+          </figure>
+          <ul>
+            <li>테드창</li>
+            <li>홍시라네님 왤케 이뻐염? 저는 2번스타일 좋아하긴 하는데 홍시라네님한테는 1번 룩이랑 립이 잘 어울릴거 같아요! 1번 강추!</li>
+            <li>23분전 좋아요<span class="like">12개</span><a class="addReply">답글달기</a></li>
+          </ul>
+          <div class="snsSmallLikeIcon"></div>
+          <div class="more"></div>
+        </li>
+
+        <li>
+          <figure>
+            <img src="../img/common/sampleProfilePicture3.jpg">
+          </figure>
+          <ul>
+            <li>러블리수</li>
+            <li>홍시라네님 왤케 이뻐염? 저는 2번스타일 좋아하긴 하는데 홍시라네님한테는 1번 룩이랑 립이 잘 어울릴거 같아요! 1번 강추!</li>
+            <li>23분전 좋아요<span class="like">12개</span><a class="addReply">답글달기</a></li>
+          </ul>
+          <div class="snsSmallLikeIcon"></div>
+          <div class="more"></div>
+        </li>
+      </ul>
+
+      @@include("partial/replyList02.html")
+
+
+
+    </div>
+
+	</main>
+
+	<script type="text/javascript">
+	</script>
+</body>
+
+</html>
