@@ -64,7 +64,8 @@ function jsLib() {
 		'src/js/src/jquery.js',
 		'src/js/src/bootstrap.min.js',
 		'src/js/src/bootstrap-datepicker.js',
-		'src/js/src/bootstrap-datepicker.ko.min.js'
+		'src/js/src/bootstrap-datepicker.ko.min.js',
+    'src/js/src/swiper.min.js',
 	];
 	return gulp.src(sourceLib)
 		.pipe(concat('bundle.js'))
