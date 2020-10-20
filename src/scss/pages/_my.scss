@@ -117,6 +117,16 @@ button.black { color: black; border-color: black; }
   background-size: cover;
   display: block;
 }
+.homeIcon {
+  width: 24px;
+  height: 24px;
+  background: url("../img/common/ic-home@2x.png") no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+
+
 
 .bookmarkIcon {
   width: 24px;
@@ -332,7 +342,8 @@ header .bookmarkFillIcon,
 header .bellIcon,
 header .gearIcon,
 header .dotsIcon,
-header .backArrow
+header .backArrow,
+header .homeIcon
 { display: none; }
 
 header.showBookmark .bookmarkIcon,
@@ -340,7 +351,8 @@ header.showBookmarkFill .bookmarkFillIcon,
 header.showBell .bellIcon,
 header.showConfig .gearIcon,
 header.showDots .dotsIcon,
-header.showBack .backArrow
+header.showBack .backArrow,
+header.showHome .homeIcon
 { display: block; }
 
 header.searchHeader { position: relative; display: flex; align-items: center;  height: 60px; padding: 12px 16px; }
@@ -542,7 +554,7 @@ li.noItem p.search-fail span {
 .listPhoto { height: 100vw; overflow-x: auto; display: flex; padding: 0; scroll-snap-type: x mandatory; }
 .listPhoto-home { height: 190px;  margin-bottom: 16px;}
 .listPhoto img { flex-shrink: 0; display: block; width: 100vw; scroll-snap-align: start;}
-
+.listPhoto-lip img {max-width: 100%; display: inline-block; width:auto}
 /* 리스트의 작성자 정보 */
 .writerInfo { align-items: center; display: flex; justify-content: space-between; height: 74px; padding: 16px; background-color: white; }
 .writerInfo > div:first-child { align-items: center; display: flex;}

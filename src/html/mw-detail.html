@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Amore" })
+<body>
+
+<header class="showBack showHome">
+  @@include('include/header.html', { title : "" })
+</header>
+<main class="detail">
+
+
+  <div class="product">
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="../img/common/samplePouchProduct01.jpg"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="../img/common/samplePouchProduct02.jpg"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="../img/common/samplePouchProduct03.jpg"/>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script>
+      var mySwiper = new Swiper('.swiper-container', {
+
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
+      })
+    </script>
+    <div class="spec">
+      <figure class="brand">
+        <img src="../img/common/img-brand-logo@2x.png" height="20"/>
+      </figure>
+      <ul>
+        <li class="title">볼륨 틴트 라커</li>
+        <li class="description">체리 모찌</li>
+        <li class="weather"><span class="personalColor summer"></span><span class="personalColorText summer">본 투비 피치</span></li>
+        <li class="price">11,000원 | 4.5g</li>
+      </ul>
+    </div>
+    <div class="point">
+      <p>상큼한 과즙 컬러감을 한껏 머금은 탕후루 시럽 코팅 틴트</p>
+    </div>
+    <div class="hash">
+      <span>#촉촉한</span>
+      <span>#매트립</span>
+      <span>#부드러운발색</span>
+    </div>
+    <div class="btn-move">
+      <a href="#">
+        <span class="title">구찌뷰티</span><span class="text">브랜드관 가기</span> <span><img src="../img/common/tagEvent.png" width="40"/></span>
+        <span class="arrow"><img src="../img/common/ic-right@2x.png" height="24"/></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="line">
+    <h3>같은 라인 제품</h3>
+    <div class="list">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="photo"><img src="../img/common/img-lip-1@2x.png" height="60"/></span>
+            <span class="color" style="background-color: #9a2321;">
+              생 제르망 <span class="maincolor"><img src="../img/common/tg-product-main-color@2x.png" height="14"/></span>
+              <span class="check"><img src="../img/common/ic-check@2x.png" height="24"/></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="photo"><img src="../img/common/img-lip-1@2x.png" height="60"/></span>
+            <span class="color" style="background-color: #fb3b56;">
+              생 제르망
+              <span class="maincolor"><img src="../img/common/tg-product-main-color@2x.png" height="14"/></span>
+              <span class="check"><img src="../img/common/ic-check@2x.png" height="24"/></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="photo"><img src="../img/common/img-lip-1@2x.png" height="60"/></span>
+            <span class="color" style="background-color: #f06197;">
+              생 제르망 <span class="maincolor"><img src="../img/common/tg-product-main-color@2x.png" height="14"/></span>
+              <span class="check"><img src="../img/common/ic-check@2x.png" height="24"/></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="photo"><img src="../img/common/img-lip-1@2x.png" height="60"/></span>
+            <span class="color" style="background-color: #f5a5ac;">
+              생 제르망 <span class="maincolor"><img src="../img/common/tg-product-main-color@2x.png" height="14"/></span>
+              <span class="check"><img src="../img/common/ic-check@2x.png" height="24"/></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="photo"><img src="../img/common/img-lip-1@2x.png" height="60"/></span>
+            <span class="color" style="background-color: #c94438;">
+              생 제르망 <span class="maincolor"><img src="../img/common/tg-product-main-color@2x.png" height="14"/></span>
+              <span class="check"><img src="../img/common/ic-check@2x.png" height="24"/></span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="btn-allcolor">
+      <a href="#">
+        <span class="text">전 색상보기 <img src="../img/common/ic-down@2x.png" width="18"/></span>
+      </a>
+    </div>
+  </div>
+
+
+
+
+  <div class="rate">
+    <h3>사용자들의 평가</h3>
+    <div class="box">
+      <div class="count">
+        <div class="num">4.9</div>
+        <div class="star clearfix">
+          <img src="../img/common/ic-rate-100@2x.png" width="24"/><img src="../img/common/ic-rate-100@2x.png" width="24"/><img src="../img/common/ic-rate-100@2x.png" width="24"/><img src="../img/common/ic-rate-100@2x.png" width="24"/><img src="../img/common/ic-rate-25@2x.png" width="24"/>
+        </div>
+        <div class="description">43개의 사용자 평가</div>
+      </div>
+      <div class="rate_list">
+        <ul>
+          <li><span class="tit">5점</span><span class="point"><span class="no" style="width:75%"></span></span></li>
+          <li><span class="tit">4점</span><span class="point"><span class="no" style="width:50%"></span></span></li>
+          <li><span class="tit">3점</span><span class="point"><span class="no" style="width:20%"></span></span></li>
+          <li><span class="tit">2점</span><span class="point"><span class="no" style="width:10%"></span></span></li>
+          <li><span class="tit">1점</span><span class="point"><span class="no" style="width:0%"></span></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="appraisal">
+      <ul>
+        <li><span class="tit">발색력</span><span class="point">선명하게 발려요</span><span class="no">75%</span></li>
+        <li><span class="tit">지속력</span><span class="point">오래 유지돼요</span><span class="no">53%</span></li>
+        <li><span class="tit">각질부각</span><span class="point">원래 톤으로 착색되요</span><span class="no">100%</span></li>
+      </ul>
+    </div>
+    <ul class="productReviewList">
+      <li>
+        <div class="writerInfo">
+          <div>
+            <figure class="userPhoto">
+              <img src="../img/common/sampleProfilePicture4.jpg">
+            </figure>
+            <div class="nickName">이쁘니</div>
+            <div class="personalColor spring"></div>
+            <div class="personalColorText spring">봄웜</div>
+          </div>
+
+          <div>
+            <div class="whenDidShe">202시간전</div>
+          </div>
+        </div>
+
+        <div class="listPhoto noScrollBar">
+          <img src="../img/common/sampleProductPhoto02.jpg">
+          <img src="../img/common/sampleProductPhoto01.jpg">
+          <img src="../img/common/sampleProductPhoto02.jpg">
+          <img src="../img/common/sampleProductPhoto01.jpg">
+        </div>
+
+        <div class="productScrollButtons">
+          <div class="on"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="paddingFrame">
+          <div class="productInfoBox">
+
+            <figure>
+              <img src="../img/common/sampleLipstick01.jpg">
+            </figure>
+
+            <ul>
+              <li class="productBrand">메이크업포에버</li>
+              <li class="productName">버시컬러 스테인</li>
+              <li class="productType">핫 스트릭</li>
+            </ul>
+          </div>
+
+          <div class="starBox">
+            <div>
+              <ul class="stars">
+                <li class="on"></li>
+                <li class="on"></li>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <div class="averageStar">3</div>
+            </div>
+
+            <div>
+              <button type="button" class="pinkSmallButton firstReview"></button>
+            </div>
+
+          </div>
+
+          <ul class="productReviewReplyList">
+            <li class="thumbUp">너무 부드럽고 저렴한데다가 발색도 너무 좋아요.</li>
+            <li class="thumbDown">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+            <li class="tip">단점을 고르자면 비싼 가격과 금방 다 써버려서 없어져요.</li>
+          </ul>
+          <a class="showMore">더보기</a>
+
+          <div class="hashButtons">
+            <a>캔디</a>
+            <a>이뻐</a>
+            <a>비싸</a>
+          </div>
+
+        </div>
+
+        <!-- 소셜 인포 박스 -->
+        <div class="socialInfoBox">
+          <div>
+            <div class="snsSmallLikeIcon"></div>
+            <span>999+</span>
+            <div class="snsSmallReplyIcon"></div>
+            <span>46</span>
+            <div class="snsSmallWatchIcon"></div>
+            <span>38k</span>
+          </div>
+
+        </div>
+
+
+
+      </li>
+
+
+
+
+    </ul>
+
+    <div class="app">
+      <p><span class="description">지금 바로 App 다운로드 받고</span></p>
+      <p><span class="black">이 제품의 다른</span><span class="pink">리뷰 다 보기!</span></p>
+      <div class="btn-app"><a href="#">앱에서 보기</a></div>
+    </div>
+
+  </div>
+
+  <div class="recommend-lip">
+    <h3>이 브랜드의 추천 립</h3>
+    @@include("partial/prdts.html")
+  </div>
+
+
+
+
+
+
+</main>
+
+<script type="text/javascript">
+</script>
+</body>
+
+</html>
