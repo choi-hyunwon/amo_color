@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+@@include('../html/include/head.html', { title : "Amore"})
+
+<body>
+
+<header class="showBack showTitle">
+  @@include('../html/include/header.html', { "title" : "제품 정보 수정 요청" })
+</header>
+<main class="add_product">
+  <div class="paddingFrame">
+    <h3 class="title">수정이 필요한 제품 정보가 있다면<span>컬러테일러에 알려주세요.</span></h3>
+
+    <label class="subTitle"><span class="ico-ic-write"></span><span>항목을 선택해주세요.</span><span class="essential">(필수)</span></label>
+    <div class="filter_wrap" id="filterDropdown">
+      <div class="filter">
+        <button type="button" class="tit" id="btnText">
+          <span>선택해주세요.</span>
+          <span class="arrow"><img src="../img/common/ic-down@2x.png" height="18"/></span>
+        </button>
+        <ul>
+          <li>
+            <div class="ck">
+              <label for="type_1"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>제품명</label>
+              <input type="radio" id="type_1" name="type" value="N">
+            </div>
+          </li>
+          <li>
+            <div class="ck">
+              <label for="type_2"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>가격/용량</label>
+              <input type="radio" id="type_2" name="type" value="PC">
+            </div>
+          </li>
+          <li>
+            <div class="ck">
+              <label for="type_3"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>퍼스널컬러 정보</label>
+              <input type="radio" id="type_3" name="type" value="P">
+            </div>
+          </li>
+          <li>
+            <div class="ck">
+              <label for="type_4"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>단종 여부</label>
+              <input type="radio" id="type_4" name="type" value="D">
+            </div>
+          </li>
+          <li>
+            <div class="ck">
+              <label for="type_5"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>해시태그</label>
+              <input type="radio" id="type_5" name="type" value="T">
+            </div>
+          </li>
+          <li>
+            <div class="ck">
+              <label for="type_6"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>기타</label>
+              <input type="radio" id="type_6" name="type" value="ETC">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      $('.filter_wrap').on('click','button', function () {
+        $(this).parent().addClass('on');
+      });
+      $('.filter_wrap').on('click','label', function () {
+        $(this).parent().addClass('on');
+        $(this).find('img').attr('src', $(this).find('img').attr('src').replace('ic-check@2x.png', 'ic-check-on@2x.png'));
+        $(this).parents('li').siblings().find('.ck').removeClass('on');
+        $(this).parents('li').siblings().find('label img').attr('src',$(this).parents('li').siblings().find('label img').attr('src').replace('ic-check-on@2x.png', 'ic-check@2x.png'));
+        $(this).parents('.filter').removeClass('on').find('button span').eq(0).text($(this).text());
+      })
+    </script>
+
+    <label class="subTitle"><span class="ico-ic-write"></span><span>수정할 내용을 입력해주세요.</span><span class="essential">(필수)</span></label>
+    <textarea class="inputStyleBox" name="name" rows="13"></textarea>
+    <p class="desc">요청하신 정보는 검토 후 반영되며, 사정에 따라 반영이 어렵거나 다소 늦어질 수 있으니 양해 부탁드립니다.</p>
+  </div>
+  <div>
+    <button type="button" class="bottomButton btn_add_product">제출하기</button>
+    <!--      <button type="button" disabled class="bottomButton btn_add_product">제출하기</button>-->
+  </div>
+</main>
+<div class="blackAlert" style="bottom: -100px;"></div>
+
+<script>
+  $(function () {
+// 이메일 인증하기
+    $(".btn_add_product").on("click", function () {
+      showBlackAlert("컬러명을 입력해주세요.");
+    });
+  });
+</script>
+</body>
+</html>
