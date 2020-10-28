@@ -13971,7 +13971,7 @@ li.noItem p.search-fail span {
   background-size: contain;
 }
 
-/* 하단 소셜인포박스 (좋아요, 덧글 수 등등) */
+/* 하단 소셜인포박스 (좋아요, 댓글 수 등등) */
 .socialInfoBox {
   margin-top: 16px;
   border-top: 1px solid #ededed;
@@ -15270,7 +15270,7 @@ h3 + .productScrollBox {
   margin-top: 32px;
 }
 
-/* 덧글 리스트 (브랜드 디테일 2) */
+/* 댓글 리스트 (브랜드 디테일 2) */
 .replyList {
   border-top: 1px solid #ededed;
 }

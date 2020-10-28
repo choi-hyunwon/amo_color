@@ -118,6 +118,7 @@ button {
 button[disabled] {
   color: #cccccc !important;
   border-color: #ededed !important;
+  background-color: #f7f7f7;
 }
 
 i {
@@ -230,12 +231,11 @@ span.textCount {
 
 // 버튼 스타일
 button {
-  background-color: white;
   font-size: 14px;
   color: #333333;
   border: 1px solid #ededed;
-  padding: 8px 16px;
-  background-color: white;
+  padding: 10px 16px 9px 16px;
+  background-color: #ffffff;
   border-radius: 2px;
 }
 
@@ -455,13 +455,12 @@ input[type="email"].inputStyle,
 input[type="password"].inputStyle {
   transition: border-color .5s;
   padding: 7px 8px;
-  height: 26px;
+  height: 40px;
   width: 100%;
   border: none;
   border-bottom: 1px solid #cccccc;
   color: #333333;
   font-size: 16px;
-  margin-top: 16px;
 }
 
 input[type="text"].inputStyle:focus,
@@ -749,7 +748,7 @@ header.searchHeader .iconMagnify {
 }
 
 .layer .profileBox {
-  margin-bottom: 0;
+  margin-bottom: 24px;
 }
 
 .profileBox > * {
@@ -814,6 +813,7 @@ header.searchHeader .iconMagnify {
   font-size: 14px;
   color: var(--pinkColor);
   margin-left: 4px;
+  font-weight: normal;
 }
 
 .profileBox .follwInfo {
@@ -823,8 +823,8 @@ header.searchHeader .iconMagnify {
 }
 
 .profileBox .introduceMe {
-  font-size: 14px;
-  color: #cccccc;
+  font-size: 12px;
+  color: #999999;
   margin-top: 16px;
 }
 
@@ -833,7 +833,7 @@ header.searchHeader .iconMagnify {
   align-items: center;
   color: #666666;
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 8px;
   text-align: center;
 }
 
@@ -855,7 +855,7 @@ header.searchHeader .iconMagnify {
   background: url("../img/common/blueCheck.png") no-repeat center;
   font-size: 14px;
   color: #3396ff;
-  margin-left: 8px;
+  margin-left: 2px;
   display: inline-block;
   background-size: 18px 18px;
 }
@@ -923,6 +923,7 @@ header.searchHeader .iconMagnify {
 .personalColorBox .personalColorText {
   margin-top: 8px;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .personalColorText.spring {
@@ -946,7 +947,7 @@ header.searchHeader .iconMagnify {
 .hashTags {
   justify-content: center;
   color: #333333;
-  font-size: 14px;
+  font-size: 12px;
   margin: 16px 16px 0;
   display: flex;
   flex-wrap: wrap;
@@ -1020,12 +1021,15 @@ header.searchHeader .iconMagnify {
 /* 레벨 진행상황 박스 */
 .infoBox {
   border-radius: 2px;
-  padding: 24px 16px;
+  padding: 16px;
   border: 1px solid #ededed;
+  height: 98px;
+
 }
 
 .levelInfoBox {
   margin-top: 24px;
+  padding: 24px 16px;
 }
 
 .levelInfoBox .levelInfos {
@@ -1036,6 +1040,7 @@ header.searchHeader .iconMagnify {
 
 .levelInfoBox .levelInfos .level {
   color: var(--pinkColor);
+  font-weight: bold;
 }
 
 .levelInfoBox .levelInfos .levelFraction {
@@ -1068,7 +1073,7 @@ header.searchHeader .iconMagnify {
   width: 100%;
   background-color: white;
   border-radius: 2px;
-  padding: 17px 0;
+  padding: 15px 0;
   border: 1px solid var(--pinkColor);
   color: var(--pinkColor);
   font-size: 16px;
@@ -1097,7 +1102,7 @@ header.searchHeader .iconMagnify {
 .validateEmailBox p {
   letter-spacing: -0.9px;
   font-size: 14px;
-  color: black;
+  color: #333333;
   text-align: center;
 }
 
@@ -1110,9 +1115,13 @@ button.okButton {
   background-color: white;
   border: 1px solid var(--pinkColor);
   border-radius: 2px;
-  padding: 11px 16px;
+  padding: 9px 16px 10px;
   color: var(--pinkColor);
   font-size: 14px;
+}
+button.okButton.black {
+  border: 1px solid #000000;
+  color: #000000;
 }
 
 /* 좌우 스크롤 박스 */
@@ -1205,7 +1214,7 @@ button.okButton {
   text-align: center;
   margin-top: 4px;
   color: #999999;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
 }
 
@@ -1273,11 +1282,12 @@ button.okButton {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 8px;
 }
 
 .tabs > li {
   white-space: nowrap;
-  padding: 16px 8px;
+  padding: 16px 8px 15px;
   font-size: 14px;
   flex: 1;
   text-align: center;
@@ -1300,7 +1310,7 @@ button.okButton {
 
 /* 하단 알림 상자 */
 .blackAlert {
-  text-align: left;
+  text-align: center;
   line-height: 1.7;
   z-index: 1;
   transition: bottom 0.5s;
@@ -1381,6 +1391,7 @@ li.noItem p.bookmark {
 
 li.noItem p.lipstick {
   background-image: url("../img/common/lipstick.png");
+  color: #999999;
 }
 
 li.noItem p.search-fail span {
@@ -1445,7 +1456,7 @@ li.noItem p.search-fail span {
 
 .colorChipBox .item label {
   display: block;
-  margin-top: 4px;
+  margin-top: 8px;
   width: 80px;
   text-align: center;
   color: #999999;
@@ -1689,7 +1700,7 @@ li.noItem p.search-fail span {
   background-size: contain;
 }
 
-/* 하단 소셜인포박스 (좋아요, 덧글 수 등등) */
+/* 하단 소셜인포박스 (좋아요, 댓글 수 등등) */
 .socialInfoBox {
   margin-top: 16px;
   border-top: 1px solid #ededed;
@@ -2001,7 +2012,7 @@ li.noItem p.search-fail span {
 .brandList > li.sticky {
   z-index: 1;
   font-size: 12px;
-  padding: 12px 16px 12px 24px;
+  padding: 12px 24px 12px 24px;
   position: sticky;
   top: 0px;
   background-color: #f7f7f7;
@@ -2045,7 +2056,7 @@ li.noItem p.search-fail span {
 }
 
 .brandList .brandName {
-  margin-left: 8px;
+  margin-left: 16px;
   color: #333333;
   font-size: 14px;
 }
@@ -2058,14 +2069,14 @@ li.noItem p.search-fail span {
 
 /* 제품 리스트 */
 .productList {
-  border-top: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
+  //border-top: 1px solid #ededed;
+  //border-bottom: 1px solid #ededed;
 }
 
 .productList > li {
   position: relative;
   display: flex;
-  padding: 10px 24px;
+  padding: 12px 24px;
   align-items: center;
 }
 
@@ -2288,7 +2299,7 @@ li.noItem p.search-fail span {
 }
 
 label.subTitle {
-  margin: 40px 0 0px;
+  margin: 32px 0 0px;
   display: block;
   font-style: normal;
   font-size: 14px;
@@ -2317,6 +2328,7 @@ label.subTitle:first-child {
   line-height: 1.21;
   color: #666666;
   margin-top: 64px;
+  text-decoration: underline;
 }
 
 .isValid {
@@ -2348,7 +2360,7 @@ label.subTitle:first-child {
 }
 
 #editProfileLayer .grayBox {
-  margin-top: 43px;
+  margin-top: 24px;
 }
 
 #editProfileLayer .bottomButton {
@@ -2372,12 +2384,13 @@ label.subTitle:first-child {
 .grayBox p {
   text-align: justify;
   white-space: pre-line;
+  color: #666666;
 }
 
 .grayBox .title {
   text-align: center;
   color: #333333;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .grayBox .title.left {
@@ -2527,7 +2540,7 @@ label.subTitle:first-child {
 
 .peopleList li {
   padding: 16px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   margin-bottom: 1px;
   display: flex;
   align-items: center;
@@ -2586,11 +2599,11 @@ label.subTitle:first-child {
 /* 컬러칩 추가 레이어 */
 .colorChipList {
   background-color: #f7f7f7;
-  padding: 14px 14px 14px 22px;
+  padding: 16px 16px 8px 30px;
 }
 
 .colorChipList > li {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -2603,7 +2616,7 @@ label.subTitle:first-child {
   width: 5px;
   height: calc(100% - 2px);
   top: 0;
-  left: -11px;
+  left: -15px;
 }
 
 /*.colorChipList > li:before { content: ""; display: block; position: absolute; top: 0; left: -11px; width: 5px; height: calc(100% - 2px); border-radius: 4px; }
@@ -2643,6 +2656,7 @@ label.subTitle:first-child {
 
   & strong {
     font-weight: bold;
+    margin-right: 4px;
   }
 }
 
@@ -2772,7 +2786,7 @@ input.agreeForExpose {
 }
 
 .setLabelList .grayInfo {
-  margin-left: 24px;
+  margin-left: 28px;
 }
 
 .setLabelList .buttonBox {
@@ -2901,12 +2915,12 @@ input.agreeForExpose {
   margin-top: 16px;
   text-align: center;
   font-weight: bold;
-  color: black;
+  color: #333333;
   font-size: 20px;
 }
 
 .brandInfoBox + .infoBox {
-  margin: 16px 0 8px;
+  margin: 24px 0 8px;
   text-align: center;
   border-left: none;
   border-right: 0;
@@ -2921,6 +2935,7 @@ input.agreeForExpose {
 .brandDetailPhoto {
   width: 100%;
   height: auto;
+  margin-bottom: 8px;
 }
 
 
@@ -2946,11 +2961,12 @@ h4 {
 }
 
 .productScrollBox {
-  padding: 0 16px;
+  padding: 0 16px 8px;
   overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+
 }
 
 h3 + .productScrollBox {
@@ -2969,6 +2985,9 @@ h3 + .productScrollBox {
   border: 1px solid #ededed;
   width: 120px; /* height:201px; */
   margin-right: 16px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .productScrollBox > ul > li > img {
@@ -3017,7 +3036,7 @@ h3 + .productScrollBox {
   margin-top: 32px;
 }
 
-/* 덧글 리스트 (브랜드 디테일 2) */
+/* 댓글 리스트 (브랜드 디테일 2) */
 .replyList {
   border-top: 1px solid #ededed;
 }
@@ -3066,7 +3085,7 @@ h3 + .productScrollBox {
 .replyList > li ul li:nth-child(3) {
   font-size: 12px;
   color: #cccccc;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .replyList + .infoBox {
@@ -3109,6 +3128,7 @@ h3 + .productScrollBox {
   font-size: 12px;
   color: #999999;
   margin-left: 8px;
+  font-weight: bold;
 }
 
 .replyList .more {
@@ -3118,7 +3138,7 @@ h3 + .productScrollBox {
 }
 
 .brandDetail .pinkButton, .brandDetail3 .pinkButton, #editProfileLayer .pinkButton {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .brandDetail .socialInfoBox {
@@ -3138,7 +3158,10 @@ h3 + .productScrollBox {
   height: 120px;
   position: relative;
   padding: 8px 24px 8px 0;
+  margin-top: 8px;
 }
+
+
 
 .pullDownProductList > li > div figure {
   position: absolute;
@@ -3287,7 +3310,7 @@ main.brandDetail3 .replyInputBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 16px;
+  padding: 20px 24px;
 }
 
 .replyInputBox > div:first-child {
@@ -3624,7 +3647,7 @@ main.brandDetail3 .replyInputBox {
 }
 
 #search .paddingFrame + .buttonTabs {
-  padding: 8px 16px 16px;
+  padding: 8px 16px 24px;
 }
 
 #search .gap-top {
@@ -3658,6 +3681,10 @@ main.brandDetail3 .replyInputBox {
 .castList li figure {
   width: 100%;
   margin-bottom: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .castList li figure img {
@@ -3678,7 +3705,7 @@ main.brandDetail3 .replyInputBox {
   color: #ff336c;
   font-size: 14px;
   font-weight: bold;
-  margin-right: 3px;
+  margin-right: 4px;
 }
 
 /* event.html */
@@ -3767,7 +3794,9 @@ main.event_detail .replyList {
   color: #999999;
 }
 
-
+.notiList {
+  border-top: 1px solid #ededed;
+}
 /* notification.html */
 .notiList, .noti_header {
   font-size: 14px;
@@ -4016,7 +4045,7 @@ i.ic-colorcard {
 }
 
 .season_slider {
-  height: 586px;
+  height: 594px;
   padding-top: 48px;
 }
 
@@ -4047,7 +4076,7 @@ i.ic-colorcard {
   width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
-  margin-top: 24px;
+  padding-top: 24px;
   display: flex;
 }
 
@@ -4217,7 +4246,6 @@ i.ic-colorcard {
   border: 1px solid #ededed;
   border-radius: 4px;
   height: 48px;
-  font-weight: bold;
 }
 
 hr.thick {
@@ -4306,7 +4334,7 @@ main.personal_color, main.personal_color_final, main.personal_color_season {
 
 .personal_color_final h3, .personal_color_season h3,
 .personal_color_final .writerInfo {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .personal_color_final .productList {
@@ -4335,8 +4363,7 @@ i.more_icon {
 }
 
 .more_center {
-  height: 48px;
-  height: 48px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4415,7 +4442,7 @@ i.refresh {
 
 .add_product {
   position: relative;
-
+  padding-bottom: 80px;
   & .title {
     padding: 32px 0 12px;
     font-size: 20px;
@@ -4444,6 +4471,7 @@ i.refresh {
       width: 24px;
       height: 24px;
       display: inline-block;
+      margin-right: 4px;
     }
 
     & .essential {
@@ -4451,6 +4479,7 @@ i.refresh {
       line-height: 1.19;
       color: #999999;
       font-weight: normal;
+      margin-left: 4px;
     }
   }
 
@@ -4458,6 +4487,7 @@ i.refresh {
     font-size: 14px;
     line-height: 1.21;
     color: #ff336c;
+    padding: 0;
   }
 
   & .btn_add_product {
