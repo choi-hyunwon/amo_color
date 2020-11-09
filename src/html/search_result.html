@@ -2,9 +2,11 @@
 <html lang="ko">
 @@include('include/head.html', { title : "Color Tailor" })
 <body id="search_result">
-<header class="searchHeader">
-@@include('include/searchHeader.html', { value : "밀리" })
-<div class="search_clear"></div>
+<header class="searchHeader showBack">
+  <div class="leftIcons">
+    <span class="backArrow"></span>
+  </div>
+  <input class="search_input" type="text" placeholder="브랜드, 제품명, 컬러 또는 키워드" value="밀리" style="margin-left: 36px;" /><div class="search_clear"></div>
 </header>
 <main>
 	<ul class="tabs" data-tab-id="mainTabs">
@@ -15,13 +17,13 @@
 
 	<div id="mainTabs" class="tabContents">
 		<section style="display: none">
-			
+
 		</section>
-		
+
 		<section style="display: none">
-			
+
 		</section>
-		
+
 		<section>
 			<ul class="castList">
 				<li data-href="my.html"> <!-- 링크 예 -->

@@ -2140,6 +2140,11 @@ li.noItem p.search-fail span {
   display: inline-block;
   vertical-align: middle;
 }
+.productList > li ul li .personalColorText {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 .productList .plusProductIcon {
   position: absolute;
@@ -2252,7 +2257,7 @@ li.noItem p.search-fail span {
 
   & .match {
     position: absolute;
-    top: 30px;
+    top: 37px;
     right: 24px;
 
     & .text {
@@ -2928,7 +2933,7 @@ input.agreeForExpose {
   padding: 16px;
   line-height: 17px;
   font-size: 14px;
-  text-align: center;
+  height: auto;
 }
 
 
@@ -3094,6 +3099,7 @@ h3 + .productScrollBox {
   text-align: center;
   font-size: 16px;
   color: #333333;
+  height: auto;
 }
 
 .replyList + .infoBox span {
@@ -4102,12 +4108,13 @@ i.ic-colorcard {
 }
 
 .season_slider .inner {
-  padding: 32px 24px;
+  padding: 0;
   border-radius: 16px;
   background-color: white;
   height: 420px;
   width: 80vw;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .season_slider .box .center {
@@ -4487,7 +4494,7 @@ i.refresh {
     font-size: 14px;
     line-height: 1.21;
     color: #ff336c;
-    padding: 0;
+    padding: 8px 0 0 0 ;
   }
 
   & .btn_add_product {

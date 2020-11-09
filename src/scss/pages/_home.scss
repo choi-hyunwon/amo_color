@@ -834,7 +834,7 @@
 
           & .color {
             display: block;
-            line-height: 60px;
+            height: 60px;
             padding-left: 24px;
             font-size: 14px;
             color: #ffffff;
@@ -847,6 +847,8 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
+              line-height: 60px;
+              height: 60px;
             }
 
             & .maincolor {
