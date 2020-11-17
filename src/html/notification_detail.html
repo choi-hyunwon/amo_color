@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Color Tailor" })
+<body>
+<header class="showBack showTitle">
+@@include('include/header.html', { title : "공지" })
+</header>
+<main>
+	<ul class="notiList">
+		<li>
+			[안내] 컬러테일러 앱 업데이트 안내(1.7.0)
+			<div class="dt">2020.07.07</div>
+		</li>
+		<li>
+			당신만의 특별한 무드 "페페리" 공식입점
+			<div class="dt">2020.07.07</div>
+		</li>
+		<li>
+			특별한 색조 퀄리티 브랜드 "레드쿠키" 공식입점
+			<div class="dt">2020.07.07</div>
+		</li>
+		<li>
+			컬러테일러 크리에이터 합격자 20명 발표
+			<div class="dt">2020.07.07</div>
+		</li>
+		<li>
+			아모레퍼시픽 컬러테일러 크리에이터 모집(~6/21)
+			<div class="dt">2020.07.07</div>
+		</li>
+		<li>
+			당신을 위한 뷰티 단축키 "키보" 공식입점
+			<div class="dt">2020.07.07</div>
+		</li>
+		<li>
+			"어퓨" 공식입점, 과즙팡 스파클링 틴트 추가 호수 등록
+			<div class="dt">2020.07.07</div>
+		</li>
+		<li>
+			퍼스널컬러 코스메틱 브랜드, "웜앤쿨" 공식입점
+			<div class="dt">2020.07.07</div>
+		</li>
+	</ul>
+
+	@@include("layer/notification_detail.html")
+</main>
+
+<script type="text/javascript">
+	showLayer("#notification_detailLayer");
+</script>
+</body>
+</html>

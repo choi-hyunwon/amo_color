@@ -21,37 +21,37 @@
         <ul>
           <li>
             <div class="ck">
-              <label for="type_1"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>제품명</label>
+              <label for="type_1"><img src="../img/common/ic-check-gray@2x.png" height="18" width="18"/>제품명</label>
               <input type="radio" id="type_1" name="type" value="N">
             </div>
           </li>
           <li>
             <div class="ck">
-              <label for="type_2"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>가격/용량</label>
+              <label for="type_2"><img src="../img/common/ic-check-gray@2x.png" height="18" width="18"/>가격/용량</label>
               <input type="radio" id="type_2" name="type" value="PC">
             </div>
           </li>
           <li>
             <div class="ck">
-              <label for="type_3"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>퍼스널컬러 정보</label>
+              <label for="type_3"><img src="../img/common/ic-check-gray@2x.png" height="18" width="18"/>퍼스널컬러 정보</label>
               <input type="radio" id="type_3" name="type" value="P">
             </div>
           </li>
           <li>
             <div class="ck">
-              <label for="type_4"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>단종 여부</label>
+              <label for="type_4"><img src="../img/common/ic-check-gray@2x.png" height="18" width="18"/>단종 여부</label>
               <input type="radio" id="type_4" name="type" value="D">
             </div>
           </li>
           <li>
             <div class="ck">
-              <label for="type_5"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>해시태그</label>
+              <label for="type_5"><img src="../img/common/ic-check-gray@2x.png" height="18" width="18"/>해시태그</label>
               <input type="radio" id="type_5" name="type" value="T">
             </div>
           </li>
           <li>
             <div class="ck">
-              <label for="type_6"><img src="../img/common/ic-check@2x.png" height="18" width="18"/>기타</label>
+              <label for="type_6"><img src="../img/common/ic-check-gray@2x.png" height="18" width="18"/>기타</label>
               <input type="radio" id="type_6" name="type" value="ETC">
             </div>
           </li>
@@ -65,9 +65,9 @@
       });
       $('.filter_wrap').on('click','label', function () {
         $(this).parent().addClass('on');
-        $(this).find('img').attr('src', $(this).find('img').attr('src').replace('ic-check@2x.png', 'ic-check-on@2x.png'));
+        $(this).find('img').attr('src', $(this).find('img').attr('src').replace('ic-check-gray@2x.png', 'ic-check-on@2x.png'));
         $(this).parents('li').siblings().find('.ck').removeClass('on');
-        $(this).parents('li').siblings().find('label img').attr('src',$(this).parents('li').siblings().find('label img').attr('src').replace('ic-check-on@2x.png', 'ic-check@2x.png'));
+        $(this).parents('li').siblings().find('label img').attr('src',$(this).parents('li').siblings().find('label img').attr('src').replace('ic-check-on@2x.png', 'ic-check-gray@2x.png'));
         $(this).parents('.filter').removeClass('on').find('button span').eq(0).text($(this).text());
       })
     </script>

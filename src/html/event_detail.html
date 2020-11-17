@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html', { title : "Color Tailor" })
+<body>
+<header class="showTitle showBack">
+@@include('include/header.html', { title : "이벤트" })
+</header>
+<main>
+	<ul class="tabs" data-tab-id="mainTabs">
+		<li class="on">진행중</li>
+		<li>당첨자 발표</li>
+		<li>종료</li>
+	</ul>
+
+	<div id="mainTabs" class="tabContents">
+		<!-- 진행중 -->
+		<section>
+			<div class="events">
+				<ul class="ev">
+					<figure>
+						<img src="../img/common/sample_event_banner_01.jpg" />
+					</figure>
+					<label class="etl">진행중인 이벤트</label>
+					<li class="tit">신상만 모아모아 다 드림 이벤트</li>
+					<li class="dt">2020.04.28 ~ 2020.05.10</li>
+				</ul>
+
+				<ul class="ev">
+					<figure>
+						<img src="../img/common/sample_event_banner_02.jpg" />
+					</figure>
+					<label class="etl">진행중인 이벤트</label>
+					<li class="tit">에디터들이 직접 픽한 잘산템 나눔 이벤트</li>
+					<li class="dt">2020.04.28 ~ 2020.05.10</li>
+				</ul>
+			</div>
+		</section>
+		<!-- 진행중 끝 -->
+
+		<!-- 당첨자 발표 -->
+		<section style="display: none">
+			<div class="events">
+				<ul class="ev">
+					<figure>
+						<img src="../img/common/sample_event_banner_01.jpg" />
+					</figure>
+					<label class="etl">당첨자 발표</label>
+					<li class="tit">신상만 모아모아 다 드림 이벤트 당첨자 발표</li>
+				</ul>
+
+				<ul class="ev">
+					<figure>
+						<img src="../img/common/sample_event_banner_02.jpg" />
+					</figure>
+					<label class="etl">당첨자 발표</label>
+					<li class="tit">에디터들이 직접 픽한 잘산템 나눔 이벤트 당첨자 30명 발표</li>
+				</ul>
+			</div>
+		</section>
+		<!-- 당첨자 발표 끝 -->
+
+		<!-- 종료 리스트 -->
+		<section style="display: none">
+			<div class="events">
+				<ul class="ev end">
+					<figure>
+						<img src="../img/common/sample_event_banner_01.jpg" />
+					</figure>
+					<label class="etl">종료된 이벤트</label>
+					<li class="tit">신상만 모아모아 다 드림 이벤트</li>
+					<li class="dt">2020.04.28 ~ 2020.05.10</li>
+				</ul>
+
+				<ul class="ev end">
+					<figure>
+						<img src="../img/common/sample_event_banner_02.jpg" />
+					</figure>
+					<label class="etl">종료된 이벤트</label>
+					<li class="tit">에디터들이 직접 픽한 잘산템 나눔 이벤트</li>
+					<li class="dt">2020.04.28 ~ 2020.05.10</li>
+				</ul>
+			</div>
+		</section>
+		<!-- 종료 끝 -->
+
+
+	</div>
+
+</main>
+
+<!-- 이벤트 디테일 -->
+@@include("layer/event_detail.html")
+
+<script type="text/javascript">
+
+// 이벤트 디테일 레이어
+	showLayer($("#event_detailLayer"));
+</script>
+</body>
+</html>
