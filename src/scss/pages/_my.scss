@@ -2281,17 +2281,19 @@ li.noItem p.search-fail span {
   z-index: 2;
   overflow-y: auto;
   box-shadow: 0px 0 80px rgba(0, 0, 0, 0);
-  transition: left 0.4s, box-shadow 0.4s;
+  //transition: left 0.4s, box-shadow 0.4s;
   position: fixed;
   top: 0;
-  left: 100%;
+  left: 0;
   background-color: white;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 .layer.show {
-  left: 0;
+  //left: 0;
+  display: block;
   box-shadow: 0px 0 50px rgba(0, 0, 0, 0.2);
 }
 
