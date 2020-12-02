@@ -1,0 +1,1 @@
+  2020. 9. 8. 오후 3시 27분 33초 GMT+9: Starting composition “tempConverterComp”.  Output To: /private/var/folders/bk/f0mcf9yx5bs58pn_n_lxnh9h0000gn/T/TemporaryItems/Bodymovin/cr3a5i5buh/raw/images/img_2.png    2020. 9. 8. 오후 3시 27분 33초 GMT+9: Finished composition “tempConverterComp”.  Total Time Elapsed: 0 SecondsLog closed on 2020. 9. 8. at 오후 3시 27분 33초 GMT+9
