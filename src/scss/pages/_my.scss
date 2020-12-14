@@ -4097,8 +4097,10 @@ i.ic-colorcard {
   scroll-snap-align: center;
   flex-shrink: 0;
   padding: 0px 8px 10px 8px;
-}
+  height: 450px;
+  width: 100vw;
 
+}
 .season_slider .box .personalColor {
   width: 36px;
   height: 36px;
@@ -4106,22 +4108,14 @@ i.ic-colorcard {
   margin-top: 88px;
 }
 
-.season_slider .box:first-child {
-  padding-left: 10vw;
-}
-
-.season_slider .box:last-child {
-  padding-right: 10vw;
-}
-
 .season_slider .inner {
-  padding: 0;
+  width: 256px;
+  margin: 0 auto;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+
+  overflow: hidden;
   border-radius: 16px;
   background-color: white;
-  height: 420px;
-  width: 80vw;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
 }
 
 .season_slider .box .center {
@@ -4344,6 +4338,8 @@ h3 span {
 
 main.personal_color, main.personal_color_final, main.personal_color_season {
   padding-bottom: 64px;
+  position: relative;
+  z-index: 10;
 }
 
 .personal_color_final h3, .personal_color_season h3,
