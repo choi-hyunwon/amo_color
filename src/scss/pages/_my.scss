@@ -461,6 +461,9 @@ input[type="password"].inputStyle {
   border-bottom: 1px solid #cccccc;
   color: #333333;
   font-size: 16px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 input[type="text"].inputStyle:focus,
@@ -787,8 +790,12 @@ header.searchHeader .iconMagnify {
 }
 
 .profileBox.editMode .relative .editButton {
-  background: url("../img/common/cameraIcon.png") no-repeat center var(--pinkColor);
+  background-image: url("../img/common/cameraIcon.png");
+  background-repeat: no-repeat ;
+  background-position: center center;
+  background-color: var(--pinkColor);
   background-size: 18px;
+  z-index:100;
 }
 
 .profileBox .relative .personalColor {
