@@ -1,10 +1,10 @@
 <div class="layer flex column" id="addColorChipsLayer">
 	<div>
-		<header class="showBack showTitle">
+		<header class="showBack showTitle fixed-top">
 		@@include('../include/header.html', { title : "나의 컬러칩 추가" })
 		</header>
 
-		<div class="buttonTabs scrollBox">
+		<div class="buttonTabs scrollBox" style="margin-top: 60px;">
 			<div class="scrollItems">
 				<button type="button" class="on">봄웜</button>
 				<button type="button">여름쿨</button>
@@ -21,7 +21,7 @@
 				<div style="background-color:#e42e20"></div>
 				<div style="background-color: #e4002b"></div>
 			</li>
-			
+
 			<li>
 				<div class="beforeColorChip" style="background-color: #ff85b5"></div>
 				<div style="background-color: #eb97a0"></div>
@@ -37,7 +37,7 @@
 				<div style="background-color: #df3644"></div>
 				<div style="background-color: #ce2643"></div>
 			</li>
-			
+
 			<li>
 				<div class="beforeColorChip" style="background-color: #ff6a1e"></div>
 				<div style="background-color: #eb645f"></div>
@@ -57,7 +57,7 @@
 		<button type="button" class="bottomButton" disabled>추가하기</button>
 	</div>
 </div>
-	
+
 <script type="text/javascript">
 // 컬러칩 클릭
 $("#addColorChipsLayer .colorChipList > li div").on("click", function(){
