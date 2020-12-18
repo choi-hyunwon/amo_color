@@ -551,19 +551,23 @@
       }
 
     }
+
     & .list {
       & ul {
         border-top: 1px solid #ededed;
       }
+
       & li {
         border-bottom: 1px solid #ededed;
         position: relative;
+
         & a {
           display: block;
           padding-left: 122px;
           padding-top: 16px;
           height: 60px;
         }
+
         & .img {
           height: 60px;
           width: 106px;
@@ -571,10 +575,12 @@
           position: absolute;
           top: 0;
           left: 0;
+
           & img {
-              max-width: 100% ;
+            max-width: 100%;
           }
         }
+
         & .text {
           display: block;
           font-size: 10px;
@@ -582,6 +588,7 @@
           line-height: 1.2;
           color: #999999;
         }
+
         & .title {
           font-size: 14px;
           line-height: 1.21;
@@ -599,15 +606,18 @@
       & ul {
         border-top: 1px solid #ededed;
       }
+
       & li {
         border-bottom: 1px solid #ededed;
         position: relative;
+
         & a {
           display: block;
           padding-top: 16px;
           padding-left: 16px;
           height: 60px;
         }
+
         & .text {
           display: block;
           font-size: 10px;
@@ -615,6 +625,7 @@
           line-height: 1.2;
           color: #999999;
         }
+
         & .title {
           font-size: 14px;
           line-height: 1.21;
@@ -624,27 +635,34 @@
       }
     }
   }
+
   & .help {
     background-color: #f7f7f7;
     padding: 16px 16px 24px;
+
     & a {
       display: block;
     }
+
     & div {
       width: 50%;
       float: left;
       text-align: center;
+
       & img {
         margin-bottom: 8px;
       }
+
       & span {
         display: block;
+
         &.title {
           font-size: 14px;
           font-weight: bold;
           text-align: center;
           color: #333333;
         }
+
         & .desc {
           font-size: 14px;
           text-align: center;
@@ -812,6 +830,7 @@
   & .line {
     padding: 32px 0 0;
     border-bottom: 8px solid #ededed;
+
     & .list {
       padding: 0 16px;
 
@@ -884,6 +903,7 @@
   & .rate {
     padding: 32px 0 0;
     border-bottom: 8px solid #ededed;
+
     & h3 {
       margin-bottom: 24px;
     }
@@ -913,6 +933,7 @@
         & .star {
           text-align: center;
           margin-bottom: 4px;
+
           & img {
             display: inline-block;
           }
@@ -965,6 +986,7 @@
         }
       }
     }
+
     & .appraisal {
       background-color: #f7f7f7;
       padding: 16px;
@@ -982,12 +1004,14 @@
           vertical-align: middle;
           line-height: 15px;
         }
+
         & .tit {
           width: 66px;
           font-size: 14px;
           font-weight: bold;
           color: #333333;
         }
+
         & .point {
           width: calc(100% - 66px - 40px);
           font-size: 14px;
@@ -1019,22 +1043,27 @@
 
         margin-bottom: 2px;
       }
+
       & .description {
         font-size: 14px;
         color: #666666;
       }
+
       & .black {
         font-size: 16px;
         font-weight: bold;
         color: #333333;
       }
+
       & .pink {
         font-size: 16px;
         font-weight: bold;
         color: #ff336c;
       }
-      & .btn-app   {
+
+      & .btn-app {
         text-align: center;
+
         & a {
           width: 97px;
           height: 36px;
@@ -1066,29 +1095,34 @@
 
 .footer {
   position: relative;
-  padding-top: 24px ;
+  padding-top: 24px;
+
   & .logo {
     height: 35px;
     line-height: 35px;
     padding: 0 16px;
   }
+
   & .follow {
     background-color: #f7f7f7;
     padding: 16px 70px 16px 16px;
     position: relative;
+
     & span {
       font-size: 12px;
       line-height: 1.25;
       color: #333333;
     }
+
     & .icon {
       position: absolute;
       top: 16px;
       right: 16px;
     }
   }
+
   & .copyright {
-    padding:16px 0;
+    padding: 16px 0;
     margin: 0 16px;
     font-size: 12px;
     line-height: 1.25;
@@ -1096,9 +1130,11 @@
     border-bottom: 1px solid #ededed;
     margin-bottom: 16px;
   }
+
   & .term {
-    margin : 0 16px;
+    margin: 0 16px;
     margin-bottom: 40px;
+
     & a {
       display: inline-block;
       font-size: 12px;
@@ -1127,7 +1163,7 @@
 }
 
 
-.filter_wrap button{
+.filter_wrap button {
   position: absolute;
   top: 0;
   width: 100%;
@@ -1170,6 +1206,7 @@
   border-top: 1px solid #f2f2f2;
   box-sizing: border-box;
 }
+
 .filter_wrap li:first-child {
   border-top: none;
 }
@@ -1225,11 +1262,11 @@
   text-align: right;
   padding-right: 20px;
 }
+
 .filter_wrap .filter.on.filter_tab_1 button.tit {
   left: 0;
   width: 100%;
 }
-
 
 
 .filter_wrap .filter ul {
@@ -1243,4 +1280,53 @@
 
 .filter_wrap .filter li label {
   text-align: center;
+}
+
+.swiper-container {
+  &.swiper-container-lg {
+    width: 100%;
+    .swiper-slide {
+      position: relative;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      .btn-play {
+        position: absolute;
+        display: block;
+        width: 63px;
+        height: 63px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .swiper-pagination {
+      display: flex;
+      justify-content: center;
+      padding: 8px 0 16px;
+      height: 28px;
+      > span {
+        transition: width .4s, background-color 0.4s;
+        border-radius: 2px;
+        margin-right: 4px;
+        width: 4px;
+        height: 4px;
+        background-color: #cccccc;
+        font-size: 0;
+        line-height: 0;
+        &.swiper-pagination-bullet-active {
+          width: 14px;
+          background-color: #333333;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }

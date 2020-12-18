@@ -174,19 +174,49 @@
           </div>
         </div>
 
-        <div class="listPhoto noScrollBar">
-          <img src="../img/common/sampleProductPhoto02.jpg">
-          <img src="../img/common/sampleProductPhoto01.jpg">
-          <img src="../img/common/sampleProductPhoto02.jpg">
-          <img src="../img/common/sampleProductPhoto01.jpg">
-        </div>
+<!--        <div class="listPhoto noScrollBar">-->
+<!--          <img src="../img/common/sampleProductPhoto02.jpg">-->
+<!--          <img src="../img/common/sampleProductPhoto01.jpg">-->
+<!--          <img src="../img/common/sampleProductPhoto02.jpg">-->
+<!--          <img src="../img/common/sampleProductPhoto01.jpg">-->
+<!--        </div>-->
 
-        <div class="productScrollButtons">
-          <div class="on"></div>
-          <div></div>
-          <div></div>
-          <div></div>
+<!--        <div class="productScrollButtons">-->
+<!--          <div class="on"></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--        </div>-->
+
+        <!-- s swiper slider 적용 -- 2020.12.17 -->
+        <div class="swiper-container swiper-container-lg _swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" style="height: 100vw;background-image: url('../img/common/sampleProductPhoto02.jpg'); background-size: cover; background-position: center; ">
+              <a href="#" class="btn-play"><img src="../img/common/ic-video.png" alt=""></a>
+            </div>
+            <div class="swiper-slide" style="height: 100vw;background-image: url('../img/common/sampleProductPhoto01.jpg'); background-size: cover; background-position: center; "></div>
+            <div class="swiper-slide" style="height: 100vw;background-image: url('../img/common/sampleProductPhoto02.jpg'); background-size: cover; background-position: center; "></div>
+            <div class="swiper-slide" style="height: 100vw;background-image: url('../img/common/sampleProductPhoto01.jpg'); background-size: cover; background-position: center; "></div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
+        <script>
+          var mySwiper2 = new Swiper('._swiper', {
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+              renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+              },
+            },
+          })
+        </script>
+        <!-- s swiper slider 적용 -- 2020.12.17 -->
 
         <div class="paddingFrame">
           <div class="productInfoBox">
